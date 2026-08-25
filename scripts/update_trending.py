@@ -17,6 +17,7 @@ START_MARKER = "<!-- GITHUB-TRENDING:START -->"
 END_MARKER = "<!-- GITHUB-TRENDING:END -->"
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 HISTORY_PATH = REPOSITORY_ROOT / "data" / "trending-history.json"
+SPRING_HISTORY_PATH = REPOSITORY_ROOT / "data" / "spring-boot-history.json"
 README_PATH = REPOSITORY_ROOT / "README.md"
 
 
@@ -63,11 +64,17 @@ def parse_repository(item):
     language = item.get("language")
     if language is not None and not isinstance(language, str):
         raise RuntimeError(f"GitHub API returned an invalid language for {full_name}")
+    topics = item.get("topics", [])
+    if not isinstance(topics, list) or not all(
+        isinstance(topic, str) for topic in topics
+    ):
+        raise RuntimeError(f"GitHub API returned invalid topics for {full_name}")
 
     return {
         "full_name": full_name,
         "language": language or "-",
         "stars": stars,
+        "topics": topics,
     }
 
 
@@ -89,12 +96,13 @@ def search_repositories(query, token):
     return result["items"]
 
 
-def collect_repositories(token, today, tracked_names):
+def collect_repositories(token, today, tracked_names, topic=None):
+    topic_qualifier = f" topic:{topic}" if topic else ""
     queries = (
         f"created:>={(today - timedelta(days=30)).isoformat()} "
-        "stars:>=10 archived:false fork:false",
+        f"stars:>=10 archived:false fork:false{topic_qualifier}",
         f"pushed:>={(today - timedelta(days=7)).isoformat()} "
-        "stars:>=100 archived:false fork:false",
+        f"stars:>=100 archived:false fork:false{topic_qualifier}",
     )
     repositories = {}
 
@@ -103,6 +111,8 @@ def collect_repositories(token, today, tracked_names):
             if isinstance(item, dict) and item.get("private") is True:
                 continue
             repository = parse_repository(item)
+            if topic and topic not in repository["topics"]:
+                continue
             repositories[repository["full_name"]] = repository
 
     for full_name in sorted(tracked_names):
@@ -118,6 +128,8 @@ def collect_repositories(token, today, tracked_names):
         if isinstance(item, dict) and item.get("private") is True:
             continue
         repository = parse_repository(item)
+        if topic and topic not in repository["topics"]:
+            continue
         repositories[repository["full_name"]] = repository
 
     return repositories
@@ -149,6 +161,19 @@ def load_history(path):
                 raise RuntimeError(f"Invalid stars in history for {full_name}")
 
     return history
+
+
+def update_history(history, repositories, today):
+    history[today.isoformat()] = {
+        full_name: repository["stars"]
+        for full_name, repository in repositories.items()
+    }
+    cutoff = today - timedelta(days=7)
+    return {
+        day: history[day]
+        for day in sorted(history)
+        if cutoff <= date.fromisoformat(day) <= today
+    }
 
 
 def calculate_rankings(repositories, history, today):
@@ -187,14 +212,8 @@ def format_change(change):
     return "-" if change is None else f"{change:+,}"
 
 
-def render_section(rankings, today):
+def render_table(rankings):
     lines = [
-        START_MARKER,
-        "",
-        "## 🔥 최근 스타 상승 저장소",
-        "",
-        f"> {today.isoformat()} 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.",
-        "",
         "| 순위 | Repository | Language | Stars | 24시간 | 7일 |",
         "|---:|---|---|---:|---:|---:|",
     ]
@@ -208,6 +227,30 @@ def render_section(rankings, today):
             f"| {format_change(repository['weekly_change'])} |"
         )
 
+    return lines
+
+
+def render_section(rankings, spring_boot_rankings, today):
+    lines = [
+        START_MARKER,
+        "",
+        "## 🔥 최근 스타 상승 저장소",
+        "",
+        f"> {today.isoformat()} 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.",
+        "",
+    ]
+    lines.extend(render_table(rankings))
+    lines.extend(
+        (
+            "",
+            "## 🌱 Spring Boot 최근 스타 상승 저장소",
+            "",
+            f"> {today.isoformat()} 09:00 KST 기준 · `topic:spring-boot` "
+            "저장소의 자체 수집한 스타 변화량입니다.",
+            "",
+        )
+    )
+    lines.extend(render_table(spring_boot_rankings))
     lines.extend(("", END_MARKER))
     return "\n".join(lines)
 
@@ -242,8 +285,15 @@ def write_if_changed(path, content):
     return True
 
 
-def run(token, today, history_path=HISTORY_PATH, readme_path=README_PATH):
+def run(
+    token,
+    today,
+    history_path=HISTORY_PATH,
+    spring_history_path=SPRING_HISTORY_PATH,
+    readme_path=README_PATH,
+):
     history = load_history(history_path)
+    spring_history = load_history(spring_history_path)
     readme = readme_path.read_bytes().decode("utf-8") if readme_path.exists() else ""
 
     eligible_days = [day for day in history if day <= today.isoformat()]
@@ -251,27 +301,47 @@ def run(token, today, history_path=HISTORY_PATH, readme_path=README_PATH):
     repositories = collect_repositories(token, today, tracked_names)
     rankings = calculate_rankings(repositories, history, today)
 
-    history[today.isoformat()] = {
-        full_name: repository["stars"]
-        for full_name, repository in repositories.items()
-    }
-    cutoff = today - timedelta(days=7)
-    history = {
-        day: history[day]
-        for day in sorted(history)
-        if cutoff <= date.fromisoformat(day) <= today
-    }
+    spring_eligible_days = [
+        day for day in spring_history if day <= today.isoformat()
+    ]
+    spring_tracked_names = (
+        set(spring_history[max(spring_eligible_days)])
+        if spring_eligible_days
+        else set()
+    )
+    spring_repositories = collect_repositories(
+        token, today, spring_tracked_names, topic="spring-boot"
+    )
+    spring_boot_rankings = calculate_rankings(
+        spring_repositories,
+        spring_history,
+        today,
+    )
 
-    updated_readme = update_readme(readme, render_section(rankings, today))
+    history = update_history(history, repositories, today)
+    spring_history = update_history(spring_history, spring_repositories, today)
+
+    updated_readme = update_readme(
+        readme, render_section(rankings, spring_boot_rankings, today)
+    )
     updated_history = json.dumps(
         history, ensure_ascii=False, indent=2, sort_keys=True
     ) + "\n"
+    updated_spring_history = json.dumps(
+        spring_history, ensure_ascii=False, indent=2, sort_keys=True
+    ) + "\n"
 
     history_changed = write_if_changed(history_path, updated_history)
+    spring_history_changed = write_if_changed(
+        spring_history_path, updated_spring_history
+    )
     readme_changed = write_if_changed(readme_path, updated_readme)
     print(
-        f"Tracked {len(repositories)} repositories; "
-        f"history changed: {history_changed}; README changed: {readme_changed}"
+        f"Tracked {len(repositories)} repositories and "
+        f"{len(spring_repositories)} Spring Boot repositories; "
+        f"history changed: {history_changed}; "
+        f"Spring history changed: {spring_history_changed}; "
+        f"README changed: {readme_changed}"
     )
 
 
