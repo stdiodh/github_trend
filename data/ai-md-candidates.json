@@ -42,7 +42,14 @@
     "sample_sha": "76ebd23dbb8266dab9491425b39f3c4857fb4a52"
   },
   "SKILL.md": {
-    "classification": null,
+    "classification": {
+      "classified_at": "2026-08-25",
+      "confidence": 0.95,
+      "kind": "skill",
+      "reason": "SKILL.md file defining a reusable workflow for transforming photographs into abstract editorial artwork with structured steps, guardrails, and reference materials.",
+      "status": "unknown",
+      "tool": "Unknown"
+    },
     "first_seen": "2026-08-25",
     "last_seen": "2026-08-25",
     "repositories": [

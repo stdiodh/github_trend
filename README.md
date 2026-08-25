@@ -7,15 +7,15 @@
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
 | 1 | [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | - | 499,743 | - | - |
-| 2 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | Python | 470,103 | - | - |
+| 2 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | Python | 470,110 | - | - |
 | 3 | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | TypeScript | 454,563 | - | - |
-| 4 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | Python | 395,183 | - | - |
-| 5 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | TypeScript | 387,532 | - | - |
-| 6 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | TypeScript | 365,353 | - | - |
-| 7 | [vinta/awesome-python](https://github.com/vinta/awesome-python) | Python | 315,939 | - | - |
-| 8 | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | - | 314,906 | - | - |
-| 9 | [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | Python | 280,734 | - | - |
-| 10 | [obra/superpowers](https://github.com/obra/superpowers) | Shell | 277,285 | - | - |
+| 4 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | Python | 395,182 | - | - |
+| 5 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | TypeScript | 387,536 | - | - |
+| 6 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | TypeScript | 365,355 | - | - |
+| 7 | [vinta/awesome-python](https://github.com/vinta/awesome-python) | Python | 315,942 | - | - |
+| 8 | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | - | 314,908 | - | - |
+| 9 | [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | Python | 280,736 | - | - |
+| 10 | [obra/superpowers](https://github.com/obra/superpowers) | Shell | 277,293 | - | - |
 
 ## 🌱 Spring Boot 최근 스타 상승 저장소
 
@@ -23,14 +23,14 @@
 
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
-| 1 | [spring-projects/spring-boot](https://github.com/spring-projects/spring-boot) | Java | 81,359 | - | - |
+| 1 | [spring-projects/spring-boot](https://github.com/spring-projects/spring-boot) | Java | 81,360 | - | - |
 | 2 | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | Java | 32,121 | - | - |
 | 3 | [apolloconfig/apollo](https://github.com/apolloconfig/apollo) | Java | 29,800 | - | - |
 | 4 | [jhipster/generator-jhipster](https://github.com/jhipster/generator-jhipster) | TypeScript | 22,444 | - | - |
 | 5 | [linlinjava/litemall](https://github.com/linlinjava/litemall) | Java | 20,337 | - | - |
 | 6 | [zxwk1998/vue-admin-better](https://github.com/zxwk1998/vue-admin-better) | Vue | 18,903 | - | - |
 | 7 | [codecentric/spring-boot-admin](https://github.com/codecentric/spring-boot-admin) | Java | 12,850 | - | - |
-| 8 | [apereo/cas](https://github.com/apereo/cas) | Java | 11,360 | - | - |
+| 8 | [apereo/cas](https://github.com/apereo/cas) | Java | 11,361 | - | - |
 | 9 | [pig-mesh/pig](https://github.com/pig-mesh/pig) | Java | 6,674 | - | - |
 | 10 | [jetlinks/jetlinks-community](https://github.com/jetlinks/jetlinks-community) | Java | 6,591 | - | - |
 
@@ -57,7 +57,9 @@
 
 <!-- AI-MD-CANDIDATES:START -->
 
-현재 3개 이상 저장소에서 반복된 미확정 후보가 없습니다.
+| 후보 규약 | AI 분류 | Tool 추정 | 상태 | 저장소 |
+|---|---|---|---|---:|
+| `SKILL.md` | 스킬 | Unknown | 불명 | 8 |
 
 <!-- AI-MD-CANDIDATES:END -->
 
