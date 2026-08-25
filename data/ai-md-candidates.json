@@ -1,0 +1,62 @@
+{
+  ".agents/notes/**/*.md": {
+    "classification": {
+      "classified_at": "2026-08-25",
+      "confidence": 0.85,
+      "kind": "unrelated",
+      "reason": "Development documentation note about a bug fix implementation in clipboard API fallback handling. Not a reusable skill, prompt, agent definition, or repo instruction.",
+      "status": "unknown",
+      "tool": "Unknown"
+    },
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "repositories": [
+      "anywhere-labs/dsh-desktop",
+      "deepseek-ai/deepseek-harness",
+      "zhu1090093659/dsh-web"
+    ],
+    "sample_path": ".agents/notes/implemented/bug-fix/2026-08-24-market-copy-fallback-status.zh.md",
+    "sample_repository": "zhu1090093659/dsh-web",
+    "sample_sha": "d0f79e755fd0ab5835163e9cbc29cdddc90c280d"
+  },
+  "CONTEXT.md": {
+    "classification": {
+      "classified_at": "2026-08-25",
+      "confidence": 0.9,
+      "kind": "repo_instruction",
+      "reason": "Repository-level documentation defining conventions, terminology, and organization for agent skills and triage; serves as contextual instructions rather than an executable skill, prompt, or agent definition.",
+      "status": "unknown",
+      "tool": "Unknown"
+    },
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "repositories": [
+      "anomalyco/opencode",
+      "guillermolg00/morphicons",
+      "mattpocock/skills",
+      "nexu-io/open-design",
+      "vinta/awesome-python"
+    ],
+    "sample_path": "CONTEXT.md",
+    "sample_repository": "mattpocock/skills",
+    "sample_sha": "76ebd23dbb8266dab9491425b39f3c4857fb4a52"
+  },
+  "SKILL.md": {
+    "classification": null,
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "repositories": [
+      "Leonxlnx/unlazy",
+      "ShawnPana/phone-harness",
+      "ZzzLc0405/photo-abstract-editorial",
+      "duty1g/x64dbg-mcp-server",
+      "garrytan/gstack",
+      "geeklee/srt-whiteboard-animation",
+      "oil-oil/oil-motion",
+      "s1dashu/ip-as-logo-skill"
+    ],
+    "sample_path": "SKILL.md",
+    "sample_repository": "ZzzLc0405/photo-abstract-editorial",
+    "sample_sha": "68b2e456d654cf78896d9d90acfbf06a9354fc7d"
+  }
+}

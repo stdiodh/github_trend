@@ -10,23 +10,138 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-github-trends
+  cancel-in-progress: false
+
 jobs:
-  update-trending:
+  collect:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Update GitHub trends
+      - name: Collect GitHub trends
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_trending.py
 
+      - name: Upload collected trends
+        uses: actions/upload-artifact@v7
+        with:
+          name: collected-trends
+          path: |
+            README.md
+            data/trending-history.json
+            data/spring-boot-history.json
+            data/ai-md-history.json
+            data/ai-md-candidates.json
+          if-no-files-found: error
+          retention-days: 1
+
+  classify:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      copilot-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Download collected trends
+        uses: actions/download-artifact@v8
+        with:
+          name: collected-trends
+          path: collected-trends
+
+      - name: Stage collected trends
+        run: |
+          cp collected-trends/README.md README.md
+          cp collected-trends/data/trending-history.json data/trending-history.json
+          cp collected-trends/data/spring-boot-history.json data/spring-boot-history.json
+          cp collected-trends/data/ai-md-history.json data/ai-md-history.json
+          cp collected-trends/data/ai-md-candidates.json data/ai-md-candidates.json
+
+      - name: Set up Node.js
+        id: setup-node
+        continue-on-error: true
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install GitHub Copilot CLI
+        id: install-copilot
+        if: steps.setup-node.outcome == 'success'
+        continue-on-error: true
+        run: npm install --global @github/copilot@1.0.80 --no-audit --no-fund
+
+      - name: Classify AI Markdown candidates
+        id: classify-candidates
+        if: steps.install-copilot.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_trending.py --classify-ai-candidates
+
+      - name: Restore collected trends after classification failure
+        if: steps.classify-candidates.outcome == 'failure'
+        run: |
+          cp collected-trends/README.md README.md
+          cp collected-trends/data/ai-md-candidates.json data/ai-md-candidates.json
+
+      - name: Report skipped classification
+        if: >-
+          steps.setup-node.outcome == 'failure' ||
+          steps.install-copilot.outcome == 'failure' ||
+          steps.classify-candidates.outcome == 'failure'
+        run: echo "::warning::AI candidate classification was skipped; preserving the collected core update."
+
+      - name: Upload final trends
+        uses: actions/upload-artifact@v7
+        with:
+          name: final-trends
+          path: |
+            README.md
+            data/trending-history.json
+            data/spring-boot-history.json
+            data/ai-md-history.json
+            data/ai-md-candidates.json
+          if-no-files-found: error
+          retention-days: 1
+
+  commit:
+    needs: classify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Download final trends
+        uses: actions/download-artifact@v8
+        with:
+          name: final-trends
+          path: final-trends
+
+      - name: Stage final trends
+        run: |
+          cp final-trends/README.md README.md
+          cp final-trends/data/trending-history.json data/trending-history.json
+          cp final-trends/data/spring-boot-history.json data/spring-boot-history.json
+          cp final-trends/data/ai-md-history.json data/ai-md-history.json
+          cp final-trends/data/ai-md-candidates.json data/ai-md-candidates.json
+
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet -- README.md data/trending-history.json data/spring-boot-history.json; then
+          if [ -z "$(git status --porcelain -- README.md data/trending-history.json data/spring-boot-history.json data/ai-md-history.json data/ai-md-candidates.json)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -37,6 +152,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/trending-history.json data/spring-boot-history.json
+          git add README.md data/trending-history.json data/spring-boot-history.json data/ai-md-history.json data/ai-md-candidates.json
           git commit -m "docs: update GitHub trends"
           git push
