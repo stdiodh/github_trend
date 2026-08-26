@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 
 API_ROOT = "https://api.github.com"
 API_VERSION = "2022-11-28"
+GITHUB_REPOSITORY_PATTERN = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
 START_MARKER = "<!-- GITHUB-TRENDING:START -->"
 END_MARKER = "<!-- GITHUB-TRENDING:END -->"
 AI_MARKDOWN_START_MARKER = "<!-- AI-MARKDOWN:START -->"
@@ -162,9 +163,9 @@ def parse_repository(item):
     except (KeyError, TypeError) as error:
         raise RuntimeError("GitHub API returned an invalid repository") from error
 
-    if not isinstance(full_name, str) or not re.fullmatch(
-        r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
-        full_name,
+    if (
+        not isinstance(full_name, str)
+        or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
     ):
         raise RuntimeError("GitHub API returned an invalid repository name")
     if type(stars) is not int or stars < 0:
@@ -303,9 +304,9 @@ def load_history(path):
         if parsed_day.isoformat() != day or not isinstance(repositories, dict):
             raise RuntimeError(f"Invalid history entry: {day}")
         for full_name, stars in repositories.items():
-            if not isinstance(full_name, str) or not re.fullmatch(
-                r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
-                full_name,
+            if (
+                not isinstance(full_name, str)
+                or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
             ):
                 raise RuntimeError(f"Invalid repository in history: {full_name}")
             if type(stars) is not int or stars < 0:
@@ -639,9 +640,9 @@ def load_ai_history(path):
         if parsed_day.isoformat() != day or not isinstance(repositories, dict):
             raise RuntimeError(f"Invalid AI Markdown history entry: {day}")
         for full_name, stars in repositories.items():
-            if not isinstance(full_name, str) or not re.fullmatch(
-                r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
-                full_name,
+            if (
+                not isinstance(full_name, str)
+                or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
             ):
                 raise RuntimeError(f"Invalid AI Markdown repository: {full_name}")
             if type(stars) is not int or stars < 0:
@@ -796,10 +797,7 @@ def load_ai_candidates(path):
             candidate["pushed_at"] = None
         if (
             not isinstance(full_name, str)
-            or not re.fullmatch(
-                r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
-                full_name,
-            )
+            or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
             or not isinstance(candidate, dict)
             or set(candidate) != required
         ):
