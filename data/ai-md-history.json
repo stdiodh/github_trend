@@ -574,5 +574,589 @@
     "zouyuxuan122/Deepseek-Harness-EAC": [
       "agent-skills"
     ]
+  },
+  "2026-08-26": {
+    "2dust/v2rayN": [],
+    "AIMixer/ComfyUI_MiniMaxH3_Director": [],
+    "AMAP-ML/LongHorizon-Harness": [
+      "claude-skills"
+    ],
+    "Accio-org/CommerceAgentBench": [],
+    "AdamPlatin123/awesome-dsh-plugins": [],
+    "Anduin2017/HowToCook": [],
+    "Anionex/agent-vision-toolkit": [
+      "gitlab-skills"
+    ],
+    "CYQawa/YunX": [],
+    "Chalarangelo/30-seconds-of-code": [
+      "copilot",
+      "copilot-prompts"
+    ],
+    "Comfy-Org/ComfyUI": [
+      "agents"
+    ],
+    "CopilotKit/OpenBot": [
+      "claude-skills"
+    ],
+    "DannyMac180/sol-advisor": [],
+    "FareedKhan-dev/kimi-k3-in-c": [],
+    "Graphify-Labs/graphify": [
+      "agents"
+    ],
+    "Hisn00w/ASu-skills": [
+      "agents",
+      "claude",
+      "gitlab-skills"
+    ],
+    "JuliusBrussee/caveman": [
+      "agents",
+      "claude",
+      "gemini",
+      "gitlab-skills"
+    ],
+    "KKKKhazix/human-writing": [],
+    "LaoFeng-mouse/flyingmouse-format": [
+      "agents"
+    ],
+    "Leonxlnx/unlazy": [],
+    "MatrAIx-ai/MatrAIx-Persona-8B": [
+      "copilot-skills"
+    ],
+    "MengTo/kage": [],
+    "MengTo/threeui": [],
+    "MeteorNOX/DeepSeek-Balance-Whale-Widget": [],
+    "MiniMax-AI/MiniMax-H3": [
+      "agent-skills",
+      "claude-skills",
+      "gitlab-skills"
+    ],
+    "MoonshotAI/Kimi-K3": [],
+    "NanmiCoder/dsh-agent-teams": [
+      "gitlab-skills"
+    ],
+    "NousResearch/hermes-agent": [
+      "agents"
+    ],
+    "OpenMouse-Project/openmouse": [],
+    "QwenAudio/qwen-audio-agent": [],
+    "QwenLM/Qwen-MM-Plugins": [
+      "agents",
+      "claude"
+    ],
+    "SMNETSTUDIO/WeChat-AI": [],
+    "SaladDay/pi-from-scratch": [],
+    "ShawnPana/phone-harness": [],
+    "Shubhamsaboo/awesome-llm-apps": [
+      "agents",
+      "claude"
+    ],
+    "Significant-Gravitas/AutoGPT": [
+      "agents",
+      "claude",
+      "claude-skills",
+      "copilot"
+    ],
+    "Small-tailqwq/dsh-deep-whale": [
+      "agent-skills",
+      "agents"
+    ],
+    "Snailclimb/JavaGuide": [],
+    "Tencent-Hunyuan/Hunyuan3D-WorldClaw": [],
+    "TheAlgorithms/Python": [],
+    "Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report": [],
+    "ZSvirt/zsvirt": [],
+    "Zeejay0/gathered-scenes-zine-skill": [
+      "gitlab-skills"
+    ],
+    "ZzzLc0405/photo-abstract-editorial": [],
+    "affaan-m/ECC": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "claude-commands",
+      "claude-rules",
+      "copilot",
+      "copilot-prompts",
+      "cursor-skills",
+      "gemini",
+      "gitlab-skills",
+      "kiro",
+      "opencode-commands",
+      "qwen"
+    ],
+    "alchaincyf/deepseek-harness-orange-book": [],
+    "angular/angular": [
+      "agents",
+      "gemini"
+    ],
+    "anomalyco/opencode": [
+      "agents",
+      "opencode-skills"
+    ],
+    "ant-design/ant-design": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "copilot"
+    ],
+    "anthropics/claude-code": [
+      "claude-commands"
+    ],
+    "anthropics/skills": [
+      "gitlab-skills"
+    ],
+    "antirez/h3.c": [],
+    "anywhere-labs/dsh-desktop": [
+      "agents",
+      "claude"
+    ],
+    "arvids-unavailable/openGym": [],
+    "avelino/awesome-go": [
+      "agents",
+      "copilot",
+      "cursor-legacy"
+    ],
+    "awesome-dsh-plugin/awesome-dsh-plugin": [
+      "agent-skills"
+    ],
+    "awesome-selfhosted/awesome-selfhosted": [],
+    "axios/axios": [
+      "agents",
+      "claude",
+      "copilot"
+    ],
+    "b-nnett/grok-bot-0.18-reconstructed": [],
+    "bashalarmistalt/decimen-optical-transfer": [],
+    "ben-z/findphone": [],
+    "bowenliang123/dsh-context": [
+      "agents"
+    ],
+    "browser-use/browser-use": [
+      "agents",
+      "claude",
+      "gitlab-skills"
+    ],
+    "ccch1mneyyy/dsh-TUI": [
+      "agents",
+      "claude",
+      "gitlab-skills"
+    ],
+    "chen-006/gpt56_api_detector": [],
+    "cinderline/northcinder": [],
+    "clash-verge-rev/clash-verge-rev": [
+      "copilot-agents"
+    ],
+    "cordiverse/paper": [],
+    "dataelement/dsh-desktop": [],
+    "deepseek-ai/deepseek-harness": [
+      "agent-skills",
+      "agents",
+      "claude"
+    ],
+    "denoland/deno": [
+      "claude",
+      "claude-skills",
+      "copilot"
+    ],
+    "dmmulroy/anti-slop": [
+      "agents",
+      "gitlab-skills"
+    ],
+    "dsh-market/dsh-market": [],
+    "dsh-tauri-desk/deepseek-harness-desktop": [
+      "agents"
+    ],
+    "duty1g/x64dbg-mcp-server": [],
+    "earendil-works/pi": [
+      "agents"
+    ],
+    "egoist/waku": [
+      "agents",
+      "claude"
+    ],
+    "elayadesign/ai-design-skills": [
+      "gitlab-skills"
+    ],
+    "electron/electron": [
+      "claude",
+      "claude-skills",
+      "copilot"
+    ],
+    "elie222/rakazo": [
+      "agent-skills",
+      "agents",
+      "claude"
+    ],
+    "eternityspring/shuohao-skills": [
+      "claude",
+      "gitlab-skills"
+    ],
+    "excalidraw/excalidraw": [
+      "claude",
+      "copilot"
+    ],
+    "f/prompts.chat": [
+      "agents",
+      "claude",
+      "windsurf-skills"
+    ],
+    "farion1231/cc-switch": [],
+    "fastapi/fastapi": [
+      "agent-skills"
+    ],
+    "firecrawl/anydoc": [
+      "gitlab-skills"
+    ],
+    "firecrawl/firecrawl": [
+      "agents",
+      "claude",
+      "gitlab-skills"
+    ],
+    "flutter/flutter": [
+      "agent-skills",
+      "agents",
+      "firebase-style",
+      "gemini"
+    ],
+    "freeCodeCamp/freeCodeCamp": [
+      "copilot",
+      "copilot-path"
+    ],
+    "fuxicodex/Fuxi": [],
+    "garrytan/gstack": [
+      "agents",
+      "claude"
+    ],
+    "geeklee/srt-whiteboard-animation": [],
+    "genspark-ai/genoffice": [
+      "claude"
+    ],
+    "ggml-org/llama.cpp": [
+      "agents",
+      "claude",
+      "gitlab-skills"
+    ],
+    "github/gitignore": [],
+    "github/spec-kit": [
+      "agents",
+      "copilot-skills"
+    ],
+    "godotengine/godot": [],
+    "golang/go": [],
+    "google-gemini/gemini-cli": [
+      "gemini"
+    ],
+    "google-gemma/gemma-translator": [],
+    "guillaumemeyer/watermarks-remover": [
+      "gitlab-skills"
+    ],
+    "guillermolg00/morphicons": [
+      "agents",
+      "claude"
+    ],
+    "gvzdv/claudish-to-english": [],
+    "hacksider/Deep-Live-Cam": [],
+    "harry0703/MangoDisk": [
+      "agents"
+    ],
+    "harry0703/MoneyPrinterTurbo": [],
+    "huggingface/transformers": [
+      "agents",
+      "claude",
+      "copilot"
+    ],
+    "iluwatar/java-design-patterns": [
+      "agents"
+    ],
+    "immich-app/immich": [],
+    "imsai-sh/zhuzhiliao": [
+      "claude"
+    ],
+    "iptv-org/iptv": [],
+    "jaywcjlove/awesome-mac": [
+      "codex-skills"
+    ],
+    "jd-opensource/JoyAI-Video-Edit": [],
+    "kubernetes/kubernetes": [
+      "agents"
+    ],
+    "langchain-ai/langchain": [
+      "agents",
+      "claude"
+    ],
+    "langflow-ai/langflow": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "cursor"
+    ],
+    "langgenius/dify": [
+      "agent-skills",
+      "agents",
+      "claude"
+    ],
+    "lexmount/moli": [
+      "agents",
+      "gitlab-skills"
+    ],
+    "louislam/uptime-kuma": [
+      "agents",
+      "claude",
+      "copilot"
+    ],
+    "magicrew/doc7": [
+      "agents"
+    ],
+    "mattpocock/skills": [
+      "agents",
+      "claude"
+    ],
+    "microsoft/PowerToys": [
+      "agents",
+      "claude",
+      "copilot",
+      "copilot-agents",
+      "copilot-path",
+      "copilot-prompts",
+      "copilot-skills"
+    ],
+    "microsoft/generative-ai-for-beginners": [
+      "agents",
+      "copilot-skills"
+    ],
+    "microsoft/markitdown": [],
+    "microsoft/playwright": [
+      "claude",
+      "claude-skills",
+      "copilot"
+    ],
+    "microsoft/skill-recorder": [
+      "copilot"
+    ],
+    "microsoft/terminal": [],
+    "microsoft/vscode": [
+      "agent-skills",
+      "agents",
+      "copilot",
+      "copilot-agents",
+      "copilot-path",
+      "copilot-prompts",
+      "copilot-skills"
+    ],
+    "milind-soni/OpenMausBot": [
+      "agents",
+      "claude",
+      "claude-skills",
+      "gitlab-skills"
+    ],
+    "mrdoob/three.js": [],
+    "mui/material-ui": [
+      "agents",
+      "claude",
+      "gitlab-skills"
+    ],
+    "n8n-io/n8n": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "opencode-skills"
+    ],
+    "neovim/neovim": [
+      "agents"
+    ],
+    "nextlevelbuilder/ui-ux-pro-max-skill": [
+      "claude",
+      "claude-agents",
+      "claude-skills"
+    ],
+    "nexu-io/open-design": [
+      "agents",
+      "claude",
+      "claude-commands",
+      "claude-skills",
+      "gitlab-skills"
+    ],
+    "nfzerox/VirtualMacOniPad": [],
+    "nilbuild/developer-roadmap": [],
+    "nodejs/node": [
+      "agents",
+      "gemini"
+    ],
+    "obra/superpowers": [
+      "agents",
+      "claude",
+      "gemini",
+      "gitlab-skills"
+    ],
+    "ohmyzsh/ohmyzsh": [],
+    "oil-oil/oil-motion": [],
+    "ollama/ollama": [
+      "agents",
+      "claude"
+    ],
+    "omdsh-dev/DSH-better-sidebar": [
+      "agents"
+    ],
+    "open-webui/open-webui": [],
+    "openTrinity/mycontext": [
+      "agents",
+      "claude"
+    ],
+    "openai/codex": [
+      "agents",
+      "codex-skills"
+    ],
+    "openclaw/openclaw": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "copilot-path",
+      "gitlab-skills"
+    ],
+    "orbien-org/orbien": [],
+    "oven-sh/bun": [
+      "agents",
+      "claude",
+      "claude-commands",
+      "claude-skills"
+    ],
+    "papers-we-love/papers-we-love": [],
+    "pathwaycom/arc-task-gen": [],
+    "petergyang/human-review": [],
+    "practical-tutorials/project-based-learning": [],
+    "public-apis/public-apis": [],
+    "puppeteer/puppeteer": [
+      "agent-skills"
+    ],
+    "pytorch/pytorch": [
+      "agents",
+      "claude",
+      "claude-skills",
+      "copilot"
+    ],
+    "rasbt/LLMs-from-scratch": [],
+    "react/react": [
+      "claude",
+      "claude-agents",
+      "claude-skills"
+    ],
+    "react/react-native": [
+      "agents",
+      "claude"
+    ],
+    "ripienaar/free-for-dev": [
+      "agents",
+      "claude"
+    ],
+    "ruanyf/weekly": [],
+    "rustdesk/rustdesk": [
+      "agents",
+      "claude",
+      "gemini"
+    ],
+    "ruvnet/RuView": [
+      "agents",
+      "claude",
+      "claude-commands",
+      "claude-skills"
+    ],
+    "s1dashu/ip-as-logo-skill": [],
+    "shadcn-ui/ui": [
+      "agents",
+      "cursor",
+      "gitlab-skills"
+    ],
+    "sindresorhus/awesome": [],
+    "sophiamyang/finger-frame-effect-ai": [],
+    "sqliteai/warp": [
+      "claude"
+    ],
+    "storybookjs/storybook": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "claude-skills",
+      "cursor",
+      "cursor-legacy"
+    ],
+    "supabase/supabase": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "claude-skills",
+      "copilot",
+      "copilot-path"
+    ],
+    "talivia-group/talivia": [],
+    "tauri-apps/tauri": [],
+    "tensorflow/tensorflow": [
+      "agents",
+      "firebase-style",
+      "gemini"
+    ],
+    "thebuggeddev/anatomy": [],
+    "thedotmack/claude-mem": [
+      "claude",
+      "claude-commands",
+      "copilot",
+      "warp-legacy",
+      "windsurf-legacy"
+    ],
+    "tobi/walgit": [
+      "agents"
+    ],
+    "trycompai/crm": [
+      "agent-skills",
+      "agents",
+      "claude"
+    ],
+    "twbs/bootstrap": [],
+    "vercel-labs/eve-software-factory-template": [
+      "agents",
+      "claude"
+    ],
+    "vercel-labs/fx": [
+      "agents"
+    ],
+    "vercel/next.js": [
+      "agent-skills",
+      "agents",
+      "claude",
+      "cursor-commands",
+      "gitlab-skills"
+    ],
+    "vinta/awesome-python": [
+      "agents",
+      "claude",
+      "claude-skills"
+    ],
+    "vvxw/deploy-vercel": [],
+    "wang2122/sprix-sage-router": [],
+    "wangeai/K3Flight": [],
+    "xdash/FDE-the-Guidance-Book-of-Forward-Deployed-Engineer": [],
+    "xiaobright/dsh-anchored-standard": [],
+    "xoreaxeaxeax/asm-hall-of-shame": [],
+    "xoreaxeaxeax/skitter-creek-bath-salts": [],
+    "yc-software/qm": [
+      "agents",
+      "claude",
+      "claude-skills",
+      "codex-skills"
+    ],
+    "yetone/cumora": [],
+    "yjh051108/dsh-routing-suite": [
+      "agents"
+    ],
+    "ysr666/dsh-vision-router": [],
+    "yt-dlp/yt-dlp": [],
+    "zenbu-labs/terminal-code": [],
+    "zhu1090093659/dsh-web": [
+      "agent-skills",
+      "agents",
+      "claude"
+    ],
+    "zouyuxuan122/Deepseek-Harness-EAC": [
+      "agent-skills"
+    ]
   }
 }

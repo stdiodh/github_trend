@@ -2,54 +2,54 @@
 
 ## 🔥 최근 스타 상승 저장소
 
-> 2026-08-25 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.
+> 2026-08-26 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.
 
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
-| 1 | [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | - | 499,743 | - | - |
-| 2 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | Python | 470,110 | - | - |
-| 3 | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | TypeScript | 454,563 | - | - |
-| 4 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | Python | 395,182 | - | - |
-| 5 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | TypeScript | 387,536 | - | - |
-| 6 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | TypeScript | 365,355 | - | - |
-| 7 | [vinta/awesome-python](https://github.com/vinta/awesome-python) | Python | 315,942 | - | - |
-| 8 | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | - | 314,908 | - | - |
-| 9 | [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | Python | 280,736 | - | - |
-| 10 | [obra/superpowers](https://github.com/obra/superpowers) | Shell | 277,293 | - | - |
+| 1 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | TypeScript | 195,279 | +1,470 | - |
+| 2 | [arvids-unavailable/openGym](https://github.com/arvids-unavailable/openGym) | JavaScript | 5,387 | +945 | - |
+| 3 | [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 236,721 | +731 | - |
+| 4 | [openai/codex](https://github.com/openai/codex) | Rust | 118,106 | +408 | - |
+| 5 | [pathwaycom/arc-task-gen](https://github.com/pathwaycom/arc-task-gen) | Python | 6,055 | +374 | - |
+| 6 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | Python | 470,467 | +357 | - |
+| 7 | [b-nnett/grok-bot-0.18-reconstructed](https://github.com/b-nnett/grok-bot-0.18-reconstructed) | TypeScript | 2,548 | +308 | - |
+| 8 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Python | 236,419 | +304 | - |
+| 9 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | TypeScript | 172,346 | +288 | - |
+| 10 | [obra/superpowers](https://github.com/obra/superpowers) | Shell | 277,576 | +283 | - |
 
 ## 🌱 Spring Boot 최근 스타 상승 저장소
 
-> 2026-08-25 09:00 KST 기준 · `topic:spring-boot` 저장소의 자체 수집한 스타 변화량입니다.
+> 2026-08-26 09:00 KST 기준 · `topic:spring-boot` 저장소의 자체 수집한 스타 변화량입니다.
 
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
-| 1 | [spring-projects/spring-boot](https://github.com/spring-projects/spring-boot) | Java | 81,360 | - | - |
-| 2 | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | Java | 32,121 | - | - |
-| 3 | [apolloconfig/apollo](https://github.com/apolloconfig/apollo) | Java | 29,800 | - | - |
-| 4 | [jhipster/generator-jhipster](https://github.com/jhipster/generator-jhipster) | TypeScript | 22,444 | - | - |
-| 5 | [linlinjava/litemall](https://github.com/linlinjava/litemall) | Java | 20,337 | - | - |
-| 6 | [zxwk1998/vue-admin-better](https://github.com/zxwk1998/vue-admin-better) | Vue | 18,903 | - | - |
-| 7 | [codecentric/spring-boot-admin](https://github.com/codecentric/spring-boot-admin) | Java | 12,850 | - | - |
-| 8 | [apereo/cas](https://github.com/apereo/cas) | Java | 11,361 | - | - |
-| 9 | [pig-mesh/pig](https://github.com/pig-mesh/pig) | Java | 6,674 | - | - |
-| 10 | [jetlinks/jetlinks-community](https://github.com/jetlinks/jetlinks-community) | Java | 6,591 | - | - |
+| 1 | [grimmory-tools/grimmory](https://github.com/grimmory-tools/grimmory) | Java | 4,061 | +15 | - |
+| 2 | [888newstep/ai-agent-platform](https://github.com/888newstep/ai-agent-platform) | Java | 38 | +5 | - |
+| 3 | [spring-projects/spring-boot](https://github.com/spring-projects/spring-boot) | Java | 81,364 | +4 | - |
+| 4 | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | Java | 32,125 | +4 | - |
+| 5 | [booklore-app/booklore](https://github.com/booklore-app/booklore) | Java | 972 | +3 | - |
+| 6 | [818000/bus](https://github.com/818000/bus) | Java | 755 | +3 | - |
+| 7 | [zxwk1998/vue-admin-better](https://github.com/zxwk1998/vue-admin-better) | Vue | 18,905 | +2 | - |
+| 8 | [apache/camel](https://github.com/apache/camel) | Java | 6,299 | +2 | - |
+| 9 | [jdubois/boot-ui](https://github.com/jdubois/boot-ui) | Java | 273 | +2 | - |
+| 10 | [jhipster/generator-jhipster](https://github.com/jhipster/generator-jhipster) | TypeScript | 22,445 | +1 | - |
 
 ## 🤖 AI 지침 파일 경로 채택 추세
 
-> 2026-08-25 09:00 KST 기준 · 정상 스캔한 활성 저장소 196개에서 공식 파일 경로 존재 여부를 자체 수집한 결과입니다.
+> 2026-08-26 09:00 KST 기준 · 정상 스캔한 활성 저장소 196개에서 공식 파일 경로 존재 여부를 자체 수집한 결과입니다.
 
 | 순위 | 파일 경로 규약 | Tool | 상태 | 저장소 | 채택률 | 24시간 신규 | 7일 신규 |
 |---:|---|---|---|---:|---:|---:|---:|
-| 1 | `AGENTS.md` | Codex·Copilot 등 | 현재 | 77 | 39.3% | - | - |
-| 2 | `CLAUDE.md` | Claude Code | 현재 | 58 | 29.6% | - | - |
-| 3 | `skills/*/SKILL.md` | Agent Skills·GitLab Duo | 현재 | 25 | 12.8% | - | - |
-| 4 | `**/.agents/skills/**/SKILL.md` | Codex·Copilot·Cursor | 현재 | 20 | 10.2% | - | - |
-| 5 | `**/.github/copilot-instructions.md` | Copilot | 현재 | 18 | 9.2% | - | - |
-| 6 | `**/.claude/skills/**/SKILL.md` | Claude Code·Copilot·Cursor | 현재 | 17 | 8.7% | - | - |
-| 7 | `GEMINI.md` | Gemini | 현재 | 9 | 4.6% | - | - |
-| 8 | `.claude/commands/**/*.md` | Claude Code | 레거시 | 6 | 3.1% | - | - |
-| 9 | `**/.github/instructions/**/*.instructions.md` | Copilot | 현재 | 5 | 2.6% | - | - |
-| 10 | `**/.github/skills/*/SKILL.md` | Copilot | 현재 | 5 | 2.6% | - | - |
+| 1 | `AGENTS.md` | Codex·Copilot 등 | 현재 | 78 | 39.8% | +0 | - |
+| 2 | `CLAUDE.md` | Claude Code | 현재 | 59 | 30.1% | +0 | - |
+| 3 | `skills/*/SKILL.md` | Agent Skills·GitLab Duo | 현재 | 25 | 12.8% | +0 | - |
+| 4 | `**/.agents/skills/**/SKILL.md` | Codex·Copilot·Cursor | 현재 | 21 | 10.7% | +0 | - |
+| 5 | `**/.github/copilot-instructions.md` | Copilot | 현재 | 19 | 9.7% | +0 | - |
+| 6 | `**/.claude/skills/**/SKILL.md` | Claude Code·Copilot·Cursor | 현재 | 18 | 9.2% | +0 | - |
+| 7 | `GEMINI.md` | Gemini | 현재 | 9 | 4.6% | +0 | - |
+| 8 | `.claude/commands/**/*.md` | Claude Code | 레거시 | 6 | 3.1% | +0 | - |
+| 9 | `**/.github/instructions/**/*.instructions.md` | Copilot | 현재 | 5 | 2.6% | +0 | - |
+| 10 | `**/.github/skills/*/SKILL.md` | Copilot | 현재 | 5 | 2.6% | +0 | - |
 
 ### 🧭 AI가 찾은 신흥 파일 후보
 
