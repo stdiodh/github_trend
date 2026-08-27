@@ -1,19 +1,26 @@
 {
   "2026-08-27": {
-    "Graphify-Labs/graphify": 111145,
-    "VoltAgent/awesome-design-md": 110718,
-    "affaan-m/ECC": 243567,
-    "agentsmd/agents.md": 23927,
-    "anthropics/skills": 171895,
+    "Anbeeld/AGENTS.md": 154,
+    "Graphify-Labs/graphify": 111162,
+    "SnailSploit/Claude-Red": 2977,
+    "VoltAgent/awesome-design-md": 110725,
+    "addyosmani/agent-skills": 90110,
+    "affaan-m/ECC": 243575,
+    "agentsmd/agents.md": 23929,
+    "anthropics/skills": 171909,
+    "calesthio/OpenMontage": 51550,
     "fecarrico/A11Y.md": 389,
-    "google-labs-code/design.md": 27530,
-    "jakubkrehel/skills": 4488,
+    "google-labs-code/design.md": 27531,
+    "jakubkrehel/skills": 4490,
     "jbarbier/CLAUDE.md": 486,
+    "madhvantyagi/SOUL.md": 355,
     "mindmuxai/brain.md": 509,
-    "msitarzewski/agency-agents": 148283,
-    "multica-ai/andrej-karpathy-skills": 207788,
-    "nextlevelbuilder/ui-ux-pro-max-skill": 121478,
+    "msitarzewski/agency-agents": 148297,
+    "multica-ai/andrej-karpathy-skills": 207808,
+    "nextlevelbuilder/ui-ux-pro-max-skill": 121499,
     "originalankur/GenerateAgents.md": 254,
-    "s1dashu/ip-as-logo-skill": 4396
+    "s1dashu/ip-as-logo-skill": 4400,
+    "yibie/SPEC-AGENTS.md": 125,
+    "zeke/agents.md": 151
   }
 }

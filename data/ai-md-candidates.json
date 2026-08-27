@@ -49,7 +49,15 @@
     "stars": 2866
   },
   "Anbeeld/AGENTS.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "AGENTS.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "instruction",
+      "label": "AGENTS.md",
+      "reason": "Reusable global instruction set for AI coding agents: scope, evidence, boundaries, verification, and workflow patterns."
+    },
     "default_branch": "main",
     "description": "Global instructions for coding agents: evidence, parallelization, validation, all in one AGENTS.md / CLAUDE.md",
     "first_seen": "2026-08-27",
@@ -105,6 +113,84 @@
     "readme_sha": "79877614f3b37e133d7fcd0f1cdb39c88039c65c",
     "stars": 3460
   },
+  "DenisSergeevitch/agents-best-practices": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "SKILL.md",
+      "references/agent-legibility-feedback-loops.md",
+      "references/agentic-loop.md",
+      "references/coding-agents.md",
+      "references/mvp-agent-blueprint.md",
+      "references/prompt-caching-and-cost.md",
+      "references/skills-and-connectors.md",
+      "references/system-prompts-instructions.md",
+      "references/architecture.md",
+      "references/checklists.md",
+      "references/context-memory-compaction.md",
+      "references/coverage-audit.md",
+      "references/environment-adaptive-tools.md",
+      "references/evals.md",
+      "references/planning-and-goals.md",
+      "references/provider-api-patterns.md",
+      "references/security-observability.md",
+      "references/self-refining-recursive-harnesses.md",
+      "references/source-links.md",
+      "references/speculative-tool-execution.md",
+      "references/tools-and-permissions.md",
+      "references/workflow-orchestration.md"
+    ],
+    "pushed_at": "2026-08-26T16:46:59Z",
+    "readme_path": "README.md",
+    "readme_sha": "dc3f3782a71e5036d8a07ccd38e0b16cdd7c0eef",
+    "stars": 2243
+  },
+  "FrancyJGLisboa/agent-skill-creator": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Build tested agent skills and govern their lifecycle through a user-defined marketplace: evidence, discovery, updates, rollback, quarantine, and 17-platform distribution.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "SKILL.md",
+      "references/agentdb-integration.md",
+      "references/multi-agent-guide.md",
+      "references/skill-audit.md",
+      "references/skill-graph.md",
+      ".github/ISSUE_TEMPLATE/skill_request.md",
+      "CONTRIBUTOR_ASSIGNMENT.md",
+      "COPYRIGHT.md",
+      "GATES.md",
+      "LAUNCH.md",
+      "LEARNINGS.md",
+      "PLAN.md",
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      "assets/DEMO.md",
+      "gates/leaf-1.1.1.md",
+      "gates/leaf-1.2.1.md",
+      "gates/leaf-1.3.1.md",
+      "gates/leaf-1.4.1.md",
+      "gates/leaf-1.5.1.md",
+      "gates/node-1.1.md",
+      "gates/node-1.2.md",
+      "gates/node-1.3.md",
+      "gates/node-1.4.md",
+      "gates/node-1.5.md",
+      "references/architecture-guide.md",
+      "references/claude-artifact-format.md",
+      "references/cross-platform-guide.md",
+      "references/discovery-metadata.md",
+      "references/distribution-guide.md"
+    ],
+    "pushed_at": "2026-08-26T18:42:11Z",
+    "readme_path": "README.md",
+    "readme_sha": "c05285d55bdddf902413ac96920b8ec3bf86c7f0",
+    "stars": 2337
+  },
   "Graphify-Labs/graphify": {
     "classification": {
       "artifact_path": "graphify/skill-agents.md",
@@ -154,7 +240,7 @@
     "pushed_at": "2026-08-25T17:43:30Z",
     "readme_path": "README.md",
     "readme_sha": "0c14d207c9d6faf72a22c7c0b86c9d024460c2a7",
-    "stars": 111145
+    "stars": 111162
   },
   "JimLiu/baoyu-design": {
     "classification": null,
@@ -197,10 +283,18 @@
     "pushed_at": "2026-07-30T01:41:39Z",
     "readme_path": "README.md",
     "readme_sha": "9c94ea3c3fbc43c69f297c23f12cbaecce37ac90",
-    "stars": 3612
+    "stars": 3614
   },
   "JuliusBrussee/caveman": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "agents/cavecrew-builder.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.85,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "cavecrew-builder.md",
+      "reason": "Reusable caveman sub-agent profile specification defining bounded-scope agent behavior, workflow, and output format for surgical code edits."
+    },
     "default_branch": "main",
     "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
     "first_seen": "2026-08-27",
@@ -240,7 +334,7 @@
     "pushed_at": "2026-08-24T23:31:25Z",
     "readme_path": "README.md",
     "readme_sha": "1fae7e9c6d7eb5127a92d4e8297bc7cef6098617",
-    "stars": 101251
+    "stars": 101257
   },
   "K-Dense-AI/scientific-agent-skills": {
     "classification": null,
@@ -283,7 +377,7 @@
     "pushed_at": "2026-08-24T09:22:55Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 34846
+    "stars": 34869
   },
   "KKKKhazix/human-writing": {
     "classification": null,
@@ -302,7 +396,7 @@
     "pushed_at": "2026-08-11T15:07:45Z",
     "readme_path": "README.md",
     "readme_sha": "b1e47207c5f86e1a3e3948f8e6cd176c4d3dc385",
-    "stars": 3146
+    "stars": 3152
   },
   "KKKKhazix/khazix-skills": {
     "classification": null,
@@ -334,7 +428,7 @@
     "pushed_at": "2026-08-16T08:49:13Z",
     "readme_path": "README.en.md",
     "readme_sha": "5f2798f85aeb7942235ed2a7320d34e9f58d8733",
-    "stars": 20108
+    "stars": 20111
   },
   "Leonxlnx/unlazy": {
     "classification": null,
@@ -358,7 +452,7 @@
     "pushed_at": "2026-08-24T16:46:40Z",
     "readme_path": "README.md",
     "readme_sha": "e05b5d1bf6478a7fa53ec6cd5f1f644a4c1e2dd3",
-    "stars": 2581
+    "stars": 2583
   },
   "MengTo/Skills": {
     "classification": null,
@@ -401,7 +495,7 @@
     "pushed_at": "2026-08-18T06:04:32Z",
     "readme_path": "README.md",
     "readme_sha": "5be5973aa26017e361aa3df4a15113ac2e3372ec",
-    "stars": 5484
+    "stars": 5488
   },
   "MrLesk/Backlog.md": {
     "classification": {
@@ -467,7 +561,7 @@
     "pushed_at": "2026-08-26T22:26:20Z",
     "readme_path": "README.md",
     "readme_sha": "a3af76b51ddf9958fc345afc5ea31d42cdd9838d",
-    "stars": 15016
+    "stars": 15017
   },
   "NVIDIA/skills": {
     "classification": null,
@@ -512,6 +606,68 @@
     "readme_sha": "b74357d3f67eec11df02769dde5823af6eafd47d",
     "stars": 3113
   },
+  "NarratorAI-Studio/narrator-ai-cli-skill": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "AI 解说大师 — Agent skill；封装 narrator-ai-cli 供 Claude/Codex 等工具调用",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "SKILL.md",
+      "README_CN.md",
+      "references/magic-video.md",
+      "references/operations.md",
+      "references/resources.md",
+      "references/workflows.md"
+    ],
+    "pushed_at": "2026-07-05T14:10:21Z",
+    "readme_path": "README.md",
+    "readme_sha": "c3901545dcb1a8650713f01908bf99ed69c28493",
+    "stars": 2355
+  },
+  "Owl-Listener/designer-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Designer Skills Collection: agentic skills, commands, and plugins for design — from research to systems, UI, interaction, and delivery.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "SKILL_TEMPLATE.md",
+      ".github/ISSUE_TEMPLATE/new-skill-or-command.md",
+      "design-ops/commands/handoff.md",
+      "design-ops/commands/plan-sprint.md",
+      "design-ops/commands/setup-workflow.md",
+      "design-research/commands/discover.md",
+      "design-research/commands/interview.md",
+      "design-research/commands/synthesize.md",
+      "design-research/commands/test-plan.md",
+      "design-systems/commands/audit-system.md",
+      "design-systems/commands/create-component.md",
+      "design-systems/commands/tokenize.md",
+      "designer-toolkit/commands/build-presentation.md",
+      "designer-toolkit/commands/write-case-study.md",
+      "designer-toolkit/commands/write-rationale.md",
+      "interaction-design/commands/design-form.md",
+      "interaction-design/commands/design-interaction.md",
+      "interaction-design/commands/design-onboarding.md",
+      "interaction-design/commands/error-flow.md",
+      "interaction-design/commands/map-states.md",
+      "ui-design/commands/color-palette.md",
+      "ui-design/commands/design-screen.md",
+      "ui-design/commands/platform-audit.md",
+      "ui-design/commands/responsive-audit.md",
+      "ui-design/commands/type-system.md",
+      ".gemini/extensions/design-ops/GEMINI.md",
+      ".gemini/extensions/design-research/GEMINI.md",
+      ".gemini/extensions/design-systems/GEMINI.md",
+      ".gemini/extensions/designer-toolkit/GEMINI.md",
+      ".gemini/extensions/interaction-design/GEMINI.md"
+    ],
+    "pushed_at": "2026-08-08T16:02:37Z",
+    "readme_path": "README.md",
+    "readme_sha": "98574107a868348190ee1646b01b8378a224887a",
+    "stars": 2335
+  },
   "Piebald-AI/claude-code-system-prompts": {
     "classification": null,
     "default_branch": "main",
@@ -553,7 +709,22 @@
     "pushed_at": "2026-08-26T01:39:33Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 12465
+    "stars": 12466
+  },
+  "Piebald-AI/tweakcc": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Customize Claude Code's system prompts, create custom toolsets, input pattern highlighters, themes/thinking verbs/spinners, customize input box & user message styling, support AGENTS.md, unlock private/unreleased features, and much more.  Supports both native/npm installs on all platforms.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      ".claude/skills/patch-creation/SKILL.md"
+    ],
+    "pushed_at": "2026-08-26T14:36:10Z",
+    "readme_path": null,
+    "readme_sha": null,
+    "stars": 2465
   },
   "RKiding/Awesome-finance-skills": {
     "classification": null,
@@ -625,10 +796,18 @@
     "pushed_at": "2026-08-22T04:01:54Z",
     "readme_path": "README.md",
     "readme_sha": "bc5ef9a2c0df4d651c026e5749352a589a585b22",
-    "stars": 134633
+    "stars": 134640
   },
   "SnailSploit/Claude-Red": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "Skills/ai/offensive-ai-security/SKILL.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.92,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "SKILL.md",
+      "reason": "A structured SKILL.md explicitly designed to prime Claude with an AI security offensive checklist — a reusable instruction/skill artifact meant for an AI assistant environment."
+    },
     "default_branch": "main",
     "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
     "first_seen": "2026-08-27",
@@ -719,10 +898,18 @@
     "pushed_at": "2026-07-31T12:32:42Z",
     "readme_path": "README.md",
     "readme_sha": "3e989b4971ae2692190ae25119e7f8e0d63a558e",
-    "stars": 110718
+    "stars": 110725
   },
   "addyosmani/agent-skills": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "agents/code-reviewer.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.92,
+      "content_checked": true,
+      "kind": "prompt",
+      "label": "code-reviewer.md",
+      "reason": "Defines a reusable 'Senior Code Reviewer' persona with a review framework, output template, rules, and invocation guidance — clearly a reusable prompt/instruction for AI coding agents."
+    },
     "default_branch": "main",
     "description": "Production-grade engineering skills for AI coding agents.",
     "first_seen": "2026-08-27",
@@ -762,7 +949,7 @@
     "pushed_at": "2026-08-21T18:15:04Z",
     "readme_path": "README.md",
     "readme_sha": "f31b37f7fc881e76cf9ba9cedd74efad27d4d255",
-    "stars": 90096
+    "stars": 90110
   },
   "addyosmani/web-quality-skills": {
     "classification": null,
@@ -842,7 +1029,7 @@
     "pushed_at": "2026-08-25T21:27:27Z",
     "readme_path": "README.zh-CN.md",
     "readme_sha": "7081f46b23a23d8697809d578b32ea710a31dad3",
-    "stars": 243567
+    "stars": 243575
   },
   "ageerle/ruoyi-ai": {
     "classification": null,
@@ -907,7 +1094,7 @@
     "pushed_at": "2026-08-25T16:41:55Z",
     "readme_path": "README.md",
     "readme_sha": "8ce701e74909d5f08e2810380e0ff15f547aa0c8",
-    "stars": 23927
+    "stars": 23929
   },
   "alirezarezvani/claude-skills": {
     "classification": null,
@@ -950,7 +1137,7 @@
     "pushed_at": "2026-08-26T15:12:59Z",
     "readme_path": "README.md",
     "readme_sha": "c50f00b2a16dc17023368b070f0ffda8b12c0ba1",
-    "stars": 25046
+    "stars": 25049
   },
   "antfu/skills": {
     "classification": null,
@@ -1044,7 +1231,93 @@
     "pushed_at": "2026-08-21T17:10:55Z",
     "readme_path": "README.md",
     "readme_sha": "eb54ee8b92f2d40b4b26569be0772be3c1e23156",
-    "stars": 171895
+    "stars": 171909
+  },
+  "apify/agent-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Collection of Apify agent skills",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "agents/AGENTS.md",
+      "scripts/AGENTS_TEMPLATE.md",
+      "skills/apify-actor-development/SKILL.md",
+      "skills/apify-actorization/SKILL.md",
+      "skills/apify-generate-output-schema/SKILL.md",
+      "skills/apify-sdk-integration/SKILL.md",
+      "skills/apify-ultimate-scraper/SKILL.md",
+      "skills/apify-actor-development/references/actor-json.md",
+      "skills/apify-actor-development/references/actor-readme.md",
+      "skills/apify-actor-development/references/dataset-schema.md",
+      "skills/apify-actor-development/references/input-schema.md",
+      "skills/apify-actor-development/references/key-value-store-schema.md",
+      "skills/apify-actor-development/references/logging.md",
+      "skills/apify-actor-development/references/output-schema.md",
+      "skills/apify-actor-development/references/standby-mode.md",
+      "skills/apify-actorization/references/cli-actorization.md",
+      "skills/apify-actorization/references/js-ts-actorization.md",
+      "skills/apify-actorization/references/python-actorization.md",
+      "skills/apify-actorization/references/schemas-and-output.md",
+      "skills/apify-ultimate-scraper/references/actor-index.md",
+      "skills/apify-ultimate-scraper/references/gotchas.md",
+      "skills/apify-ultimate-scraper/references/workflows/brand-monitoring.md",
+      "skills/apify-ultimate-scraper/references/workflows/company-research.md",
+      "skills/apify-ultimate-scraper/references/workflows/competitive-intel.md",
+      "skills/apify-ultimate-scraper/references/workflows/contact-enrichment.md",
+      "skills/apify-ultimate-scraper/references/workflows/content-and-seo.md",
+      "skills/apify-ultimate-scraper/references/workflows/ecommerce-price-monitoring.md",
+      "skills/apify-ultimate-scraper/references/workflows/influencer-vetting.md",
+      "skills/apify-ultimate-scraper/references/workflows/job-market-and-recruitment.md",
+      "skills/apify-ultimate-scraper/references/workflows/knowledge-base-and-rag.md"
+    ],
+    "pushed_at": "2026-08-10T15:02:02Z",
+    "readme_path": "README.md",
+    "readme_sha": "797f5c26ad71acef330fde4b631161f1fa408571",
+    "stars": 2361
+  },
+  "bergside/awesome-design-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "List of 67 awesome DESIGN.md and SKILL.md design skill files for agentic tools like Claude Design, Google Stitch, Codex, Cursor, and other AI tools",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "skills/agentic/DESIGN.md",
+      "skills/agentic/SKILL.md",
+      "skills/ant/DESIGN.md",
+      "skills/ant/SKILL.md",
+      "skills/artistic/DESIGN.md",
+      "skills/artistic/SKILL.md",
+      "skills/basic/DESIGN.md",
+      "skills/basic/SKILL.md",
+      "skills/bento/DESIGN.md",
+      "skills/bento/SKILL.md",
+      "skills/bold/DESIGN.md",
+      "skills/bold/SKILL.md",
+      "skills/brutalism/DESIGN.md",
+      "skills/brutalism/SKILL.md",
+      "skills/cafe/DESIGN.md",
+      "skills/cafe/SKILL.md",
+      "skills/claude/DESIGN.md",
+      "skills/claude/SKILL.md",
+      "skills/claymorphism/DESIGN.md",
+      "skills/claymorphism/SKILL.md",
+      "skills/clean/DESIGN.md",
+      "skills/clean/SKILL.md",
+      "skills/codex/DESIGN.md",
+      "skills/codex/SKILL.md",
+      "skills/colorful/DESIGN.md",
+      "skills/colorful/SKILL.md",
+      "skills/contemporary/DESIGN.md",
+      "skills/contemporary/SKILL.md",
+      "skills/corporate/DESIGN.md",
+      "skills/corporate/SKILL.md"
+    ],
+    "pushed_at": "2026-06-28T10:05:22Z",
+    "readme_path": "README.md",
+    "readme_sha": "9466ecea1615b75488c346d03c298fbb86d8fe10",
+    "stars": 2537
   },
   "bergside/design-md-chrome": {
     "classification": null,
@@ -1073,7 +1346,7 @@
     "pushed_at": "2026-08-19T05:58:53Z",
     "readme_path": "README.md",
     "readme_sha": "aea9a0b49385bf16ebaab073bd458f964d13cfc0",
-    "stars": 38163
+    "stars": 38173
   },
   "browserbase/skills": {
     "classification": null,
@@ -1156,13 +1429,21 @@
       "skills/12-pedrohcgs-claude-code-my-workflow/CLAUDE.md",
       "skills/12-pedrohcgs-claude-code-my-workflow/README-original.md"
     ],
-    "pushed_at": "2026-08-26T19:43:45Z",
+    "pushed_at": "2026-08-27T06:07:36Z",
     "readme_path": "README-zh-CN.md",
     "readme_sha": "6a88ae2ee0a0fd932d6c66f184765a60eee085e5",
     "stars": 3561
   },
   "calesthio/OpenMontage": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "CLAUDE.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.92,
+      "content_checked": true,
+      "kind": "instruction",
+      "label": "CLAUDE.md",
+      "reason": "Agent routing instruction file directing Claude to AGENT_GUIDE.md for operational rules; part of 700+ agent skill files for video production system."
+    },
     "default_branch": "main",
     "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
     "first_seen": "2026-08-27",
@@ -1202,7 +1483,7 @@
     "pushed_at": "2026-08-22T18:22:24Z",
     "readme_path": "README.md",
     "readme_sha": "0dae0149c8a92482d51d31b22428bf6eb95446c9",
-    "stars": 51504
+    "stars": 51550
   },
   "centminmod/my-claude-code-setup": {
     "classification": null,
@@ -1263,7 +1544,7 @@
     "pushed_at": "2026-07-30T14:02:33Z",
     "readme_path": "README.en.md",
     "readme_sha": "86d1d5033e607052e19843e6f2a99e63312a0e3d",
-    "stars": 6402
+    "stars": 6406
   },
   "ciembor/agent-rules-books": {
     "classification": null,
@@ -1308,6 +1589,49 @@
     "readme_sha": "b3d0bc65e12f7bbd2fb0d0824f10982c3beb0779",
     "stars": 2626
   },
+  "cisco-ai-defense/skill-scanner": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Security Scanner for Agent Skills",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "skill_scanner/data/prompts/boilerplate_protection_rule_prompt.md",
+      "skill_scanner/data/prompts/code_alignment_threat_analysis_prompt.md",
+      "skill_scanner/data/prompts/skill_meta_analysis_prompt.md",
+      "skill_scanner/data/prompts/skill_threat_analysis_prompt.md",
+      "skill_scanner/data/prompts/unified_response_schema.md",
+      "evals/skills/backdoor/magic-string-trigger/SKILL.md",
+      "evals/skills/behavioral-analysis/multi-file-exfiltration/SKILL.md",
+      "evals/skills/command-injection/eval-execution/SKILL.md",
+      "evals/skills/data-exfiltration/config-tunnel-exfil/SKILL.md",
+      "evals/skills/data-exfiltration/environment-secrets/SKILL.md",
+      "evals/skills/obfuscation/base64-payload/SKILL.md",
+      "evals/skills/path-traversal/file-reader/SKILL.md",
+      "evals/skills/prompt-injection/jailbreak-override/SKILL.md",
+      "evals/skills/resource-exhaustion/infinite-loop/SKILL.md",
+      "evals/skills/safe-skills-2/file-validator/SKILL.md",
+      "evals/skills/safe-skills/simple-math/SKILL.md",
+      "evals/skills/sql-injection/database-query/SKILL.md",
+      "evals/test_skills/malicious/ascii-smuggling/SKILL.md",
+      "evals/test_skills/malicious/eicar-test/SKILL.md",
+      "evals/test_skills/malicious/exfiltrator/SKILL.md",
+      "evals/test_skills/malicious/flowise-cve-2025-59528/SKILL.md",
+      "evals/test_skills/malicious/mcp-atlassian-cve-2026-27825/SKILL.md",
+      "evals/test_skills/malicious/mcpwn-cve-2026-33032/SKILL.md",
+      "evals/test_skills/malicious/prompt-injection/SKILL.md",
+      "evals/test_skills/safe/atr-benign-control/SKILL.md",
+      "evals/test_skills/safe/simple-formatter/SKILL.md",
+      "FEATURE.md",
+      "TESTING.md",
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".cursor/rules/codeguard-0-additional-cryptography.mdc"
+    ],
+    "pushed_at": "2026-08-04T04:50:35Z",
+    "readme_path": "README.md",
+    "readme_sha": "f5f797d9ba8ac60fde434507010e2a4a6af076a8",
+    "stars": 2461
+  },
   "cloudflare/security-audit-skill": {
     "classification": null,
     "default_branch": "main",
@@ -1328,7 +1652,50 @@
     "pushed_at": "2026-07-06T13:36:03Z",
     "readme_path": "README.md",
     "readme_sha": "871e44ddfafc8d4ec875c3e7e317f90a92e4a3c1",
-    "stars": 3093
+    "stars": 3096
+  },
+  "datopian/portaljs": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "🌀 AI-native framework for building data portals. Scaffold a full portal from a brief and load datasets in minutes with agentic skills — any backend (CKAN, GitHub, Frictionless).",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "DESIGN.md",
+      "skills/arcgis-to-portaljs/SKILL.md",
+      "skills/portaljs-add-chart/SKILL.md",
+      "skills/portaljs-add-dataset/SKILL.md",
+      "skills/portaljs-add-dcat/SKILL.md",
+      "skills/portaljs-add-geo/SKILL.md",
+      "skills/portaljs-add-map/SKILL.md",
+      "skills/portaljs-add-resource/SKILL.md",
+      "skills/portaljs-architect/SKILL.md",
+      "skills/portaljs-check-data-quality/SKILL.md",
+      "skills/portaljs-connect-ckan/SKILL.md",
+      "skills/portaljs-define-schema/SKILL.md",
+      "skills/portaljs-deploy/SKILL.md",
+      "skills/portaljs-migrate/SKILL.md",
+      "skills/portaljs-new-portal/SKILL.md",
+      "site/content/blog/portaljs-skills-launch.md",
+      "skills/arcgis-to-portaljs/references/reference.md",
+      "skills/arcgis-to-portaljs/references/sync-and-cutover.md",
+      "skills/portaljs-add-chart/references/reference.md",
+      "skills/portaljs-add-dataset/references/reference.md",
+      "skills/portaljs-add-dcat/references/reference.md",
+      "skills/portaljs-add-geo/references/reference.md",
+      "skills/portaljs-add-map/references/reference.md",
+      "skills/portaljs-add-resource/references/reference.md",
+      "skills/portaljs-architect/references/reference.md",
+      "skills/portaljs-check-data-quality/references/reference.md",
+      "skills/portaljs-connect-ckan/references/reference.md",
+      "skills/portaljs-define-schema/references/reference.md"
+    ],
+    "pushed_at": "2026-08-25T07:16:45Z",
+    "readme_path": "README.md",
+    "readme_sha": "e1eb9c32888b50193b8ca7c48ac1e2670c6ae228",
+    "stars": 2344
   },
   "davidondrej/skills": {
     "classification": null,
@@ -1409,7 +1776,7 @@
     "pushed_at": "2026-06-16T03:10:06Z",
     "readme_path": "README.md",
     "readme_sha": "7159068619de8c92aa2dfeadd47c7f576e606d13",
-    "stars": 5983
+    "stars": 5982
   },
   "earthtojake/text-to-cad": {
     "classification": null,
@@ -1449,10 +1816,123 @@
       "skills/cad/references/step-generation.md",
       "skills/cad/references/supported-exports.md"
     ],
-    "pushed_at": "2026-08-27T02:20:42Z",
+    "pushed_at": "2026-08-27T06:07:36Z",
     "readme_path": "README.md",
     "readme_sha": "585be95c9e4d679da13c553077dfa59a87a8efc5",
-    "stars": 13937
+    "stars": 13939
+  },
+  "elementalsouls/Claude-OSINT": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "8 Claude skills · 100+ recon capabilities · 80 secret-regex patterns · 80+ dorks · 9 read-only credential validators · 27 attack-path templates · ~10,000 lines of structured tradecraft. Drop-in SKILL.md files that turn Claude into a god-mode external recon operator for authorized red-team and bug-bounty engagements.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "skills/cloud-saas-exposure/SKILL.md",
+      "skills/continuous-exposure-monitoring/SKILL.md",
+      "skills/email-domain-security/SKILL.md",
+      "skills/exposure-risk-quantification/SKILL.md",
+      "skills/identity-provider-recon/SKILL.md",
+      "skills/offensive-osint/SKILL.md",
+      "skills/org-attack-surface/SKILL.md",
+      "skills/osint-autopilot/SKILL.md",
+      "skills/osint-methodology/SKILL.md",
+      ".claude/skills/run-claude-osint/SKILL.md",
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/ISSUE_TEMPLATE/bug_report.md",
+      ".github/ISSUE_TEMPLATE/feature_request.md",
+      ".github/ISSUE_TEMPLATE/new_technique.md"
+    ],
+    "pushed_at": "2026-08-24T16:21:23Z",
+    "readme_path": "README.md",
+    "readme_sha": "df86919d7f357c7b0885cc1f7051fef67691723a",
+    "stars": 2343
+  },
+  "eternityspring/shuohao-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "AI 短剧制作的 skill 集合：拆角色、排大纲、出场景与道具设定、写剧本、切分镜 | Agent skills for AI short-drama production — character bibles, adaptation outlines, art bibles, screenplays, storyboards. Runs in Claude Code & codex.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "CLAUDE.md",
+      "README.en.md",
+      "skills/novel-art/README.en.md",
+      "skills/novel-art/SKILL.md",
+      "skills/novel-characters/README.en.md",
+      "skills/novel-characters/SKILL.md",
+      "skills/novel-outline/README.en.md",
+      "skills/novel-outline/SKILL.md",
+      "skills/novel-script/README.en.md",
+      "skills/novel-script/SKILL.md",
+      "skills/novel-storyboard/README.en.md",
+      "skills/novel-storyboard/SKILL.md",
+      "skills/novel-art/references/prop-pass.md",
+      "skills/novel-art/references/report-style.md",
+      "skills/novel-art/references/scene-pass.md",
+      "skills/novel-art/references/schema.md",
+      "skills/novel-art/references/sheet.md",
+      "skills/novel-characters/references/profile-pass.md",
+      "skills/novel-characters/references/report-style.md",
+      "skills/novel-characters/references/roster-pass.md",
+      "skills/novel-characters/references/schema.md",
+      "skills/novel-characters/references/sheet.md",
+      "skills/novel-characters/references/style-presets.md",
+      "skills/novel-outline/references/episode-pass.md",
+      "skills/novel-outline/references/outline-pass.md",
+      "skills/novel-outline/references/report-style.md",
+      "skills/novel-outline/references/schema.md",
+      "skills/novel-outline/references/volume-pass.md",
+      "skills/novel-script/references/report-style.md",
+      "skills/novel-script/references/schema.md"
+    ],
+    "pushed_at": "2026-08-26T14:20:50Z",
+    "readme_path": "README.en.md",
+    "readme_sha": "4e6770acd41877c70f4c10e2d49056b3bbbeebab",
+    "stars": 2206
+  },
+  "expo/skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      ".claude/skills/expo-skill-eval/SKILL.md",
+      ".claude/skills/expo-skill-eval/agents/visual-grader.md",
+      ".claude/skills/expo-skill-eval/references/design-rubric.md",
+      ".claude/skills/expo-skill-eval/references/runtime-matrix.md",
+      "plugins/expo-experiments/skills/expo-migrate-module/SKILL.md",
+      "plugins/expo/skills/eas-app-stores/SKILL.md",
+      "plugins/expo/skills/eas-hosting/SKILL.md",
+      "plugins/expo/skills/eas-observe/SKILL.md",
+      "plugins/expo/skills/eas-simulator/SKILL.md",
+      "plugins/expo/skills/eas-update-insights/SKILL.md",
+      "plugins/expo/skills/eas-workflows/SKILL.md",
+      "plugins/expo/skills/expo-animation/RECIPES.md",
+      "plugins/expo/skills/expo-animation/SKILL.md",
+      "plugins/expo/skills/expo-app-clip/SKILL.md",
+      "plugins/expo/skills/expo-brownfield/SKILL.md",
+      "plugins/expo/skills/expo-data-fetching/SKILL.md",
+      "plugins/expo/skills/expo-design-system/SKILL.md",
+      "plugins/expo/skills/expo-dev-client/SKILL.md",
+      "plugins/expo/skills/expo-dom/SKILL.md",
+      "plugins/expo/skills/expo-examples/SKILL.md",
+      "plugins/expo/skills/expo-module/SKILL.md",
+      "plugins/expo/skills/expo-native-ui/SKILL.md",
+      "plugins/expo/skills/expo-overview/SKILL.md",
+      "plugins/expo/skills/expo-project-structure/SKILL.md",
+      "plugins/expo/skills/expo-router/SKILL.md",
+      "plugins/expo/skills/expo-skill-feedback/SKILL.md",
+      "plugins/expo/skills/expo-tailwind-setup/SKILL.md",
+      "plugins/expo/skills/expo-ui/SKILL.md",
+      "plugins/expo/skills/expo-upgrade/SKILL.md"
+    ],
+    "pushed_at": "2026-08-26T18:10:46Z",
+    "readme_path": "README.md",
+    "readme_sha": "2c45d69378a1c1066c5fd6434173e090b2d1610e",
+    "stars": 2466
   },
   "fecarrico/A11Y.md": {
     "classification": {
@@ -1620,10 +2100,10 @@
       "agents/azure-saas-architect.agent.md",
       "agents/azure-smart-city-iot-architect.agent.md"
     ],
-    "pushed_at": "2026-08-27T04:59:14Z",
+    "pushed_at": "2026-08-27T06:17:38Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 38291
+    "stars": 38293
   },
   "google-labs-code/design.md": {
     "classification": {
@@ -1649,7 +2129,7 @@
     "pushed_at": "2026-07-27T21:15:07Z",
     "readme_path": "README.md",
     "readme_sha": "ed855c5227b5e18317537549cde731c3fd96b331",
-    "stars": 27530
+    "stars": 27531
   },
   "google-labs-code/stitch-skills": {
     "classification": null,
@@ -1735,7 +2215,7 @@
     "pushed_at": "2026-08-26T18:15:55Z",
     "readme_path": "README.md",
     "readme_sha": "9521a15af2bfe70a946f95bf6f4a42e1fcdcc518",
-    "stars": 18728
+    "stars": 18730
   },
   "googleworkspace/cli": {
     "classification": null,
@@ -1879,7 +2359,7 @@
       "builtin-skills/skills/meeting-note-summarizer/SKILL.md",
       "builtin-skills/skills/retrieval-practice-generator/NOTICE.md"
     ],
-    "pushed_at": "2026-08-26T13:43:27Z",
+    "pushed_at": "2026-08-27T06:31:06Z",
     "readme_path": "README.md",
     "readme_sha": "3a01513a24802fb84b499bfff5b1499371b3ec00",
     "stars": 4894
@@ -1968,7 +2448,7 @@
     "pushed_at": "2026-07-08T13:32:08Z",
     "readme_path": "README.en.md",
     "readme_sha": "cbc03011555f358e7521c10684cec67dc85d9063",
-    "stars": 3337
+    "stars": 3339
   },
   "jacob-bd/gemini-notebook-mcp-cli": {
     "classification": null,
@@ -1995,7 +2475,15 @@
     "stars": 5949
   },
   "jakubkrehel/make-interfaces-feel-better": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "CLAUDE.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.84,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "CLAUDE.md",
+      "reason": "Contains agent-facing guidance for Claude Code as part of a standalone, reusable 'make-interfaces-feel-better' agent skill — primary purpose is a reusable instruction/skill for coding agents."
+    },
     "default_branch": "main",
     "description": "An agent skill that helps make your interface feel better.",
     "first_seen": "2026-08-27",
@@ -2064,7 +2552,7 @@
     "pushed_at": "2026-08-24T22:30:14Z",
     "readme_path": "README.md",
     "readme_sha": "d77fe3092dcf5cbfe38d6ed1048dbfd4fecde0aa",
-    "stars": 4488
+    "stars": 4490
   },
   "jangviktor-web/nihaixia": {
     "classification": null,
@@ -2107,7 +2595,7 @@
     "pushed_at": "2026-08-19T13:57:51Z",
     "readme_path": "README.md",
     "readme_sha": "552abba4caa04558854d7e3d25ef19004f227bf2",
-    "stars": 2682
+    "stars": 2686
   },
   "jbarbier/CLAUDE.md": {
     "classification": {
@@ -2162,7 +2650,7 @@
     "pushed_at": "2026-08-26T14:30:08Z",
     "readme_path": "README.md",
     "readme_sha": "8a9eef8810477f2cf1f7b0a407bc569592359bc0",
-    "stars": 3801
+    "stars": 3804
   },
   "jsynowiec/node-typescript-boilerplate": {
     "classification": null,
@@ -2207,7 +2695,7 @@
     "pushed_at": "2026-08-26T05:20:34Z",
     "readme_path": "README.ja.md",
     "readme_sha": "86be640cb6d299020d85eaeee06eeee30a3e5de7",
-    "stars": 9034
+    "stars": 9037
   },
   "kepano/obsidian-skills": {
     "classification": null,
@@ -2273,7 +2761,48 @@
     "pushed_at": "2026-08-27T05:39:20Z",
     "readme_path": "README.md",
     "readme_sha": "db720a637974c8ef4cc8a321901859695df57053",
-    "stars": 16781
+    "stars": 16783
+  },
+  "lessweb/deepcode-cli": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Deep Code 是专为 deepseek-v4 模型优化的终端 AI 编码助手，支持深度思考、推理强度控制以及 Agent Skills。",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "README-en.md",
+      "README-zh_CN.md",
+      ".deepcode/AGENTS.md",
+      "packages/core/templates/prompts/plan.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/SKILL.md",
+      "packages/core/templates/skills/bundled/image-generator/SKILL.md",
+      "packages/core/templates/skills/bundled/skill-digester/SKILL.md",
+      "packages/core/templates/skills/bundled/skill-writer/SKILL.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/configuration.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/configuration_en.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/mcp.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/mcp_en.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/notify.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/notify_en.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/permission.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/permission_en.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/session-persistence.md",
+      "packages/core/templates/skills/bundled/deepcode-self-refer/references/session-persistence_en.md",
+      "RELEASE.md",
+      "RELEASE_en.md",
+      "packages/vscode-ide-companion/README_cn.md",
+      "packages/vscode-ide-companion/README_en.md",
+      "packages/core/templates/tools/ask-user-question.md",
+      "packages/core/templates/tools/bash.md",
+      "packages/core/templates/tools/edit.md",
+      "packages/core/templates/tools/update-plan.md",
+      "packages/core/templates/tools/web-search.md",
+      "packages/core/templates/tools/write.md"
+    ],
+    "pushed_at": "2026-08-26T10:05:28Z",
+    "readme_path": "README-en.md",
+    "readme_sha": "70fc105fa0bb9457d80c5ecf63a9e63690de205e",
+    "stars": 2211
   },
   "liyupi/ai-guide": {
     "classification": null,
@@ -2316,7 +2845,7 @@
     "pushed_at": "2026-08-21T07:07:15Z",
     "readme_path": "README.md",
     "readme_sha": "fed6219aba91708ffa796558eac0ee136df4d33e",
-    "stars": 19203
+    "stars": 19206
   },
   "ljagiello/ctf-skills": {
     "classification": null,
@@ -2359,10 +2888,18 @@
     "pushed_at": "2026-08-25T03:49:07Z",
     "readme_path": "README.md",
     "readme_sha": "ef8f71bd1c4078e2447b91147360ea0478ea88f8",
-    "stars": 3109
+    "stars": 3110
   },
   "madhvantyagi/SOUL.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": null,
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "instruction",
+      "label": "SOUL.md",
+      "reason": "Repository provides reusable personality instruction files (SOUL.md) that define AI agent identity, tone, convictions, and behavioral guidelines for coding and interactive tools"
+    },
     "default_branch": "main",
     "description": "This repo contains different Soul.md files each file is different and allow your agents to behave in unique interesting personality. ",
     "first_seen": "2026-08-27",
@@ -2435,7 +2972,7 @@
     "pushed_at": "2026-08-24T14:20:17Z",
     "readme_path": "README.md",
     "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
-    "stars": 238171
+    "stars": 238222
   },
   "memodb-io/Acontext": {
     "classification": null,
@@ -2561,7 +3098,7 @@
     "pushed_at": "2026-08-26T15:42:40Z",
     "readme_path": "README.md",
     "readme_sha": "03696d60edffaa8106728b08e96e871fc9af79dc",
-    "stars": 16393
+    "stars": 16395
   },
   "microsoft/skill-recorder": {
     "classification": null,
@@ -2579,7 +3116,7 @@
     "pushed_at": "2026-08-24T04:38:41Z",
     "readme_path": "README.md",
     "readme_sha": "b9835ec6eb888273718f5ba35e6c87a9bfe6b3b8",
-    "stars": 3455
+    "stars": 3458
   },
   "microsoft/skills": {
     "classification": null,
@@ -2705,7 +3242,7 @@
     "pushed_at": "2026-08-26T14:57:12Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 148283
+    "stars": 148297
   },
   "multica-ai/andrej-karpathy-skills": {
     "classification": {
@@ -2732,7 +3269,7 @@
     "pushed_at": "2026-04-20T10:05:04Z",
     "readme_path": "README.md",
     "readme_sha": "7cf07a786532bebe01c65179c8e2c3a98cc0a09b",
-    "stars": 207788
+    "stars": 207808
   },
   "muratcankoylan/Agent-Skills-for-Context-Engineering": {
     "classification": null,
@@ -2775,7 +3312,7 @@
     "pushed_at": "2026-08-19T01:55:00Z",
     "readme_path": "README.md",
     "readme_sha": "91dc1a3674a17360b3f0d401005d7f4abda0b0ff",
-    "stars": 17841
+    "stars": 17843
   },
   "muxuuu/serenity-skill": {
     "classification": null,
@@ -2802,7 +3339,7 @@
     "pushed_at": "2026-05-05T03:23:53Z",
     "readme_path": "README.en.md",
     "readme_sha": "205f7f3f427af98a06039f577737e95456ad5cef",
-    "stars": 3891
+    "stars": 3894
   },
   "mvanhorn/last30days-skill": {
     "classification": null,
@@ -2833,7 +3370,7 @@
     "pushed_at": "2026-08-26T22:09:45Z",
     "readme_path": "README.de.md",
     "readme_sha": "b244a511d81f4a4ea7f3b3f101ee85e47a054e88",
-    "stars": 59362
+    "stars": 59365
   },
   "nextlevelbuilder/ui-ux-pro-max-skill": {
     "classification": {
@@ -2884,7 +3421,7 @@
     "pushed_at": "2026-08-26T06:57:16Z",
     "readme_path": "README.md",
     "readme_sha": "6b71633819b925db6a9d849abcdf6622769d5c6d",
-    "stars": 121478
+    "stars": 121499
   },
   "nicobailon/visual-explainer": {
     "classification": null,
@@ -2917,7 +3454,7 @@
     "pushed_at": "2026-08-20T05:41:12Z",
     "readme_path": "README.md",
     "readme_sha": "92d6c438529dcfcbc22b278f1af71297a9104291",
-    "stars": 9579
+    "stars": 9581
   },
   "obra/superpowers": {
     "classification": {
@@ -2968,7 +3505,7 @@
     "pushed_at": "2026-08-19T17:33:23Z",
     "readme_path": "README.md",
     "readme_sha": "09a91c6d03cfa3d874c5c33b6f8cc3d0b2d89645",
-    "stars": 278221
+    "stars": 278238
   },
   "op7418/guizang-ppt-skill": {
     "classification": null,
@@ -2996,7 +3533,7 @@
     "pushed_at": "2026-08-07T03:58:08Z",
     "readme_path": "README.en.md",
     "readme_sha": "e19c16467f25704e782ff089407e835f7cdd6997",
-    "stars": 24971
+    "stars": 24974
   },
   "originalankur/GenerateAgents.md": {
     "classification": {
@@ -3067,7 +3604,40 @@
     "pushed_at": "2026-07-03T11:34:49Z",
     "readme_path": "README.md",
     "readme_sha": "b9fba4cac4a30e63d92b854a2cd368a5d23583fc",
-    "stars": 25697
+    "stars": 25699
+  },
+  "plannotator/effective-html": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Agent skills for useful HTML artifacts, wireframes, interactive prototypes, plans, and diagrams.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "site/design.md",
+      "skills/design-artifact/SKILL.md",
+      "skills/html-diagram/SKILL.md",
+      "skills/html-plan/SKILL.md",
+      "skills/html-prototype/SKILL.md",
+      "skills/html-wireframe/SKILL.md",
+      "skills/html/SKILL.md",
+      "skills/html/references/charts-and-data.md",
+      "skills/html/references/creative-direction.md",
+      "skills/html/references/diagrams.md",
+      "skills/html/references/documents-and-presentations.md",
+      "skills/html/references/interfaces.md",
+      "site/PRODUCT.md",
+      "site/.impeccable/audit/2026-07-31T21-08-49Z__app.md",
+      "site/.impeccable/critique/2026-07-31T20-36-45Z__app.md",
+      "site/.impeccable/critique/2026-07-31T21-52-32Z__app.md",
+      "site/.impeccable/mocks/open-specimen-surface-brief.md",
+      "site/.impeccable/surfaces/app-catalog-page-tsx.md",
+      "site/.impeccable/surfaces/content-docs-choosing-fidelity-mdx.md",
+      "site/.impeccable/surfaces/route.md"
+    ],
+    "pushed_at": "2026-08-03T23:19:04Z",
+    "readme_path": "README.md",
+    "readme_sha": "d171ce147d42f8d606d2239f26d235efb93bbc18",
+    "stars": 2384
   },
   "refly-ai/refly": {
     "classification": null,
@@ -3193,7 +3763,7 @@
       "assets/skills/comet-build/SKILL.md",
       "assets/skills/comet-classic/SKILL.md"
     ],
-    "pushed_at": "2026-08-27T05:38:32Z",
+    "pushed_at": "2026-08-27T05:49:34Z",
     "readme_path": "README-zh.md",
     "readme_sha": "2c08427ee1e85331817260e17ef4de6dfd48cdc0",
     "stars": 2851
@@ -3218,10 +3788,18 @@
     "pushed_at": "2026-08-22T16:48:59Z",
     "readme_path": "README.md",
     "readme_sha": "5c90d60233172ad9deff581d28059be36f00442e",
-    "stars": 4396
+    "stars": 4400
   },
   "samber/cc-skills-golang": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "skills/golang-benchmark/SKILL.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.87,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "SKILL.md",
+      "reason": "The repository contains SKILL.md files with YAML frontmatter, persona, usage, and tooling details — clearly authored as reusable agent 'skills' for AI coding assistants (Go benchmarking skill selected as representative)."
+    },
     "default_branch": "main",
     "description": "🧑‍🎨 A collection of Golang agentic skills that works",
     "first_seen": "2026-08-27",
@@ -3261,7 +3839,7 @@
     "pushed_at": "2026-08-26T17:18:36Z",
     "readme_path": "README.md",
     "readme_sha": "769528980bb77d1a7520b1e488355495b489e275",
-    "stars": 3078
+    "stars": 3079
   },
   "sanjeed5/awesome-cursor-rules-mdc": {
     "classification": null,
@@ -3347,7 +3925,7 @@
     "pushed_at": "2026-08-27T04:51:10Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 45496
+    "stars": 45498
   },
   "snyk/agent-scan": {
     "classification": null,
@@ -3358,10 +3936,53 @@
     "markdown_paths": [
       "TERMS.md"
     ],
-    "pushed_at": "2026-08-27T05:42:38Z",
+    "pushed_at": "2026-08-27T06:18:10Z",
     "readme_path": "README.md",
     "readme_sha": "c90dea7391c4b1c2138350a8c070155608093538",
     "stars": 2963
+  },
+  "softaworks/agent-toolkit": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "A curated collection of skills for AI coding agents. Skills are packaged instructions and scripts that extend agent capabilities across development, documentation, planning, and professional workflows.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "agents/ascii-ui-mockup-generator.md",
+      "agents/codebase-pattern-finder.md",
+      "agents/communication-excellence-coach.md",
+      "agents/general-purpose.md",
+      "agents/mermaid-diagram-specialist.md",
+      "agents/ui-ux-designer.md",
+      "commands/sync-skills-readme.md",
+      ".claude/commands/add-skill.md",
+      ".claude/commands/sync-skills-readme.md",
+      "skills/agent-md-refactor/SKILL.md",
+      "skills/backend-to-frontend-handoff-docs/SKILL.md",
+      "skills/c4-architecture/SKILL.md",
+      "skills/codex/SKILL.md",
+      "skills/command-creator/SKILL.md",
+      "skills/commit-work/SKILL.md",
+      "skills/crafting-effective-readmes/section-checklist.md",
+      "skills/crafting-effective-readmes/SKILL.md",
+      "skills/crafting-effective-readmes/style-guide.md",
+      "skills/crafting-effective-readmes/using-references.md",
+      "skills/daily-meeting-update/SKILL.md",
+      "skills/database-schema-designer/SKILL.md",
+      "skills/datadog-cli/SKILL.md",
+      "skills/dependency-updater/SKILL.md",
+      "skills/design-system-starter/SKILL.md",
+      "skills/difficult-workplace-conversations/SKILL.md",
+      "skills/domain-name-brainstormer/SKILL.md",
+      "skills/draw-io/SKILL.md",
+      "skills/excalidraw/SKILL.md",
+      "skills/feedback-mastery/SKILL.md"
+    ],
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "readme_path": "README.md",
+    "readme_sha": "dd457d8f7fef997bf02a88d062e42a471bc548ee",
+    "stars": 2390
   },
   "supabase/agent-skills": {
     "classification": null,
@@ -3494,10 +4115,10 @@
       "experiments/v3-mermaid-validation/RESULT.md",
       "experiments/visual-evolution/DECISION-MAP.md"
     ],
-    "pushed_at": "2026-08-27T05:18:19Z",
+    "pushed_at": "2026-08-27T06:11:56Z",
     "readme_path": "README.md",
-    "readme_sha": "27edff10afdf86dfa63005ae705e502f4f73a6da",
-    "stars": 18997
+    "readme_sha": "c0fc962c73e2936e4ef47cc994ab2f28b6ed008d",
+    "stars": 19357
   },
   "twostraws/SwiftUI-Agent-Skill": {
     "classification": null,
@@ -3564,7 +4185,7 @@
     "pushed_at": "2026-08-26T14:55:01Z",
     "readme_path": "README.md",
     "readme_sha": "04a1a5a46a22cfd430e2877b7c145e34fc2653ab",
-    "stars": 30511
+    "stars": 30512
   },
   "vercel-labs/lat.md": {
     "classification": {
@@ -3617,7 +4238,7 @@
     "pushed_at": "2026-08-18T20:28:34Z",
     "readme_path": "README.md",
     "readme_sha": "2246383e993f161fd909122d01769059adfb9eab",
-    "stars": 29741
+    "stars": 29746
   },
   "vuejs-ai/skills": {
     "classification": null,
@@ -3678,7 +4299,7 @@
     "pushed_at": "2026-08-06T11:28:44Z",
     "readme_path": "README.md",
     "readme_sha": "1cf327810dee244f1aed22ef0a8bd893fd997e79",
-    "stars": 15640
+    "stars": 15641
   },
   "wuyoscar/GPT-Image2-Skill": {
     "classification": null,
@@ -3739,10 +4360,61 @@
     "pushed_at": "2026-08-27T04:19:29Z",
     "readme_path": "README.md",
     "readme_sha": "c8394c416028606acb0a6f7d7f2a5dad5a42815a",
-    "stars": 4115
+    "stars": 4118
+  },
+  "yaojingang/yao-meta-skill": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "YAO = Yielding AI Outcomes. A rigorous engineering, evaluation, governance, and portability system for reusable agent skills.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "SKILL.md",
+      "references/artifact-design-doctrine.md",
+      "references/non-skill-decision-tree.md",
+      "references/prompt-engineering-doctrine.md",
+      "references/skill-archetypes.md",
+      "references/skill-atlas-method.md",
+      "references/skill-engineering-method.md",
+      "references/skill-ir-method.md",
+      "references/skillops-decision-policy.md",
+      "reports/artifact-design-profile.md",
+      "reports/prompt-quality-profile.md",
+      "reports/skill-os-2-review.md",
+      "reports/skill-overview-v2-plan.md",
+      "reports/skill_os2_audit.md",
+      "reports/skill_os2_coverage.md",
+      ".previews/yao-meta-skill-v2-report-demo/geo-content-brief-skill/SKILL.example.md",
+      "reports/iteration_bundles/yao-meta-skill/bundle.md",
+      "reports/iteration_bundles/yao-meta-skill/review.md",
+      "reports/skillops/daily/2026-06-16.md",
+      "reports/skillops/daily/2026-06-17.md",
+      "reports/skillops/daily/2026-06-20.md",
+      "reports/skillops/daily/2026-06-21.md",
+      "reports/skillops/daily/2026-07-02.md",
+      "reports/skillops/daily/2026-07-16.md",
+      "reports/skillops/daily/2026-08-12.md",
+      "reports/skillops/daily/2026-08-14.md",
+      "reports/skillops/daily/2026-08-16.md",
+      "reports/skillops/daily/2026-08-17.md",
+      "reports/skillops/weekly/2026-W25.md"
+    ],
+    "pushed_at": "2026-08-17T09:19:43Z",
+    "readme_path": "README.md",
+    "readme_sha": "26531d7064fea5bfedf989cafa0aa880cbd4067f",
+    "stars": 2530
   },
   "yibie/SPEC-AGENTS.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": null,
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "format_spec",
+      "label": "SPEC-AGENTS.md",
+      "reason": "Reusable workflow format and doctrine (plan→capture→arrange→do→check→learn) for AI agents to structure evidence-calibrated development work"
+    },
     "default_branch": "main",
     "description": "Doc-Driven Development",
     "first_seen": "2026-08-27",
@@ -3828,7 +4500,15 @@
     "stars": 4592
   },
   "zeke/agents.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "AGENTS.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "instruction",
+      "label": "AGENTS.md",
+      "reason": "System-level instruction guide for AI coding agents; explicitly designed to be reused across multiple agent types and sessions."
+    },
     "default_branch": "main",
     "description": "My global instructions for AI agents like OpenCode",
     "first_seen": "2026-08-27",
