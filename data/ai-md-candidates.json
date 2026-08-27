@@ -26,6 +26,28 @@
     "readme_sha": "18c911a826c7b5eacf88a60dd6ab91a8b286a381",
     "stars": 3921
   },
+  "AminBlg/SimpleEnglish": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "prompts/system-prompt.md",
+      "skills/simple-english/SKILL.md",
+      "skills/simple-english/references/checklist.md",
+      "skills/simple-english/references/use-cases.md",
+      "skills/simple-english/references/word-swaps.md",
+      "evals/pressure-tests.md",
+      "output-styles/simple-english.md",
+      "evals/results/RESULTS.md",
+      "evals/results/pi-2026-07-31/RESULTS.md"
+    ],
+    "pushed_at": "2026-08-21T15:29:00Z",
+    "readme_path": "README.md",
+    "readme_sha": "3036a50d9321dc7a727816fb605295ac7d68dfbe",
+    "stars": 2866
+  },
   "Anbeeld/AGENTS.md": {
     "classification": null,
     "default_branch": "main",
@@ -84,7 +106,15 @@
     "stars": 3460
   },
   "Graphify-Labs/graphify": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "graphify/skill-agents.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "skill-agents.md",
+      "reason": "Reusable /graphify skill for AI agents to query knowledge graphs from codebases; includes command syntax and usage patterns"
+    },
     "default_branch": "v8",
     "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
     "first_seen": "2026-08-27",
@@ -253,7 +283,7 @@
     "pushed_at": "2026-08-24T09:22:55Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 34845
+    "stars": 34846
   },
   "KKKKhazix/human-writing": {
     "classification": null,
@@ -272,7 +302,7 @@
     "pushed_at": "2026-08-11T15:07:45Z",
     "readme_path": "README.md",
     "readme_sha": "b1e47207c5f86e1a3e3948f8e6cd176c4d3dc385",
-    "stars": 3144
+    "stars": 3146
   },
   "KKKKhazix/khazix-skills": {
     "classification": null,
@@ -305,6 +335,30 @@
     "readme_path": "README.en.md",
     "readme_sha": "5f2798f85aeb7942235ed2a7320d34e9f58d8733",
     "stars": 20108
+  },
+  "Leonxlnx/unlazy": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Anti-laziness skill for AI agents. Core: the Depth Tree method, which splits a task N layers deep and gives every leaf the full time budget of the whole task, so effort multiplies with depth. Grounded in 2025-2026 research on model laziness, underthinking and premature completion.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "SKILL.md",
+      "references/dispatch.md",
+      "references/gates.md",
+      "references/method.md",
+      "references/orchestration.md",
+      "references/parallel.md",
+      "references/token-economy.md",
+      "research/validation-protocol.md",
+      "templates/gates-leaf.md",
+      "templates/gates-node.md",
+      "templates/PLAN.md"
+    ],
+    "pushed_at": "2026-08-24T16:46:40Z",
+    "readme_path": "README.md",
+    "readme_sha": "e05b5d1bf6478a7fa53ec6cd5f1f644a4c1e2dd3",
+    "stars": 2581
   },
   "MengTo/Skills": {
     "classification": null,
@@ -501,6 +555,35 @@
     "readme_sha": null,
     "stars": 12465
   },
+  "RKiding/Awesome-finance-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "A collection of Awesome Finance Agent Skills for free and easy to start | 一系列开源免费的金融分析Agent Skills",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "skills/alphaear-deepear-lite/SKILL.md",
+      "skills/alphaear-logic-visualizer/SKILL.md",
+      "skills/alphaear-news/SKILL.md",
+      "skills/alphaear-predictor/SKILL.md",
+      "skills/alphaear-reporter/SKILL.md",
+      "skills/alphaear-search/SKILL.md",
+      "skills/alphaear-sentiment/SKILL.md",
+      "skills/alphaear-signal-tracker/SKILL.md",
+      "skills/alphaear-stock/SKILL.md",
+      "skills/skill-creator/SKILL.md",
+      "skills/alphaear-logic-visualizer/references/PROMPTS.md",
+      "skills/alphaear-news/references/sources.md",
+      "skills/alphaear-predictor/references/PROMPTS.md",
+      "skills/alphaear-reporter/references/PROMPTS.md",
+      "skills/alphaear-search/references/PROMPTS.md",
+      "skills/alphaear-signal-tracker/references/PROMPTS.md"
+    ],
+    "pushed_at": "2026-03-29T05:03:47Z",
+    "readme_path": "README.md",
+    "readme_sha": "b51262eecc6156f7de994e640ad017a170612b74",
+    "stars": 2813
+  },
   "Shubhamsaboo/awesome-llm-apps": {
     "classification": null,
     "default_branch": "main",
@@ -542,10 +625,61 @@
     "pushed_at": "2026-08-22T04:01:54Z",
     "readme_path": "README.md",
     "readme_sha": "bc5ef9a2c0df4d651c026e5749352a589a585b22",
-    "stars": 134632
+    "stars": 134633
+  },
+  "SnailSploit/Claude-Red": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "Skills/active-directory/offensive-active-directory/SKILL.md",
+      "Skills/ai/offensive-ai-security/SKILL.md",
+      "Skills/api/offensive-api-abuse/SKILL.md",
+      "Skills/api/offensive-api-security/SKILL.md",
+      "Skills/auth/offensive-jwt/SKILL.md",
+      "Skills/auth/offensive-oauth/SKILL.md",
+      "Skills/cicd/offensive-cicd-pipeline/SKILL.md",
+      "Skills/cicd/offensive-cicd-secrets/SKILL.md",
+      "Skills/cloud/offensive-cloud/SKILL.md",
+      "Skills/container/offensive-container-escape/SKILL.md",
+      "Skills/container/offensive-k8s-attacks/SKILL.md",
+      "Skills/crypto/offensive-crypto-attacks/SKILL.md",
+      "Skills/crypto/offensive-tls-attacks/SKILL.md",
+      "Skills/exploit-dev/offensive-basic-exploitation/SKILL.md",
+      "Skills/exploit-dev/offensive-crash-analysis/SKILL.md",
+      "Skills/exploit-dev/offensive-exploit-dev-course/SKILL.md",
+      "Skills/exploit-dev/offensive-exploit-development/SKILL.md",
+      "Skills/exploit-dev/offensive-mitigations/SKILL.md",
+      "Skills/exploit-dev/offensive-toctou/SKILL.md",
+      "Skills/forensics/offensive-anti-forensics/SKILL.md",
+      "Skills/forensics/offensive-c2-frameworks/SKILL.md",
+      "Skills/fuzzing/offensive-bug-identification/SKILL.md",
+      "Skills/fuzzing/offensive-fuzzing-course/SKILL.md",
+      "Skills/fuzzing/offensive-fuzzing/SKILL.md",
+      "Skills/fuzzing/offensive-vuln-classes/SKILL.md",
+      "Skills/infrastructure/offensive-advanced-redteam/SKILL.md",
+      "Skills/infrastructure/offensive-edr-evasion/SKILL.md",
+      "Skills/infrastructure/offensive-initial-access/SKILL.md",
+      "Skills/infrastructure/offensive-keylogger-arch/SKILL.md",
+      "Skills/infrastructure/offensive-shellcode/SKILL.md"
+    ],
+    "pushed_at": "2026-08-27T05:45:09Z",
+    "readme_path": "README.md",
+    "readme_sha": "0b923b60394113eb8c79f331d4a008585c1a6b33",
+    "stars": 2977
   },
   "VoltAgent/awesome-design-md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "design-md/airbnb/DESIGN.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "format_spec",
+      "label": "DESIGN.md",
+      "reason": "DESIGN.md format specification for AI agents; curated collection enabling consistent UI generation by coding agents using design system definitions."
+    },
     "default_branch": "main",
     "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
     "first_seen": "2026-08-27",
@@ -585,7 +719,7 @@
     "pushed_at": "2026-07-31T12:32:42Z",
     "readme_path": "README.md",
     "readme_sha": "3e989b4971ae2692190ae25119e7f8e0d63a558e",
-    "stars": 110716
+    "stars": 110718
   },
   "addyosmani/agent-skills": {
     "classification": null,
@@ -628,7 +762,36 @@
     "pushed_at": "2026-08-21T18:15:04Z",
     "readme_path": "README.md",
     "readme_sha": "f31b37f7fc881e76cf9ba9cedd74efad27d4d255",
-    "stars": 90095
+    "stars": 90096
+  },
+  "addyosmani/web-quality-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Agent Skills for optimizing web quality based on Lighthouse and Core Web Vitals.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "skills/accessibility/SKILL.md",
+      "skills/best-practices/SKILL.md",
+      "skills/core-web-vitals/SKILL.md",
+      "skills/performance/SKILL.md",
+      "skills/seo/SKILL.md",
+      "skills/web-quality-audit/SKILL.md",
+      "skills/accessibility/references/A11Y-PATTERNS.md",
+      "skills/accessibility/references/WCAG.md",
+      "skills/core-web-vitals/references/CLS.md",
+      "skills/core-web-vitals/references/INP.md",
+      "skills/core-web-vitals/references/LCP.md",
+      "skills/performance/references/MEASUREMENT.md",
+      "skills/performance/references/RUM.md",
+      "skills/seo/references/STRUCTURED-DATA.md"
+    ],
+    "pushed_at": "2026-08-24T21:07:36Z",
+    "readme_path": "README.md",
+    "readme_sha": "2d272c9d09a05e3c439576fdd16e196d3dc1c2d2",
+    "stars": 2712
   },
   "affaan-m/ECC": {
     "classification": {
@@ -679,7 +842,7 @@
     "pushed_at": "2026-08-25T21:27:27Z",
     "readme_path": "README.zh-CN.md",
     "readme_sha": "7081f46b23a23d8697809d578b32ea710a31dad3",
-    "stars": 243566
+    "stars": 243567
   },
   "ageerle/ruoyi-ai": {
     "classification": null,
@@ -881,7 +1044,21 @@
     "pushed_at": "2026-08-21T17:10:55Z",
     "readme_path": "README.md",
     "readme_sha": "eb54ee8b92f2d40b4b26569be0772be3c1e23156",
-    "stars": 171894
+    "stars": 171895
+  },
+  "bergside/design-md-chrome": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Chrome extension to extract styles from any website and generate DESIGN.md files and design skills for AI based on TypeUI",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "DESIGN.md"
+    ],
+    "pushed_at": "2026-05-25T18:28:25Z",
+    "readme_path": "README.md",
+    "readme_sha": "d1176dab8deda021cb5d97cac06e1a9e3b419d93",
+    "stars": 2739
   },
   "blader/humanizer": {
     "classification": null,
@@ -896,7 +1073,7 @@
     "pushed_at": "2026-08-19T05:58:53Z",
     "readme_path": "README.md",
     "readme_sha": "aea9a0b49385bf16ebaab073bd458f964d13cfc0",
-    "stars": 38161
+    "stars": 38163
   },
   "browserbase/skills": {
     "classification": null,
@@ -1025,7 +1202,50 @@
     "pushed_at": "2026-08-22T18:22:24Z",
     "readme_path": "README.md",
     "readme_sha": "0dae0149c8a92482d51d31b22428bf6eb95446c9",
-    "stars": 51500
+    "stars": 51504
+  },
+  "centminmod/my-claude-code-setup": {
+    "classification": null,
+    "default_branch": "master",
+    "description": "Shared starter template configuration and CLAUDE.md memory bank system for Claude Code",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "README-v2.md",
+      "README-v3.md",
+      "README-v4.md",
+      ".claude/agents/code-searcher.md",
+      ".claude/agents/codex-cli.md",
+      ".claude/agents/get-current-datetime.md",
+      ".claude/agents/memory-bank-synchronizer.md",
+      ".claude/agents/ux-design-expert.md",
+      ".claude/agents/zai-cli.md",
+      "reports/secure-prompts/security-analysis_20250719_072359.md",
+      ".claude/commands/anthropic/convert-to-todowrite-tasklist-prompt.md",
+      ".claude/commands/promptengineering/batch-operations-prompt.md",
+      ".claude/commands/promptengineering/convert-to-test-driven-prompt.md",
+      ".claude/commands/security/secure-prompts.md",
+      ".claude/skills/ai-image-creator/SKILL.md",
+      ".claude/skills/audit-session-metrics/SKILL.md",
+      ".claude/skills/claude-docs-consultant/SKILL.md",
+      ".claude/skills/consult-codex/SKILL.md",
+      ".claude/skills/consult-zai/SKILL.md",
+      ".claude/skills/session-metrics/SKILL.md",
+      ".claude/skills/task-breakdown/SKILL.md",
+      ".claude/skills/ai-image-creator/references/analyze-reference.md",
+      ".claude/skills/ai-image-creator/references/api-reference.md",
+      ".claude/skills/ai-image-creator/references/composite-reference.md",
+      ".claude/skills/ai-image-creator/references/consistency-presets.md",
+      ".claude/skills/ai-image-creator/references/prompt-categories.md",
+      ".claude/skills/ai-image-creator/references/prompt-core.md",
+      ".claude/skills/ai-image-creator/references/prompt-platforms.md"
+    ],
+    "pushed_at": "2026-08-01T10:25:31Z",
+    "readme_path": "README-v2.md",
+    "readme_sha": "42eb8c0bafc9276e0b5e59f30c107afa3ef214a9",
+    "stars": 2606
   },
   "chuspeeism/dashi-ppt-skill": {
     "classification": null,
@@ -1043,7 +1263,50 @@
     "pushed_at": "2026-07-30T14:02:33Z",
     "readme_path": "README.en.md",
     "readme_sha": "86d1d5033e607052e19843e6f2a99e63312a0e3d",
-    "stars": 6401
+    "stars": 6402
+  },
+  "ciembor/agent-rules-books": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "AGENTS.md rules / skills for AI coding agents: Codex, Cursor & Claude Code. Inspired by Clean Code, Refactoring, DDD, Clean Architecture and DDIA programming books.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "a-philosophy-of-software-design/a-philosophy-of-software-design.md",
+      "a-philosophy-of-software-design/a-philosophy-of-software-design.mini.md",
+      "a-philosophy-of-software-design/a-philosophy-of-software-design.nano.md",
+      "designing-data-intensive-applications/designing-data-intensive-applications.md",
+      "designing-data-intensive-applications/designing-data-intensive-applications.mini.md",
+      "designing-data-intensive-applications/designing-data-intensive-applications.nano.md",
+      "domain-driven-design-distilled/domain-driven-design-distilled.md",
+      "domain-driven-design-distilled/domain-driven-design-distilled.mini.md",
+      "domain-driven-design-distilled/domain-driven-design-distilled.nano.md",
+      "domain-driven-design/domain-driven-design.md",
+      "domain-driven-design/domain-driven-design.mini.md",
+      "domain-driven-design/domain-driven-design.nano.md",
+      "implementing-domain-driven-design/implementing-domain-driven-design.md",
+      "implementing-domain-driven-design/implementing-domain-driven-design.mini.md",
+      "implementing-domain-driven-design/implementing-domain-driven-design.nano.md",
+      "_rule-workbench/a-philosophy-of-software-design/mini.md",
+      "_rule-workbench/a-philosophy-of-software-design/nano.md",
+      "_rule-workbench/a-philosophy-of-software-design/traceability.md",
+      "_rule-workbench/designing-data-intensive-applications/mini.md",
+      "_rule-workbench/designing-data-intensive-applications/nano.md",
+      "_rule-workbench/designing-data-intensive-applications/traceability.md",
+      "_rule-workbench/domain-driven-design-distilled/mini.md",
+      "_rule-workbench/domain-driven-design-distilled/nano.md",
+      "_rule-workbench/domain-driven-design-distilled/traceability.md",
+      "_rule-workbench/domain-driven-design/mini.md",
+      "_rule-workbench/domain-driven-design/nano.md",
+      "_rule-workbench/domain-driven-design/traceability.md",
+      "_rule-workbench/implementing-domain-driven-design/mini.md",
+      "_rule-workbench/implementing-domain-driven-design/nano.md",
+      "_rule-workbench/implementing-domain-driven-design/traceability.md"
+    ],
+    "pushed_at": "2026-05-22T11:00:37Z",
+    "readme_path": "README.md",
+    "readme_sha": "b3d0bc65e12f7bbd2fb0d0824f10982c3beb0779",
+    "stars": 2626
   },
   "cloudflare/security-audit-skill": {
     "classification": null,
@@ -1065,7 +1328,7 @@
     "pushed_at": "2026-07-06T13:36:03Z",
     "readme_path": "README.md",
     "readme_sha": "871e44ddfafc8d4ec875c3e7e317f90a92e4a3c1",
-    "stars": 3092
+    "stars": 3093
   },
   "davidondrej/skills": {
     "classification": null,
@@ -1192,7 +1455,15 @@
     "stars": 13937
   },
   "fecarrico/A11Y.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": null,
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "format_spec",
+      "label": "A11Y.md",
+      "reason": "Accessibility protocol specification for AI agents with 18-rule behavioral contract; designed for integration with Cursor, Claude, Copilot."
+    },
     "default_branch": "main",
     "description": "A context system for building accessible software by default — for developers and AI, with enforceable rules aligned to WCAG.",
     "first_seen": "2026-08-27",
@@ -1378,7 +1649,7 @@
     "pushed_at": "2026-07-27T21:15:07Z",
     "readme_path": "README.md",
     "readme_sha": "ed855c5227b5e18317537549cde731c3fd96b331",
-    "stars": 27529
+    "stars": 27530
   },
   "google-labs-code/stitch-skills": {
     "classification": null,
@@ -1723,8 +1994,37 @@
     "readme_sha": "d113e76be79ec1b558788c4d2d6a32847efeef94",
     "stars": 5949
   },
-  "jakubkrehel/skills": {
+  "jakubkrehel/make-interfaces-feel-better": {
     "classification": null,
+    "default_branch": "main",
+    "description": "An agent skill that helps make your interface feel better.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "skills/make-interfaces-feel-better/animations.md",
+      "skills/make-interfaces-feel-better/icons.md",
+      "skills/make-interfaces-feel-better/performance.md",
+      "skills/make-interfaces-feel-better/SKILL.md",
+      "skills/make-interfaces-feel-better/surfaces.md",
+      "skills/make-interfaces-feel-better/typography.md"
+    ],
+    "pushed_at": "2026-08-12T11:45:31Z",
+    "readme_path": "README.md",
+    "readme_sha": "f82f039697620bc754ff9f8202f4dd1dce828439",
+    "stars": 3024
+  },
+  "jakubkrehel/skills": {
+    "classification": {
+      "artifact_path": "AGENTS.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.9,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "AGENTS.md",
+      "reason": "Reusable agent skills for interface design distributed via CLI and plugin; AGENTS.md is the authoritative source describing skill structure and guidance for coding agents."
+    },
     "default_branch": "main",
     "description": "A collection of agent skills that help you build a great interface.",
     "first_seen": "2026-08-27",
@@ -1764,10 +2064,61 @@
     "pushed_at": "2026-08-24T22:30:14Z",
     "readme_path": "README.md",
     "readme_sha": "d77fe3092dcf5cbfe38d6ed1048dbfd4fecde0aa",
-    "stars": 4487
+    "stars": 4488
+  },
+  "jangviktor-web/nihaixia": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "倪海厦视角的中医Agent Skill，基于倪海厦教学资料开发，蒸馏倪师伤寒论、金匮要略、黄帝内经、神农本草经、针灸篇等，人纪/医案/经方思维，六经辨证，八纲辨证，天机道，天纪，紫微斗数，易经，阴阳，八卦，五行，风水，地纪等，总结8个诊断公式+快速诊断流程图+脉舌速查+七步走思维模式，蒸馏129条伤寒论 · 23篇金匮 · 72篇黄帝内经 · 神农本草经374种本草（上137/中110/下127） · 1257 例结构化案例 + 243 例叙事医案 · 2,452页讲义。",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "SKILL.md",
+      "README_EN.MD",
+      "distilled_cases.md",
+      "expression_style.md",
+      "cases/00_merged_table.md",
+      "cases/01_cancer.md",
+      "cases/02_cardiovascular.md",
+      "cases/03_metabolic.md",
+      "cases/04_autoimmune.md",
+      "cases/05_neurological.md",
+      "cases/06_other.md",
+      "modules/01_shanghan_sun.md",
+      "modules/02_shanghan_other.md",
+      "modules/03_yian.md",
+      "modules/04_jingui.md",
+      "modules/05_huangdi_neijing.md",
+      "modules/06_liangdong.md",
+      "modules/07_bimen_hantang.md",
+      "modules/08_huangdi_detail.md",
+      "modules/09_zhenjiu_bencao.md",
+      "modules/10_fuyang_luntan.md",
+      "modules/11_zhongjing_xinfa.md",
+      "modules/12_stanford_jingfang.md",
+      "modules/13_shanghan_quebing.md",
+      "modules/14_yijinjing_bidu.md",
+      "references/distilled/01-six-meridian-formulas.md",
+      "references/distilled/02-acupuncture-quick-ref.md",
+      "references/distilled/03-clinical-experience.md",
+      "references/distilled/04-acupuncture-highlights.md",
+      "references/distilled/05-clinical-dose-quickref.md"
+    ],
+    "pushed_at": "2026-08-19T13:57:51Z",
+    "readme_path": "README.md",
+    "readme_sha": "552abba4caa04558854d7e3d25ef19004f227bf2",
+    "stars": 2682
   },
   "jbarbier/CLAUDE.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "CLAUDE.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "instruction",
+      "label": "CLAUDE.md",
+      "reason": "Reusable instruction set for AI coding agents; explicitly designed to drop into projects and tools (Claude Code, Cursor, Gemini CLI, Codex); README states 'copy this' and wire across multiple tools via symlinks."
+    },
     "default_branch": "main",
     "description": "One CLAUDE.md to make your coding agent ship like a senior engineer. Drop-in for Claude Code, Codex, Cursor, Gemini.",
     "first_seen": "2026-08-27",
@@ -1812,6 +2163,21 @@
     "readme_path": "README.md",
     "readme_sha": "8a9eef8810477f2cf1f7b0a407bc569592359bc0",
     "stars": 3801
+  },
+  "jsynowiec/node-typescript-boilerplate": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Production-ready Node.js TypeScript boilerplate: ESM, Vitest, ESLint, Prettier, GitHub Actions, Mise, and AGENTS.md included.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "pushed_at": "2026-06-30T11:11:08Z",
+    "readme_path": "README.md",
+    "readme_sha": "43a6eff3be4b99b95dfe88265648df59e26d3b14",
+    "stars": 2955
   },
   "kangarooking/cangjie-skill": {
     "classification": null,
@@ -2069,7 +2435,7 @@
     "pushed_at": "2026-08-24T14:20:17Z",
     "readme_path": "README.md",
     "readme_sha": "ff9b797a342d3a64b52f9f5a83d9fc4ce28709dc",
-    "stars": 238170
+    "stars": 238171
   },
   "memodb-io/Acontext": {
     "classification": null,
@@ -2195,7 +2561,7 @@
     "pushed_at": "2026-08-26T15:42:40Z",
     "readme_path": "README.md",
     "readme_sha": "03696d60edffaa8106728b08e96e871fc9af79dc",
-    "stars": 16392
+    "stars": 16393
   },
   "microsoft/skill-recorder": {
     "classification": null,
@@ -2214,6 +2580,49 @@
     "readme_path": "README.md",
     "readme_sha": "b9835ec6eb888273718f5ba35e6c87a9bfe6b3b8",
     "stars": 3455
+  },
+  "microsoft/skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Skills, MCP servers, Custom Agents, Agents.md for SDKs to ground Coding Agents",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "Agents.md",
+      ".github/copilot-instructions.md",
+      ".github/agents/backend.agent.md",
+      ".github/agents/frontend.agent.md",
+      ".github/agents/infrastructure.agent.md",
+      ".github/agents/planner.agent.md",
+      ".github/agents/presenter.agent.md",
+      ".github/agents/scaffolder.agent.md",
+      ".github/prompts/add-endpoint.prompt.md",
+      ".github/prompts/code-review.prompt.md",
+      ".github/prompts/create-node.prompt.md",
+      ".github/prompts/create-store.prompt.md",
+      ".github/prompts/scaffold-foundry-app.prompt.md",
+      ".github/skills/applicationinsights-web-ts/SKILL.md",
+      ".github/skills/cloud-solution-architect/SKILL.md",
+      ".github/skills/continual-learning/SKILL.md",
+      ".github/skills/copilot-sdk/SKILL.md",
+      ".github/skills/debugview/SKILL.md",
+      ".github/skills/entra-agent-id/SKILL.md",
+      ".github/skills/frontend-design-review/SKILL.md",
+      ".github/skills/github-issue-creator/SKILL.md",
+      ".github/skills/kql/SKILL.md",
+      ".github/skills/mcp-builder/SKILL.md",
+      ".github/skills/microsoft-docs/SKILL.md",
+      ".github/skills/podcast-generation/SKILL.md",
+      ".github/skills/skill-creator/SKILL.md",
+      ".github/plugins/deep-wiki/agents/wiki-architect.md",
+      ".github/plugins/deep-wiki/agents/wiki-researcher.md",
+      ".github/plugins/deep-wiki/agents/wiki-writer.md",
+      ".github/plugins/deep-wiki/commands/agents.md"
+    ],
+    "pushed_at": "2026-08-26T17:02:13Z",
+    "readme_path": "README.md",
+    "readme_sha": "ea0d91186f7337e4c986d663fc5e8632bc72eabf",
+    "stars": 2958
   },
   "mindmuxai/brain.md": {
     "classification": {
@@ -2248,7 +2657,15 @@
     "stars": 509
   },
   "msitarzewski/agency-agents": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "design/design-brand-guardian.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "prompt",
+      "label": "design-brand-guardian.md",
+      "reason": "Reusable AI agent prompt specification defining Brand Guardian personality, mission, core capabilities, rules, and structured deliverables for brand strategy tasks"
+    },
     "default_branch": "main",
     "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
     "first_seen": "2026-08-27",
@@ -2288,7 +2705,7 @@
     "pushed_at": "2026-08-26T14:57:12Z",
     "readme_path": null,
     "readme_sha": null,
-    "stars": 148282
+    "stars": 148283
   },
   "multica-ai/andrej-karpathy-skills": {
     "classification": {
@@ -2315,7 +2732,7 @@
     "pushed_at": "2026-04-20T10:05:04Z",
     "readme_path": "README.md",
     "readme_sha": "7cf07a786532bebe01c65179c8e2c3a98cc0a09b",
-    "stars": 207785
+    "stars": 207788
   },
   "muratcankoylan/Agent-Skills-for-Context-Engineering": {
     "classification": null,
@@ -2419,7 +2836,15 @@
     "stars": 59362
   },
   "nextlevelbuilder/ui-ux-pro-max-skill": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "CLAUDE.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "CLAUDE.md",
+      "reason": "CLAUDE.md provides searchable design intelligence commands and domain-specific guidance for Claude Code, Windsurf, Cursor, and other AI assistants to build UI/UX professionally."
+    },
     "default_branch": "main",
     "description": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
     "first_seen": "2026-08-27",
@@ -2459,7 +2884,7 @@
     "pushed_at": "2026-08-26T06:57:16Z",
     "readme_path": "README.md",
     "readme_sha": "6b71633819b925db6a9d849abcdf6622769d5c6d",
-    "stars": 121476
+    "stars": 121478
   },
   "nicobailon/visual-explainer": {
     "classification": null,
@@ -2574,7 +2999,15 @@
     "stars": 24971
   },
   "originalankur/GenerateAgents.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": null,
+      "classified_at": "2026-08-27",
+      "confidence": 0.85,
+      "content_checked": true,
+      "kind": "format_spec",
+      "label": "GenerateAgents.md",
+      "reason": "Markdown format specification for AI agents to understand codebases (project overview, architecture, code style, anti-patterns); repository name ends in .md"
+    },
     "default_branch": "main",
     "description": "Automated generation of comprehensive Agents.md for LLMs, driven by the DSPy Recursive language model implementation.",
     "first_seen": "2026-08-27",
@@ -2722,8 +3155,59 @@
     "readme_sha": "7718807e9e289dc95e66347fb96f11f20128508e",
     "stars": 4414
   },
-  "s1dashu/ip-as-logo-skill": {
+  "rpamis/comet": {
     "classification": null,
+    "default_branch": "master",
+    "description": "Comet: agent skill harness for turning ideas into evaluated workflows",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "README-zh.md",
+      "eval/simulator-instruction.md",
+      "assets/skills-maintainer/comet-bilingual-docs/SKILL.md",
+      "assets/skills-maintainer/comet-github-ci-triage/SKILL.md",
+      "assets/skills-maintainer/comet-github-idea-to-issue/SKILL.md",
+      "assets/skills-maintainer/comet-github-issue-fix/SKILL.md",
+      "assets/skills-maintainer/comet-github-issue-triage/SKILL.md",
+      "assets/skills-maintainer/comet-github-pr-review/SKILL.md",
+      "assets/skills-maintainer/comet-github/SKILL.md",
+      "assets/skills-maintainer/comet-release/SKILL.md",
+      "assets/skills-maintainer/comet-runtime-diagnose/SKILL.md",
+      "assets/skills-maintainer/comet-safe-delivery/SKILL.md",
+      "assets/skills-zh/comet-any/SKILL.md",
+      "assets/skills-zh/comet-archive/SKILL.md",
+      "assets/skills-zh/comet-build/SKILL.md",
+      "assets/skills-zh/comet-classic/SKILL.md",
+      "assets/skills-zh/comet-design/SKILL.md",
+      "assets/skills-zh/comet-hotfix/SKILL.md",
+      "assets/skills-zh/comet-native/SKILL.md",
+      "assets/skills-zh/comet-open/SKILL.md",
+      "assets/skills-zh/comet-review/SKILL.md",
+      "assets/skills-zh/comet-tweak/SKILL.md",
+      "assets/skills-zh/comet-verify/SKILL.md",
+      "assets/skills-zh/comet/SKILL.md",
+      "assets/skills/comet-any/SKILL.md",
+      "assets/skills/comet-archive/SKILL.md",
+      "assets/skills/comet-build/SKILL.md",
+      "assets/skills/comet-classic/SKILL.md"
+    ],
+    "pushed_at": "2026-08-27T05:38:32Z",
+    "readme_path": "README-zh.md",
+    "readme_sha": "2c08427ee1e85331817260e17ef4de6dfd48cdc0",
+    "stars": 2851
+  },
+  "s1dashu/ip-as-logo-skill": {
+    "classification": {
+      "artifact_path": "SKILL.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.95,
+      "content_checked": true,
+      "kind": "skill",
+      "label": "SKILL.md",
+      "reason": "Reusable Agent Skill for generating simplified IP mascot logos; primary purpose is instructing compatible AI agents on mascot creation workflow."
+    },
     "default_branch": "main",
     "description": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
     "first_seen": "2026-08-27",
@@ -2735,6 +3219,49 @@
     "readme_path": "README.md",
     "readme_sha": "5c90d60233172ad9deff581d28059be36f00442e",
     "stars": 4396
+  },
+  "samber/cc-skills-golang": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "🧑‍🎨 A collection of Golang agentic skills that works",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "CLAUDE.md",
+      "skills/golang-benchmark/SKILL.md",
+      "skills/golang-cli/SKILL.md",
+      "skills/golang-code-style/SKILL.md",
+      "skills/golang-concurrency/SKILL.md",
+      "skills/golang-context/SKILL.md",
+      "skills/golang-continuous-integration/SKILL.md",
+      "skills/golang-data-structures/SKILL.md",
+      "skills/golang-database/SKILL.md",
+      "skills/golang-dependency-injection/SKILL.md",
+      "skills/golang-dependency-management/SKILL.md",
+      "skills/golang-design-patterns/SKILL.md",
+      "skills/golang-documentation/SKILL.md",
+      "skills/golang-error-handling/SKILL.md",
+      "skills/golang-google-wire/SKILL.md",
+      "skills/golang-gopls/SKILL.md",
+      "skills/golang-graphql/SKILL.md",
+      "skills/golang-grpc/SKILL.md",
+      "skills/golang-how-to/SKILL.md",
+      "skills/golang-lint/SKILL.md",
+      "skills/golang-modernize/SKILL.md",
+      "skills/golang-naming/SKILL.md",
+      "skills/golang-observability/SKILL.md",
+      "skills/golang-performance/SKILL.md",
+      "skills/golang-pkg-go-dev/SKILL.md",
+      "skills/golang-popular-libraries/SKILL.md",
+      "skills/golang-project-layout/SKILL.md",
+      "skills/golang-refactoring/SKILL.md",
+      "skills/golang-safety/SKILL.md",
+      "skills/golang-samber-do/SKILL.md"
+    ],
+    "pushed_at": "2026-08-26T17:18:36Z",
+    "readme_path": "README.md",
+    "readme_sha": "769528980bb77d1a7520b1e488355495b489e275",
+    "stars": 3078
   },
   "sanjeed5/awesome-cursor-rules-mdc": {
     "classification": null,
@@ -2821,6 +3348,63 @@
     "readme_path": null,
     "readme_sha": null,
     "stars": 45496
+  },
+  "snyk/agent-scan": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Security scanner for AI agents, MCP servers and agent skills.",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "TERMS.md"
+    ],
+    "pushed_at": "2026-08-27T05:42:38Z",
+    "readme_path": "README.md",
+    "readme_sha": "c90dea7391c4b1c2138350a8c070155608093538",
+    "stars": 2963
+  },
+  "supabase/agent-skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Agent Skills to help developers using AI agents with Supabase",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "skills/supabase-postgres-best-practices/SKILL.md",
+      "skills/supabase/SKILL.md",
+      "skills/supabase-postgres-best-practices/references/_contributing.md",
+      "skills/supabase-postgres-best-practices/references/_sections.md",
+      "skills/supabase-postgres-best-practices/references/_template.md",
+      "skills/supabase-postgres-best-practices/references/advanced-full-text-search.md",
+      "skills/supabase-postgres-best-practices/references/advanced-jsonb-indexing.md",
+      "skills/supabase-postgres-best-practices/references/conn-idle-timeout.md",
+      "skills/supabase-postgres-best-practices/references/conn-limits.md",
+      "skills/supabase-postgres-best-practices/references/conn-pooling.md",
+      "skills/supabase-postgres-best-practices/references/conn-prepared-statements.md",
+      "skills/supabase-postgres-best-practices/references/data-batch-inserts.md",
+      "skills/supabase-postgres-best-practices/references/data-n-plus-one.md",
+      "skills/supabase-postgres-best-practices/references/data-pagination.md",
+      "skills/supabase-postgres-best-practices/references/data-upsert.md",
+      "skills/supabase-postgres-best-practices/references/lock-advisory.md",
+      "skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+      "skills/supabase-postgres-best-practices/references/lock-short-transactions.md",
+      "skills/supabase-postgres-best-practices/references/lock-skip-locked.md",
+      "skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md",
+      "skills/supabase-postgres-best-practices/references/monitor-pg-stat-statements.md",
+      "skills/supabase-postgres-best-practices/references/monitor-vacuum-analyze.md",
+      "skills/supabase-postgres-best-practices/references/query-composite-indexes.md",
+      "skills/supabase-postgres-best-practices/references/query-covering-indexes.md",
+      "skills/supabase-postgres-best-practices/references/query-index-types.md",
+      "skills/supabase-postgres-best-practices/references/query-missing-indexes.md",
+      "skills/supabase-postgres-best-practices/references/query-partial-indexes.md",
+      "skills/supabase-postgres-best-practices/references/schema-constraints.md",
+      "skills/supabase-postgres-best-practices/references/schema-data-types.md"
+    ],
+    "pushed_at": "2026-08-12T07:37:08Z",
+    "readme_path": "README.md",
+    "readme_sha": "528beca0861b4a42368c87f8190d6fa96df44900",
+    "stars": 2550
   },
   "tech-leads-club/agent-skills": {
     "classification": null,
@@ -2913,7 +3497,7 @@
     "pushed_at": "2026-08-27T05:18:19Z",
     "readme_path": "README.md",
     "readme_sha": "27edff10afdf86dfa63005ae705e502f4f73a6da",
-    "stars": 18964
+    "stars": 18997
   },
   "twostraws/SwiftUI-Agent-Skill": {
     "classification": null,
@@ -2983,7 +3567,15 @@
     "stars": 30511
   },
   "vercel-labs/lat.md": {
-    "classification": null,
+    "classification": {
+      "artifact_path": "CLAUDE.md",
+      "classified_at": "2026-08-27",
+      "confidence": 0.85,
+      "content_checked": true,
+      "kind": "instruction",
+      "label": "CLAUDE.md",
+      "reason": "Template instructions for AI agents to use lat.md knowledge graphs; scaffolded into projects via 'lat init' as reusable guidance on maintaining architecture documentation."
+    },
     "default_branch": "main",
     "description": "Agent Lattice: a knowledge graph for your codebase, written in markdown.",
     "first_seen": "2026-08-27",
@@ -3025,7 +3617,50 @@
     "pushed_at": "2026-08-18T20:28:34Z",
     "readme_path": "README.md",
     "readme_sha": "2246383e993f161fd909122d01769059adfb9eab",
-    "stars": 29740
+    "stars": 29741
+  },
+  "vuejs-ai/skills": {
+    "classification": null,
+    "default_branch": "main",
+    "description": "Agent skills for Vue 3 development",
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "markdown_paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "skills/create-adaptable-composable/SKILL.md",
+      "skills/vue-best-practices/SKILL.md",
+      "skills/vue-debug-guides/SKILL.md",
+      "skills/vue-jsx-best-practices/SKILL.md",
+      "skills/vue-options-api-best-practices/SKILL.md",
+      "skills/vue-pinia-best-practices/SKILL.md",
+      "skills/vue-router-best-practices/SKILL.md",
+      "skills/vue-testing-best-practices/SKILL.md",
+      "skills/vue-best-practices/references/animation-class-based-technique.md",
+      "skills/vue-best-practices/references/animation-state-driven-technique.md",
+      "skills/vue-best-practices/references/component-async.md",
+      "skills/vue-best-practices/references/component-data-flow.md",
+      "skills/vue-best-practices/references/component-fallthrough-attrs.md",
+      "skills/vue-best-practices/references/component-keep-alive.md",
+      "skills/vue-best-practices/references/component-slots.md",
+      "skills/vue-best-practices/references/component-suspense.md",
+      "skills/vue-best-practices/references/component-teleport.md",
+      "skills/vue-best-practices/references/component-transition-group.md",
+      "skills/vue-best-practices/references/component-transition.md",
+      "skills/vue-best-practices/references/composables.md",
+      "skills/vue-best-practices/references/directives.md",
+      "skills/vue-best-practices/references/perf-avoid-component-abstraction-in-lists.md",
+      "skills/vue-best-practices/references/perf-v-once-v-memo-directives.md",
+      "skills/vue-best-practices/references/perf-virtualize-large-lists.md",
+      "skills/vue-best-practices/references/plugins.md",
+      "skills/vue-best-practices/references/reactivity.md",
+      "skills/vue-best-practices/references/render-functions.md",
+      "skills/vue-best-practices/references/sfc.md"
+    ],
+    "pushed_at": "2026-05-30T21:32:00Z",
+    "readme_path": "README.md",
+    "readme_sha": "7d4735237b8a9539b9b7907afd71ab1225e684f7",
+    "stars": 2804
   },
   "wasp-lang/open-saas": {
     "classification": null,
@@ -3104,7 +3739,7 @@
     "pushed_at": "2026-08-27T04:19:29Z",
     "readme_path": "README.md",
     "readme_sha": "c8394c416028606acb0a6f7d7f2a5dad5a42815a",
-    "stars": 4114
+    "stars": 4115
   },
   "yibie/SPEC-AGENTS.md": {
     "classification": null,

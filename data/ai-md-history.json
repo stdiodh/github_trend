@@ -1,10 +1,19 @@
 {
   "2026-08-27": {
-    "affaan-m/ECC": 243566,
+    "Graphify-Labs/graphify": 111145,
+    "VoltAgent/awesome-design-md": 110718,
+    "affaan-m/ECC": 243567,
     "agentsmd/agents.md": 23927,
-    "anthropics/skills": 171894,
-    "google-labs-code/design.md": 27529,
+    "anthropics/skills": 171895,
+    "fecarrico/A11Y.md": 389,
+    "google-labs-code/design.md": 27530,
+    "jakubkrehel/skills": 4488,
+    "jbarbier/CLAUDE.md": 486,
     "mindmuxai/brain.md": 509,
-    "multica-ai/andrej-karpathy-skills": 207785
+    "msitarzewski/agency-agents": 148283,
+    "multica-ai/andrej-karpathy-skills": 207788,
+    "nextlevelbuilder/ui-ux-pro-max-skill": 121478,
+    "originalankur/GenerateAgents.md": 254,
+    "s1dashu/ip-as-logo-skill": 4396
   }
 }

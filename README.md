@@ -6,16 +6,16 @@
 
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
-| 1 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | TypeScript | 198,540 | +3,261 | - |
-| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 238,170 | +1,449 | - |
+| 1 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | TypeScript | 198,550 | +3,271 | - |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 238,171 | +1,450 | - |
 | 3 | [openai/codex](https://github.com/openai/codex) | Rust | 118,906 | +800 | - |
 | 4 | [arvids-unavailable/openGym](https://github.com/arvids-unavailable/openGym) | JavaScript | 6,118 | +731 | - |
 | 5 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | Python | 471,195 | +728 | - |
-| 6 | [earendil-works/pi](https://github.com/earendil-works/pi) | TypeScript | 97,949 | +719 | - |
-| 7 | [pathwaycom/arc-task-gen](https://github.com/pathwaycom/arc-task-gen) | Python | 6,749 | +694 | - |
-| 8 | [anywhere-labs/dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | TypeScript | 20,874 | +678 | - |
-| 9 | [obra/superpowers](https://github.com/obra/superpowers) | Shell | 278,221 | +645 | - |
-| 10 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | Python | 111,162 | +645 | - |
+| 6 | [earendil-works/pi](https://github.com/earendil-works/pi) | TypeScript | 97,950 | +720 | - |
+| 7 | [pathwaycom/arc-task-gen](https://github.com/pathwaycom/arc-task-gen) | Python | 6,753 | +698 | - |
+| 8 | [anywhere-labs/dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | TypeScript | 20,876 | +680 | - |
+| 9 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | Python | 111,166 | +649 | - |
+| 10 | [obra/superpowers](https://github.com/obra/superpowers) | Shell | 278,221 | +645 | - |
 
 ## 🌱 Spring Boot 최근 스타 상승 저장소
 
@@ -42,12 +42,16 @@
 
 | 순위 | Markdown | Repository | 종류 | Stars | 24시간 | 7일 |
 |---:|---|---|---|---:|---:|---:|
-| 1 | [AGENTS.md](https://github.com/affaan-m/ECC/blob/main/AGENTS.md) | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 지침 | 243,566 | - | - |
-| 2 | [CLAUDE.md](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/CLAUDE.md) | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 스킬 | 207,785 | - | - |
-| 3 | [SKILL.md](https://github.com/anthropics/skills/blob/main/template/SKILL.md) | [anthropics/skills](https://github.com/anthropics/skills) | 형식 | 171,894 | - | - |
-| 4 | [design.md](https://github.com/google-labs-code/design.md) | [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | 형식 | 27,529 | - | - |
-| 5 | [agents.md](https://github.com/agentsmd/agents.md) | [agentsmd/agents.md](https://github.com/agentsmd/agents.md) | 형식 | 23,927 | - | - |
-| 6 | [brain.md](https://github.com/mindmuxai/brain.md) | [mindmuxai/brain.md](https://github.com/mindmuxai/brain.md) | 형식 | 509 | - | - |
+| 1 | [AGENTS.md](https://github.com/affaan-m/ECC/blob/main/AGENTS.md) | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 지침 | 243,567 | - | - |
+| 2 | [CLAUDE.md](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/CLAUDE.md) | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 스킬 | 207,788 | - | - |
+| 3 | [SKILL.md](https://github.com/anthropics/skills/blob/main/template/SKILL.md) | [anthropics/skills](https://github.com/anthropics/skills) | 형식 | 171,895 | - | - |
+| 4 | [design-brand-guardian.md](https://github.com/msitarzewski/agency-agents/blob/main/design/design-brand-guardian.md) | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 프롬프트 | 148,283 | - | - |
+| 5 | [CLAUDE.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/CLAUDE.md) | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 스킬 | 121,478 | - | - |
+| 6 | [skill-agents.md](https://github.com/Graphify-Labs/graphify/blob/v8/graphify/skill-agents.md) | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 스킬 | 111,145 | - | - |
+| 7 | [DESIGN.md](https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/airbnb/DESIGN.md) | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | 형식 | 110,718 | - | - |
+| 8 | [design.md](https://github.com/google-labs-code/design.md) | [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | 형식 | 27,530 | - | - |
+| 9 | [agents.md](https://github.com/agentsmd/agents.md) | [agentsmd/agents.md](https://github.com/agentsmd/agents.md) | 형식 | 23,927 | - | - |
+| 10 | [AGENTS.md](https://github.com/jakubkrehel/skills/blob/main/AGENTS.md) | [jakubkrehel/skills](https://github.com/jakubkrehel/skills) | 스킬 | 4,488 | - | - |
 
 <!-- AI-MARKDOWN:END -->
 
