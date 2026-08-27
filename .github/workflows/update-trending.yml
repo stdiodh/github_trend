@@ -80,7 +80,7 @@ jobs:
         continue-on-error: true
         run: npm install --global @github/copilot@1.0.80 --no-audit --no-fund
 
-      - name: Classify AI Markdown candidates
+      - name: Classify AI Markdown projects
         id: classify-candidates
         if: steps.install-copilot.outcome == 'success'
         continue-on-error: true
@@ -92,6 +92,7 @@ jobs:
         if: steps.classify-candidates.outcome == 'failure'
         run: |
           cp collected-trends/README.md README.md
+          cp collected-trends/data/ai-md-history.json data/ai-md-history.json
           cp collected-trends/data/ai-md-candidates.json data/ai-md-candidates.json
 
       - name: Report skipped classification
