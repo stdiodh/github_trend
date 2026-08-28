@@ -22,5 +22,30 @@
     "s1dashu/ip-as-logo-skill": 4400,
     "yibie/SPEC-AGENTS.md": 125,
     "zeke/agents.md": 151
+  },
+  "2026-08-28": {
+    "Anbeeld/AGENTS.md": 154,
+    "Graphify-Labs/graphify": 111719,
+    "NarratorAI-Studio/narrator-ai-cli-skill": 2359,
+    "Owl-Listener/designer-skills": 2361,
+    "SnailSploit/Claude-Red": 2987,
+    "VoltAgent/awesome-design-md": 110965,
+    "agentsmd/agents.md": 23959,
+    "anthropics/skills": 172147,
+    "calesthio/OpenMontage": 52741,
+    "elementalsouls/Claude-OSINT": 2346,
+    "fecarrico/A11Y.md": 389,
+    "google-labs-code/design.md": 27562,
+    "jbarbier/CLAUDE.md": 488,
+    "madhvantyagi/SOUL.md": 356,
+    "mindmuxai/brain.md": 515,
+    "msitarzewski/agency-agents": 148548,
+    "multica-ai/andrej-karpathy-skills": 208238,
+    "nextlevelbuilder/ui-ux-pro-max-skill": 122240,
+    "originalankur/GenerateAgents.md": 254,
+    "s1dashu/ip-as-logo-skill": 4478,
+    "vercel-labs/lat.md": 1866,
+    "yibie/SPEC-AGENTS.md": 125,
+    "zeke/agents.md": 151
   }
 }
