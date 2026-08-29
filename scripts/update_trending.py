@@ -1183,6 +1183,19 @@ def visible_ai_repositories(candidates, today):
     return repositories
 
 
+def ranking_sort_key(repository):
+    daily_change = repository["daily_change"]
+    weekly_change = repository["weekly_change"]
+    return (
+        daily_change is None,
+        -daily_change if daily_change is not None else 0,
+        weekly_change is None,
+        -weekly_change if weekly_change is not None else 0,
+        -repository["stars"],
+        repository["full_name"].casefold(),
+    )
+
+
 def calculate_ai_rankings(history, candidates, today):
     current = history.get(today.isoformat(), {})
     previous = history.get((today - timedelta(days=1)).isoformat(), {})
@@ -1215,19 +1228,7 @@ def calculate_ai_rankings(history, candidates, today):
             }
         )
 
-    def sort_key(item):
-        daily = item["daily_change"]
-        weekly = item["weekly_change"]
-        return (
-            daily is None,
-            -daily if daily is not None else 0,
-            weekly is None,
-            -weekly if weekly is not None else 0,
-            -item["stars"],
-            item["full_name"].casefold(),
-        )
-
-    return sorted(rankings, key=sort_key)
+    return sorted(rankings, key=ranking_sort_key)
 
 
 def calculate_rankings(repositories, history, today):
@@ -1247,19 +1248,7 @@ def calculate_rankings(repositories, history, today):
         )
         rankings.append(ranking)
 
-    def sort_key(repository):
-        daily_change = repository["daily_change"]
-        weekly_change = repository["weekly_change"]
-        return (
-            daily_change is None,
-            -daily_change if daily_change is not None else 0,
-            weekly_change is None,
-            -weekly_change if weekly_change is not None else 0,
-            -repository["stars"],
-            repository["full_name"].casefold(),
-        )
-
-    return sorted(rankings, key=sort_key)
+    return sorted(rankings, key=ranking_sort_key)
 
 
 def format_change(change):
