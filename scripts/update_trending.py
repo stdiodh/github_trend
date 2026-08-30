@@ -1400,6 +1400,10 @@ def write_if_changed(path, content):
     return True
 
 
+def serialize_json(value):
+    return json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
 def run(
     token,
     today,
@@ -1474,18 +1478,10 @@ def run(
             today,
         ),
     )
-    updated_history = json.dumps(
-        history, ensure_ascii=False, indent=2, sort_keys=True
-    ) + "\n"
-    updated_spring_history = json.dumps(
-        spring_history, ensure_ascii=False, indent=2, sort_keys=True
-    ) + "\n"
-    updated_ai_history = json.dumps(
-        ai_history, ensure_ascii=False, indent=2, sort_keys=True
-    ) + "\n"
-    updated_ai_candidates = json.dumps(
-        ai_candidates, ensure_ascii=False, indent=2, sort_keys=True
-    ) + "\n"
+    updated_history = serialize_json(history)
+    updated_spring_history = serialize_json(spring_history)
+    updated_ai_history = serialize_json(ai_history)
+    updated_ai_candidates = serialize_json(ai_candidates)
 
     history_changed = write_if_changed(history_path, updated_history)
     spring_history_changed = write_if_changed(
@@ -1532,12 +1528,8 @@ def run_ai_candidate_classification(
         today,
     )
     rankings = calculate_ai_rankings(history, candidates, today)
-    updated_history = json.dumps(
-        history, ensure_ascii=False, indent=2, sort_keys=True
-    ) + "\n"
-    updated_candidates = json.dumps(
-        candidates, ensure_ascii=False, indent=2, sort_keys=True
-    ) + "\n"
+    updated_history = serialize_json(history)
+    updated_candidates = serialize_json(candidates)
     updated_readme = update_ai_markdown_readme(
         readme,
         render_ai_markdown_region(rankings),
