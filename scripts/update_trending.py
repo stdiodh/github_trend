@@ -1167,14 +1167,18 @@ def classify_new_ai_candidates(token, candidates, today):
     return candidates, classified
 
 
+def is_current_visible_ai_candidate(candidate, today):
+    return (
+        candidate is not None
+        and candidate["last_seen"] == today.isoformat()
+        and is_visible_ai_classification(candidate["classification"])
+    )
+
+
 def visible_ai_repositories(candidates, today):
     repositories = {}
     for full_name, candidate in candidates.items():
-        classification = candidate["classification"]
-        if (
-            candidate["last_seen"] != today.isoformat()
-            or not is_visible_ai_classification(classification)
-        ):
+        if not is_current_visible_ai_candidate(candidate, today):
             continue
         repositories[full_name] = {
             "full_name": full_name,
@@ -1204,13 +1208,9 @@ def calculate_ai_rankings(history, candidates, today):
 
     for full_name, stars in current.items():
         candidate = candidates.get(full_name)
-        classification = candidate["classification"] if candidate else None
-        if (
-            candidate is None
-            or candidate["last_seen"] != today.isoformat()
-            or not is_visible_ai_classification(classification)
-        ):
+        if not is_current_visible_ai_candidate(candidate, today):
             continue
+        classification = candidate["classification"]
         rankings.append(
             {
                 "artifact_path": classification["artifact_path"],
