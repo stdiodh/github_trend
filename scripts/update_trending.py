@@ -168,7 +168,7 @@ def parse_repository(item):
         or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
     ):
         raise RuntimeError("GitHub API returned an invalid repository name")
-    if type(stars) is not int or stars < 0:
+    if not isinstance(stars, int) or stars < 0:
         raise RuntimeError(f"GitHub API returned invalid stars for {full_name}")
     if (
         not is_utf8_text(default_branch)
@@ -309,7 +309,7 @@ def load_history(path):
                 or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
             ):
                 raise RuntimeError(f"Invalid repository in history: {full_name}")
-            if type(stars) is not int or stars < 0:
+            if not isinstance(stars, int) or stars < 0:
                 raise RuntimeError(f"Invalid stars in history for {full_name}")
 
     return history
@@ -374,7 +374,7 @@ def get_repository_tree(token, repository):
             or mode not in {"100644", "100755", "120000"}
             or not isinstance(sha, str)
             or not re.fullmatch(r"[0-9a-f]{40,64}", sha)
-            or type(size) is not int
+            or not isinstance(size, int)
             or size < 0
         ):
             raise GitHubAPIError(f"GitHub returned an invalid blob for {full_name}")
@@ -645,7 +645,7 @@ def load_ai_history(path):
                 or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
             ):
                 raise RuntimeError(f"Invalid AI Markdown repository: {full_name}")
-            if type(stars) is not int or stars < 0:
+            if not isinstance(stars, int) or stars < 0:
                 raise RuntimeError(f"Invalid AI Markdown stars for {full_name}")
     return history
 
@@ -838,7 +838,7 @@ def load_ai_candidates(path):
                 readme_sha is not None
                 and not re.fullmatch(r"[0-9a-f]{40,64}", readme_sha)
             )
-            or type(candidate["stars"]) is not int
+            or not isinstance(candidate["stars"], int)
             or candidate["stars"] < 0
         ):
             raise RuntimeError(f"Invalid AI Markdown candidate data: {full_name}")
@@ -919,7 +919,7 @@ def get_ai_blob_sample(token, full_name, sha):
         not isinstance(result, dict)
         or result.get("encoding") != "base64"
         or not isinstance(result.get("content"), str)
-        or type(result.get("size")) is not int
+        or not isinstance(result.get("size"), int)
         or result["size"] < 0
         or result["size"] > AI_MAX_SAMPLE_BYTES
     ):
