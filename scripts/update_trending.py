@@ -53,6 +53,8 @@ AI_ARTIFACT_TERMS = (
     "spec",
 )
 AI_SEARCH_NAMES = ("CLAUDE.md", "AGENTS.md", "SKILL.md", "DESIGN.md")
+AI_SEARCH_NAMES_CASEFOLDED = frozenset(item.casefold() for item in AI_SEARCH_NAMES)
+AI_TERM_PATTERN = re.compile(r"(?<![a-z0-9])ai(?![a-z0-9])")
 AI_VISIBLE_KINDS = {"format_spec", "instruction", "prompt", "skill"}
 IGNORED_TREE_PARTS = {
     ".git",
@@ -400,7 +402,7 @@ def parse_copilot_json(output):
 def repository_matches_ai_markdown(repository):
     text = f"{repository['full_name']} {repository['description']}".casefold()
     has_ai_term = any(
-        re.search(r"(?<![a-z0-9])ai(?![a-z0-9])", text)
+        AI_TERM_PATTERN.search(text)
         if term == "ai"
         else term in text
         for term in AI_DISCOVERY_TERMS
@@ -477,13 +479,13 @@ def collect_ai_repositories(
 def markdown_path_sort_key(path):
     parts = path.split("/")
     name = parts[-1].casefold()
-    known = {item.casefold() for item in AI_SEARCH_NAMES}
-    if len(parts) == 1 and name in known:
+    path_casefolded = path.casefold()
+    if len(parts) == 1 and name in AI_SEARCH_NAMES_CASEFOLDED:
         priority = 0
     elif len(parts) == 1 and name.startswith("readme"):
         priority = 1
     elif any(
-        term in path.casefold()
+        term in path_casefolded
         for term in ("agent", "design", "instruction", "prompt", "skill")
     ):
         priority = 2
@@ -491,7 +493,7 @@ def markdown_path_sort_key(path):
         priority = 3
     else:
         priority = 4
-    return (priority, len(parts), path.casefold(), path)
+    return (priority, len(parts), path_casefolded, path)
 
 
 def collect_ai_markdown_snapshot(token, repositories, candidates):
