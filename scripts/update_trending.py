@@ -1119,18 +1119,18 @@ def classify_new_ai_candidates(token, candidates, today):
         else 0
     )
     rotated_pending = pending[rotation_start:] + pending[:rotation_start]
-    selected = []
+    selected_dict = {}
     for item in (
         format_pending[: AI_MAX_CLASSIFICATIONS // 2]
         + pending[: AI_MAX_CLASSIFICATIONS // 2]
         + rotated_pending
         + pending
     ):
-        if item not in selected:
-            selected.append(item)
-        if len(selected) == AI_MAX_CLASSIFICATION_ATTEMPTS:
+        if item[0] not in selected_dict:
+            selected_dict[item[0]] = item
+        if len(selected_dict) == AI_MAX_CLASSIFICATION_ATTEMPTS:
             break
-    pending = selected
+    pending = list(selected_dict.values())
     if not pending:
         return candidates, 0
 
@@ -1178,15 +1178,14 @@ def is_current_visible_ai_candidate(candidate, today):
 
 
 def visible_ai_repositories(candidates, today):
-    repositories = {}
-    for full_name, candidate in candidates.items():
-        if not is_current_visible_ai_candidate(candidate, today):
-            continue
-        repositories[full_name] = {
+    return {
+        full_name: {
             "full_name": full_name,
             "stars": candidate["stars"],
         }
-    return repositories
+        for full_name, candidate in candidates.items()
+        if is_current_visible_ai_candidate(candidate, today)
+    }
 
 
 def ranking_sort_key(repository):
