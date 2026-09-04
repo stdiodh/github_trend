@@ -1205,51 +1205,54 @@ def calculate_ai_rankings(history, candidates, today):
     current = history.get(today.isoformat(), {})
     previous = history.get((today - timedelta(days=1)).isoformat(), {})
     week_ago = history.get((today - timedelta(days=7)).isoformat(), {})
-    rankings = []
 
-    for full_name, stars in current.items():
-        candidate = candidates.get(full_name)
-        if not is_current_visible_ai_candidate(candidate, today):
-            continue
-        classification = candidate["classification"]
-        rankings.append(
+    return sorted(
+        [
             {
-                "artifact_path": classification["artifact_path"],
+                "artifact_path": candidate["classification"]["artifact_path"],
                 "default_branch": candidate["default_branch"],
                 "daily_change": (
                     stars - previous[full_name] if full_name in previous else None
                 ),
                 "full_name": full_name,
-                "kind": classification["kind"],
-                "label": classification["label"],
+                "kind": candidate["classification"]["kind"],
+                "label": candidate["classification"]["label"],
                 "stars": stars,
                 "weekly_change": (
                     stars - week_ago[full_name] if full_name in week_ago else None
                 ),
             }
-        )
-
-    return sorted(rankings, key=ranking_sort_key)
+            for full_name, stars in current.items()
+            if (candidate := candidates.get(full_name))
+            and is_current_visible_ai_candidate(candidate, today)
+        ],
+        key=ranking_sort_key,
+    )
 
 
 def calculate_rankings(repositories, history, today):
     previous = history.get((today - timedelta(days=1)).isoformat(), {})
     week_ago = history.get((today - timedelta(days=7)).isoformat(), {})
-    rankings = []
 
-    for repository in repositories.values():
-        full_name = repository["full_name"]
-        stars = repository["stars"]
-        ranking = dict(repository)
-        ranking["daily_change"] = (
-            stars - previous[full_name] if full_name in previous else None
-        )
-        ranking["weekly_change"] = (
-            stars - week_ago[full_name] if full_name in week_ago else None
-        )
-        rankings.append(ranking)
-
-    return sorted(rankings, key=ranking_sort_key)
+    return sorted(
+        [
+            {
+                **repository,
+                "daily_change": (
+                    repository["stars"] - previous[repository["full_name"]]
+                    if repository["full_name"] in previous
+                    else None
+                ),
+                "weekly_change": (
+                    repository["stars"] - week_ago[repository["full_name"]]
+                    if repository["full_name"] in week_ago
+                    else None
+                ),
+            }
+            for repository in repositories.values()
+        ],
+        key=ranking_sort_key,
+    )
 
 
 def format_change(change):
