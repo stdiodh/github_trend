@@ -215,6 +215,15 @@ def parse_repository(item):
     }
 
 
+def parse_eligible_repository(item):
+    if isinstance(item, dict) and item.get("private") is True:
+        return None
+    repository = parse_repository(item)
+    if repository["archived"] or repository["fork"]:
+        return None
+    return repository
+
+
 def search_repositories(query, token):
     result = github_get(
         "/search/repositories",
@@ -246,12 +255,8 @@ def collect_repositories(token, today, tracked_names, topic=None):
 
     for query in queries:
         for item in search_repositories(query, token):
-            if isinstance(item, dict) and item.get("private") is True:
-                continue
-            repository = parse_repository(item)
-            if repository["archived"] or repository["fork"]:
-                continue
-            if topic and topic not in repository["topics"]:
+            repository = parse_eligible_repository(item)
+            if repository is None or (topic and topic not in repository["topics"]):
                 continue
             repositories[repository["full_name"]] = repository
             daily_candidate_names.add(repository["full_name"])
@@ -266,12 +271,8 @@ def collect_repositories(token, today, tracked_names, topic=None):
         )
         if item is None:
             continue
-        if isinstance(item, dict) and item.get("private") is True:
-            continue
-        repository = parse_repository(item)
-        if repository["archived"] or repository["fork"]:
-            continue
-        if topic and topic not in repository["topics"]:
+        repository = parse_eligible_repository(item)
+        if repository is None or (topic and topic not in repository["topics"]):
             continue
         repositories[repository["full_name"]] = repository
 
@@ -442,13 +443,10 @@ def collect_ai_repositories(
 
     for query in ai_repository_queries(today):
         for item in search_repositories(query, token):
-            if isinstance(item, dict) and item.get("private") is True:
+            repository = parse_eligible_repository(item)
+            if repository is None or not repository_matches_ai_markdown(repository):
                 continue
-            repository = parse_repository(item)
-            if repository["archived"] or repository["fork"]:
-                continue
-            if repository_matches_ai_markdown(repository):
-                repositories[repository["full_name"]] = repository
+            repositories[repository["full_name"]] = repository
 
     for full_name in sorted(tracked_names):
         if full_name in repositories:
@@ -458,10 +456,10 @@ def collect_ai_repositories(
             token,
             allowed_statuses=(404,),
         )
-        if item is None or (isinstance(item, dict) and item.get("private") is True):
+        if item is None:
             continue
-        repository = parse_repository(item)
-        if repository["archived"] or repository["fork"]:
+        repository = parse_eligible_repository(item)
+        if repository is None:
             continue
         repositories[repository["full_name"]] = repository
 
