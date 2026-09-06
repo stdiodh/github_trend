@@ -1356,40 +1356,45 @@ def render_section(
     return "\n".join(lines)
 
 
-def update_readme(content, section):
-    start_count = content.count(START_MARKER)
-    end_count = content.count(END_MARKER)
+def replace_readme_region(content, section, start_marker, end_marker, marker_name, allow_append=False):
+    start_count = content.count(start_marker)
+    end_count = content.count(end_marker)
 
-    if start_count == 0 and end_count == 0:
+    if allow_append and start_count == 0 and end_count == 0:
         if not content:
             return f"{section}\n"
         separator = "\n" if content.endswith(("\n", "\r")) else "\n\n"
         return f"{content}{separator}{section}\n"
 
     if start_count != 1 or end_count != 1:
-        raise RuntimeError("README must contain exactly one matching marker pair")
+        raise RuntimeError(f"README must contain exactly one {marker_name} marker pair")
 
-    start = content.index(START_MARKER)
-    end = content.index(END_MARKER)
+    start = content.index(start_marker)
+    end = content.index(end_marker)
     if end < start:
-        raise RuntimeError("README markers are in the wrong order")
+        raise RuntimeError(f"README {marker_name} markers are in the wrong order")
 
-    return f"{content[:start]}{section}{content[end + len(END_MARKER):]}"
+    return f"{content[:start]}{section}{content[end + len(end_marker):]}"
+
+
+def update_readme(content, section):
+    return replace_readme_region(
+        content,
+        section,
+        START_MARKER,
+        END_MARKER,
+        "matching",
+        allow_append=True,
+    )
 
 
 def update_ai_markdown_readme(content, section):
-    if (
-        content.count(AI_MARKDOWN_START_MARKER) != 1
-        or content.count(AI_MARKDOWN_END_MARKER) != 1
-    ):
-        raise RuntimeError("README must contain exactly one AI Markdown marker pair")
-    start = content.index(AI_MARKDOWN_START_MARKER)
-    end = content.index(AI_MARKDOWN_END_MARKER)
-    if end < start:
-        raise RuntimeError("README AI Markdown markers are in the wrong order")
-    return (
-        f"{content[:start]}{section}"
-        f"{content[end + len(AI_MARKDOWN_END_MARKER):]}"
+    return replace_readme_region(
+        content,
+        section,
+        AI_MARKDOWN_START_MARKER,
+        AI_MARKDOWN_END_MARKER,
+        "AI Markdown",
     )
 
 
