@@ -512,16 +512,11 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
         for full_name in new_by_stars
         if full_name.rsplit("/", 1)[-1].casefold().endswith(".md")
     ]
-    new_names = []
-    for full_name in (
+    new_names = list(dict.fromkeys(
         new_by_stars[: AI_MAX_NEW_SCANS // 2]
         + format_names[: AI_MAX_NEW_SCANS // 2]
         + new_by_stars
-    ):
-        if full_name not in new_names:
-            new_names.append(full_name)
-        if len(new_names) == AI_MAX_NEW_SCANS:
-            break
+    ))[:AI_MAX_NEW_SCANS]
     selected_names = known_names | set(new_names)
 
     for full_name in sorted(selected_names):
@@ -549,17 +544,16 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             skipped += 1
             continue
 
-        markdown_entries = []
-        for entry in entries:
-            path = entry["path"]
-            parts = path.split("/")
-            if (
-                entry["mode"] == "120000"
-                or not path.casefold().endswith((".md", ".mdc"))
-                or any(part.casefold() in IGNORED_TREE_PARTS for part in parts[:-1])
-            ):
-                continue
-            markdown_entries.append(entry)
+        markdown_entries = [
+            entry
+            for entry in entries
+            if entry["mode"] != "120000"
+            and entry["path"].casefold().endswith((".md", ".mdc"))
+            and not any(
+                part.casefold() in IGNORED_TREE_PARTS
+                for part in entry["path"].split("/")[:-1]
+            )
+        ]
         if not markdown_entries:
             continue
 
@@ -584,15 +578,9 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
                 for part in entry["path"].split("/")[:-1]
             )
         ]
-        markdown_paths = []
-        seen_paths = set()
-        for entry in artifact_entries:
-            if entry["path"] in seen_paths:
-                continue
-            seen_paths.add(entry["path"])
-            markdown_paths.append(entry["path"])
-            if len(markdown_paths) == AI_MAX_MARKDOWN_PATHS:
-                break
+        markdown_paths = list(dict.fromkeys(
+            entry["path"] for entry in artifact_entries
+        ))[:AI_MAX_MARKDOWN_PATHS]
 
         if not allowed_ai_labels(
             full_name,
