@@ -280,11 +280,13 @@ def collect_repositories(token, today, tracked_names, topic=None):
 
 
 def get_previously_tracked_names(history, today):
-    eligible_days = [day for day in history if day <= today.isoformat()]
-    if not eligible_days:
+    latest_day = max(
+        (day for day in history if day <= today.isoformat()),
+        default=None,
+    )
+    if latest_day is None:
         return set()
-    latest = history[max(eligible_days)]
-    return set(latest)
+    return set(history[latest_day])
 
 
 def load_history(path):
