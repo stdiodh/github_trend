@@ -897,7 +897,7 @@ def update_ai_candidates(candidates, records, today):
             and classification["artifact_path"] not in candidate["markdown_paths"]
         ):
             candidate["classification"] = None
-    return {full_name: updated[full_name] for full_name in sorted(updated)}
+    return dict(sorted(updated.items()))
 
 
 def get_ai_blob_sample(token, full_name, sha):
@@ -1099,7 +1099,7 @@ def classify_new_ai_candidates(token, candidates, today):
     format_pending = [
         item
         for item in pending
-        if item[0].rsplit("/", 1)[-1].casefold().endswith(".md")
+        if repository_ai_label(item[0]) is not None
     ]
     rotation_start = (
         today.toordinal() * AI_MAX_CLASSIFICATIONS % len(pending)
