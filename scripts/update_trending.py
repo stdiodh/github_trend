@@ -215,11 +215,13 @@ def parse_repository(item):
     }
 
 
-def parse_eligible_repository(item):
+def parse_eligible_repository(item, topic=None):
     if isinstance(item, dict) and item.get("private") is True:
         return None
     repository = parse_repository(item)
     if repository["archived"] or repository["fork"]:
+        return None
+    if topic and topic not in repository["topics"]:
         return None
     return repository
 
@@ -255,8 +257,8 @@ def collect_repositories(token, today, tracked_names, topic=None):
 
     for query in queries:
         for item in search_repositories(query, token):
-            repository = parse_eligible_repository(item)
-            if repository is None or (topic and topic not in repository["topics"]):
+            repository = parse_eligible_repository(item, topic)
+            if repository is None:
                 continue
             repositories[repository["full_name"]] = repository
             daily_candidate_names.add(repository["full_name"])
@@ -271,8 +273,8 @@ def collect_repositories(token, today, tracked_names, topic=None):
         )
         if item is None:
             continue
-        repository = parse_eligible_repository(item)
-        if repository is None or (topic and topic not in repository["topics"]):
+        repository = parse_eligible_repository(item, topic)
+        if repository is None:
             continue
         repositories[repository["full_name"]] = repository
 
