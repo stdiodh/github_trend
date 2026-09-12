@@ -244,6 +244,23 @@ def search_repositories(query, token):
     return result["items"]
 
 
+def fetch_missing_tracked_repositories(token, repositories, tracked_names, topic=None):
+    for full_name in sorted(tracked_names):
+        if full_name in repositories:
+            continue
+        item = github_get(
+            f"/repos/{quote(full_name, safe='/')}",
+            token,
+            allowed_statuses=(404,),
+        )
+        if item is None:
+            continue
+        repository = parse_eligible_repository(item, topic)
+        if repository is None:
+            continue
+        repositories[repository["full_name"]] = repository
+
+
 def collect_repositories(token, today, tracked_names, topic=None):
     topic_qualifier = f" topic:{topic}" if topic else ""
     queries = (
@@ -263,20 +280,7 @@ def collect_repositories(token, today, tracked_names, topic=None):
             repositories[repository["full_name"]] = repository
             daily_candidate_names.add(repository["full_name"])
 
-    for full_name in sorted(tracked_names):
-        if full_name in repositories:
-            continue
-        item = github_get(
-            f"/repos/{quote(full_name, safe='/')}",
-            token,
-            allowed_statuses=(404,),
-        )
-        if item is None:
-            continue
-        repository = parse_eligible_repository(item, topic)
-        if repository is None:
-            continue
-        repositories[repository["full_name"]] = repository
+    fetch_missing_tracked_repositories(token, repositories, tracked_names, topic)
 
     return repositories, daily_candidate_names
 
@@ -452,20 +456,7 @@ def collect_ai_repositories(
                 continue
             repositories[repository["full_name"]] = repository
 
-    for full_name in sorted(tracked_names):
-        if full_name in repositories:
-            continue
-        item = github_get(
-            f"/repos/{quote(full_name, safe='/')}",
-            token,
-            allowed_statuses=(404,),
-        )
-        if item is None:
-            continue
-        repository = parse_eligible_repository(item)
-        if repository is None:
-            continue
-        repositories[repository["full_name"]] = repository
+    fetch_missing_tracked_repositories(token, repositories, tracked_names)
 
     selected = sorted(
         repositories.values(),
