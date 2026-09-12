@@ -1429,8 +1429,7 @@ def run(
     ai_tracked_names.update(
         full_name
         for full_name, candidate in ai_candidates.items()
-        if candidate.get("classification") is not None
-        and is_visible_ai_classification(candidate["classification"])
+        if is_visible_ai_classification(candidate.get("classification"))
     )
     ai_repositories = collect_ai_repositories(
         token,
