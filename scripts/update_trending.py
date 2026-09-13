@@ -505,7 +505,7 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
     format_names = [
         full_name
         for full_name in new_by_stars
-        if full_name.rsplit("/", 1)[-1].casefold().endswith(".md")
+        if repository_ai_label(full_name) is not None
     ]
     new_names = list(dict.fromkeys(
         new_by_stars[: AI_MAX_NEW_SCANS // 2]
