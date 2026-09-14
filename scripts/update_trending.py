@@ -331,11 +331,12 @@ def update_history(history, repositories, today):
         repository["full_name"]: repository["stars"]
         for repository in repositories.values()
     }
-    cutoff = today - timedelta(days=7)
+    cutoff_iso = (today - timedelta(days=7)).isoformat()
+    today_iso = today.isoformat()
     return {
         day: history[day]
         for day in sorted(history)
-        if cutoff <= date.fromisoformat(day) <= today
+        if cutoff_iso <= day <= today_iso
     }
 
 
@@ -840,11 +841,12 @@ def load_ai_candidates(path):
 
 
 def update_ai_candidates(candidates, records, today):
-    cutoff = today - timedelta(days=7)
+    cutoff_iso = (today - timedelta(days=7)).isoformat()
+    today_iso = today.isoformat()
     updated = {
         full_name: candidate
         for full_name, candidate in candidates.items()
-        if cutoff <= date.fromisoformat(candidate["last_seen"]) <= today
+        if cutoff_iso <= candidate["last_seen"] <= today_iso
     }
 
     for full_name, record in sorted(records.items()):
