@@ -295,6 +295,24 @@ def get_previously_tracked_names(history, today):
     return set(history[latest_day])
 
 
+def validate_history_data(history, context):
+    for day, repositories in history.items():
+        try:
+            parsed_day = date.fromisoformat(day)
+        except (TypeError, ValueError) as error:
+            raise RuntimeError(f"Invalid {context} date: {day}") from error
+        if parsed_day.isoformat() != day or not isinstance(repositories, dict):
+            raise RuntimeError(f"Invalid {context} entry: {day}")
+        for full_name, stars in repositories.items():
+            if (
+                not isinstance(full_name, str)
+                or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
+            ):
+                raise RuntimeError(f"Invalid {context} repository: {full_name}")
+            if not isinstance(stars, int) or stars < 0:
+                raise RuntimeError(f"Invalid {context} stars for {full_name}")
+
+
 def load_history(path):
     if not path.exists():
         return {}
@@ -307,22 +325,7 @@ def load_history(path):
     if not isinstance(history, dict):
         raise RuntimeError("History must be a JSON object")
 
-    for day, repositories in history.items():
-        try:
-            parsed_day = date.fromisoformat(day)
-        except (TypeError, ValueError) as error:
-            raise RuntimeError(f"Invalid history date: {day}") from error
-        if parsed_day.isoformat() != day or not isinstance(repositories, dict):
-            raise RuntimeError(f"Invalid history entry: {day}")
-        for full_name, stars in repositories.items():
-            if (
-                not isinstance(full_name, str)
-                or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
-            ):
-                raise RuntimeError(f"Invalid repository in history: {full_name}")
-            if not isinstance(stars, int) or stars < 0:
-                raise RuntimeError(f"Invalid stars in history for {full_name}")
-
+    validate_history_data(history, "history")
     return history
 
 
@@ -616,21 +619,7 @@ def load_ai_history(path):
     if values and all(isinstance(value, list) for value in values):
         return {}
 
-    for day, repositories in history.items():
-        try:
-            parsed_day = date.fromisoformat(day)
-        except (TypeError, ValueError) as error:
-            raise RuntimeError(f"Invalid AI Markdown history date: {day}") from error
-        if parsed_day.isoformat() != day or not isinstance(repositories, dict):
-            raise RuntimeError(f"Invalid AI Markdown history entry: {day}")
-        for full_name, stars in repositories.items():
-            if (
-                not isinstance(full_name, str)
-                or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
-            ):
-                raise RuntimeError(f"Invalid AI Markdown repository: {full_name}")
-            if not isinstance(stars, int) or stars < 0:
-                raise RuntimeError(f"Invalid AI Markdown stars for {full_name}")
+    validate_history_data(history, "AI Markdown history")
     return history
 
 
