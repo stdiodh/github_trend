@@ -219,9 +219,7 @@ def parse_eligible_repository(item, topic=None):
     if isinstance(item, dict) and item.get("private") is True:
         return None
     repository = parse_repository(item)
-    if repository["archived"] or repository["fork"]:
-        return None
-    if topic and topic not in repository["topics"]:
+    if repository["archived"] or repository["fork"] or (topic and topic not in repository["topics"]):
         return None
     return repository
 
@@ -1294,12 +1292,13 @@ def render_section(
     ai_rankings,
     today,
 ):
+    timestamp = f"> {today.isoformat()} 09:00 KST 기준"
     lines = [
         START_MARKER,
         "",
         "## 🔥 최근 스타 상승 저장소",
         "",
-        f"> {today.isoformat()} 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.",
+        f"{timestamp} · 자체 수집한 스타 변화량입니다.",
         "",
     ]
     lines.extend(render_table(rankings))
@@ -1308,7 +1307,7 @@ def render_section(
             "",
             "## 🌱 Spring Boot 최근 스타 상승 저장소",
             "",
-            f"> {today.isoformat()} 09:00 KST 기준 · `topic:spring-boot` "
+            f"{timestamp} · `topic:spring-boot` "
             "저장소의 자체 수집한 스타 변화량입니다.",
             "",
         )
@@ -1319,7 +1318,7 @@ def render_section(
             "",
             "## 🧠 최근 인기 AI 활용 Markdown",
             "",
-            f"> {today.isoformat()} 09:00 KST 기준 · 파일 자체에는 스타 지표가 "
+            f"{timestamp} · 파일 자체에는 스타 지표가 "
             "없어 해당 Markdown을 배포하는 저장소의 자체 수집 스타 변화량을 "
             "기준으로 하며, 공개 본문을 AI로 분류한 참고용 목록입니다.",
             "",
