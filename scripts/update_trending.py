@@ -412,13 +412,11 @@ def parse_copilot_json(output):
 
 def repository_matches_ai_markdown(repository):
     text = f"{repository['full_name']} {repository['description']}".casefold()
-    has_ai_term = any(
+    has_ai_term = (
         AI_TERM_PATTERN.search(text)
-        if term == "ai"
-        else term in text
-        for term in AI_DISCOVERY_TERMS
+        or any(term in text for term in AI_DISCOVERY_TERMS if term != "ai")
     )
-    return has_ai_term and any(term in text for term in AI_ARTIFACT_TERMS)
+    return bool(has_ai_term and any(term in text for term in AI_ARTIFACT_TERMS))
 
 
 def ai_repository_queries(today):
@@ -475,16 +473,17 @@ def markdown_path_sort_key(path):
     parts = path.split("/")
     name = parts[-1].casefold()
     path_casefolded = path.casefold()
-    if len(parts) == 1 and name in AI_SEARCH_NAMES_CASEFOLDED:
+    is_root = len(parts) == 1
+    if is_root and name in AI_SEARCH_NAMES_CASEFOLDED:
         priority = 0
-    elif len(parts) == 1 and name.startswith("readme"):
+    elif is_root and name.startswith("readme"):
         priority = 1
     elif any(
         term in path_casefolded
         for term in ("agent", "design", "instruction", "prompt", "skill")
     ):
         priority = 2
-    elif len(parts) == 1:
+    elif is_root:
         priority = 3
     else:
         priority = 4
