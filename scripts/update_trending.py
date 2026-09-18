@@ -1208,17 +1208,17 @@ def calculate_rankings(repositories, history, today):
             {
                 **repository,
                 "daily_change": (
-                    repository["stars"] - previous[repository["full_name"]]
-                    if repository["full_name"] in previous
+                    repository["stars"] - previous[full_name]
+                    if full_name in previous
                     else None
                 ),
                 "weekly_change": (
-                    repository["stars"] - week_ago[repository["full_name"]]
-                    if repository["full_name"] in week_ago
+                    repository["stars"] - week_ago[full_name]
+                    if full_name in week_ago
                     else None
                 ),
             }
-            for repository in repositories.values()
+            for full_name, repository in repositories.items()
         ],
         key=ranking_sort_key,
     )
