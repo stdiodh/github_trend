@@ -628,14 +628,13 @@ def is_safe_ai_label(value):
     return (
         is_utf8_text(value)
         and 1 <= len(value) <= 80
-        and not any(character in "`|<>[]()" for character in value)
-        and not any(ord(character) < 32 for character in value)
+        and not any(character in "`|<>[]()" or ord(character) < 32 for character in value)
     )
 
 
 def repository_ai_label(full_name):
-    name = full_name.rsplit("/", 1)[-1]
-    return name.casefold() if name.casefold().endswith(".md") else None
+    name = full_name.rsplit("/", 1)[-1].casefold()
+    return name if name.endswith(".md") else None
 
 
 def allowed_ai_labels(full_name, markdown_paths):
