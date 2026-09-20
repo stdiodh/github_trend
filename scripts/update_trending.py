@@ -540,16 +540,16 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             skipped += 1
             continue
 
-        markdown_entries = [
-            entry
-            for entry in entries
-            if entry["mode"] != "120000"
-            and entry["path"].casefold().endswith((".md", ".mdc"))
-            and not any(
-                part.casefold() in IGNORED_TREE_PARTS
-                for part in entry["path"].split("/")[:-1]
-            )
-        ]
+        markdown_entries = []
+        for entry in entries:
+            if entry["mode"] == "120000":
+                continue
+            path_casefolded = entry["path"].casefold()
+            if not path_casefolded.endswith((".md", ".mdc")):
+                continue
+            if any(part in IGNORED_TREE_PARTS for part in path_casefolded.split("/")[:-1]):
+                continue
+            markdown_entries.append(entry)
         if not markdown_entries:
             continue
 
@@ -564,16 +564,14 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             ),
             None,
         )
-        artifact_entries = [
-            entry
-            for entry in markdown_entries
-            if entry["path"].split("/")[-1].casefold()
-            not in AI_COMMON_MARKDOWN_NAMES
-            and not any(
-                part.casefold() in AI_IGNORED_ARTIFACT_PARTS
-                for part in entry["path"].split("/")[:-1]
-            )
-        ]
+        artifact_entries = []
+        for entry in markdown_entries:
+            parts = entry["path"].casefold().split("/")
+            if (
+                parts[-1] not in AI_COMMON_MARKDOWN_NAMES
+                and not any(part in AI_IGNORED_ARTIFACT_PARTS for part in parts[:-1])
+            ):
+                artifact_entries.append(entry)
         markdown_paths = list(dict.fromkeys(
             entry["path"] for entry in artifact_entries
         ))[:AI_MAX_MARKDOWN_PATHS]
