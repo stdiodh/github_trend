@@ -268,7 +268,6 @@ def collect_repositories(token, today, tracked_names, topic=None):
         f"stars:>=100 archived:false fork:false{topic_qualifier}",
     )
     repositories = {}
-    daily_candidate_names = set()
 
     for query in queries:
         for item in search_repositories(query, token):
@@ -276,8 +275,8 @@ def collect_repositories(token, today, tracked_names, topic=None):
             if repository is None:
                 continue
             repositories[repository["full_name"]] = repository
-            daily_candidate_names.add(repository["full_name"])
 
+    daily_candidate_names = set(repositories.keys())
     fetch_missing_tracked_repositories(token, repositories, tracked_names, topic)
 
     return repositories, daily_candidate_names
