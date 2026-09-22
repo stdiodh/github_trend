@@ -328,12 +328,12 @@ def load_history(path):
 
 
 def update_history(history, repositories, today):
-    history[today.isoformat()] = {
+    today_iso = today.isoformat()
+    history[today_iso] = {
         full_name: repository["stars"]
         for full_name, repository in repositories.items()
     }
     cutoff_iso = (today - timedelta(days=7)).isoformat()
-    today_iso = today.isoformat()
     return {
         day: history[day]
         for day in sorted(history)
