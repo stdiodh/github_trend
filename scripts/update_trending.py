@@ -495,9 +495,9 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
     records = {}
     skipped = 0
 
-    known_names = set(repositories) & set(candidates)
+    known_names = repositories.keys() & candidates.keys()
     new_by_stars = sorted(
-        set(repositories) - known_names,
+        repositories.keys() - known_names,
         key=lambda full_name: (
             -repositories[full_name]["stars"],
             full_name.casefold(),
