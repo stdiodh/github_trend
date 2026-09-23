@@ -512,7 +512,7 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
         + format_names[: AI_MAX_NEW_SCANS // 2]
         + new_by_stars
     ))[:AI_MAX_NEW_SCANS]
-    selected_names = known_names | set(new_names)
+    selected_names = known_names.union(new_names)
 
     for full_name in sorted(selected_names):
         repository = repositories[full_name]
