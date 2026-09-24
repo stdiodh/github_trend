@@ -546,7 +546,7 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             path_casefolded = entry["path"].casefold()
             if not path_casefolded.endswith((".md", ".mdc")):
                 continue
-            if any(part in IGNORED_TREE_PARTS for part in path_casefolded.split("/")[:-1]):
+            if not IGNORED_TREE_PARTS.isdisjoint(path_casefolded.split("/")[:-1]):
                 continue
             markdown_entries.append(entry)
         if not markdown_entries:
