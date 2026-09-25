@@ -568,7 +568,7 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             parts = entry["path"].casefold().split("/")
             if (
                 parts[-1] not in AI_COMMON_MARKDOWN_NAMES
-                and not any(part in AI_IGNORED_ARTIFACT_PARTS for part in parts[:-1])
+                and AI_IGNORED_ARTIFACT_PARTS.isdisjoint(parts[:-1])
             ):
                 artifact_entries.append(entry)
         markdown_paths = list(dict.fromkeys(
