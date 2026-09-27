@@ -283,8 +283,9 @@ def collect_repositories(token, today, tracked_names, topic=None):
 
 
 def get_previously_tracked_names(history, today):
+    today_iso = today.isoformat()
     latest_day = max(
-        (day for day in history if day <= today.isoformat()),
+        (day for day in history if day <= today_iso),
         default=None,
     )
     if latest_day is None:
@@ -758,6 +759,7 @@ def load_ai_candidates(path):
         "stars",
     }
     legacy_required = required - {"pushed_at"}
+    legacy_classification = AI_CLASSIFICATION_FIELDS - {"content_checked"}
     for full_name, candidate in candidates.items():
         if isinstance(candidate, dict) and set(candidate) == legacy_required:
             candidate["pushed_at"] = None
@@ -811,7 +813,7 @@ def load_ai_candidates(path):
         classification = candidate["classification"]
         if (
             isinstance(classification, dict)
-            and set(classification) == AI_CLASSIFICATION_FIELDS - {"content_checked"}
+            and set(classification) == legacy_classification
         ):
             candidate["classification"] = None
         validate_ai_classification(
