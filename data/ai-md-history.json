@@ -1,30 +1,4 @@
 {
-  "2026-09-21": {
-    "Anbeeld/AGENTS.md": 163,
-    "Gostyan/docx-skill-4-cn-paper": 422,
-    "Meliwat/awesome-ios-design-md": 547,
-    "NarratorAI-Studio/narrator-ai-cli-skill": 2653,
-    "VoltAgent/awesome-design-md": 116890,
-    "addyosmani/web-quality-skills": 2815,
-    "bergside/awesome-design-skills": 2861,
-    "cclank/lanshu-create-ai-presenter-video": 1010,
-    "dfinke/awesome-copilot-chatmodes": 319,
-    "gotalab/cc-sdd": 3672,
-    "inkboard/system-atlas": 423,
-    "isjiamu/gzh-design-skill": 3771,
-    "jakubkrehel/make-interfaces-feel-better": 3481,
-    "jangviktor-web/nihaixia": 2993,
-    "jbarbier/CLAUDE.md": 753,
-    "madhvantyagi/SOUL.md": 381,
-    "multica-ai/andrej-karpathy-skills": 214360,
-    "originalankur/GenerateAgents.md": 256,
-    "realrossmanngroup/no_ai_slop_writing_rules": 686,
-    "s1dashu/ip-as-logo-skill": 5376,
-    "tizzy916/humanities-writing-companion": 414,
-    "twostraws/SwiftAgents": 1437,
-    "workos/auth.md": 606,
-    "zeke/agents.md": 154
-  },
   "2026-09-22": {
     "Anbeeld/AGENTS.md": 165,
     "Gostyan/docx-skill-4-cn-paper": 425,
@@ -181,6 +155,27 @@
     "realrossmanngroup/no_ai_slop_writing_rules": 690,
     "s1dashu/ip-as-logo-skill": 5608,
     "twostraws/SwiftAgents": 1442,
+    "zeke/agents.md": 155
+  },
+  "2026-09-29": {
+    "Anbeeld/AGENTS.md": 166,
+    "Gostyan/docx-skill-4-cn-paper": 433,
+    "Meliwat/awesome-ios-design-md": 563,
+    "NarratorAI-Studio/narrator-ai-cli-skill": 2675,
+    "addyosmani/web-quality-skills": 2854,
+    "bergside/awesome-design-skills": 2967,
+    "dfinke/awesome-copilot-chatmodes": 319,
+    "inkboard/system-atlas": 426,
+    "isjiamu/gzh-design-skill": 3854,
+    "jakubkrehel/make-interfaces-feel-better": 3520,
+    "jangviktor-web/nihaixia": 3332,
+    "jbarbier/CLAUDE.md": 760,
+    "madhvantyagi/SOUL.md": 408,
+    "multica-ai/andrej-karpathy-skills": 215729,
+    "originalankur/GenerateAgents.md": 256,
+    "realrossmanngroup/no_ai_slop_writing_rules": 691,
+    "s1dashu/ip-as-logo-skill": 5642,
+    "twostraws/SwiftAgents": 1443,
     "zeke/agents.md": 155
   }
 }
