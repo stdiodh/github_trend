@@ -1136,22 +1136,23 @@ def classify_new_ai_candidates(token, candidates, today):
     return candidates, classified
 
 
-def is_current_visible_ai_candidate(candidate, today):
+def is_current_visible_ai_candidate(candidate, today_iso):
     return (
         candidate is not None
-        and candidate["last_seen"] == today.isoformat()
+        and candidate["last_seen"] == today_iso
         and is_visible_ai_classification(candidate["classification"])
     )
 
 
 def visible_ai_repositories(candidates, today):
+    today_iso = today.isoformat()
     return {
         full_name: {
             "full_name": full_name,
             "stars": candidate["stars"],
         }
         for full_name, candidate in candidates.items()
-        if is_current_visible_ai_candidate(candidate, today)
+        if is_current_visible_ai_candidate(candidate, today_iso)
     }
 
 
@@ -1169,7 +1170,8 @@ def ranking_sort_key(repository):
 
 
 def calculate_ai_rankings(history, candidates, today):
-    current = history.get(today.isoformat(), {})
+    today_iso = today.isoformat()
+    current = history.get(today_iso, {})
     previous = history.get((today - timedelta(days=1)).isoformat(), {})
     week_ago = history.get((today - timedelta(days=7)).isoformat(), {})
 
@@ -1191,7 +1193,7 @@ def calculate_ai_rankings(history, candidates, today):
             }
             for full_name, stars in current.items()
             if (candidate := candidates.get(full_name))
-            and is_current_visible_ai_candidate(candidate, today)
+            and is_current_visible_ai_candidate(candidate, today_iso)
         ],
         key=ranking_sort_key,
     )
