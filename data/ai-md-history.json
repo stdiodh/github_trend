@@ -1,29 +1,4 @@
 {
-  "2026-09-22": {
-    "Anbeeld/AGENTS.md": 165,
-    "Gostyan/docx-skill-4-cn-paper": 425,
-    "Meliwat/awesome-ios-design-md": 548,
-    "NarratorAI-Studio/narrator-ai-cli-skill": 2659,
-    "addyosmani/web-quality-skills": 2816,
-    "bergside/awesome-design-skills": 2881,
-    "cclank/lanshu-create-ai-presenter-video": 1011,
-    "dfinke/awesome-copilot-chatmodes": 319,
-    "gotalab/cc-sdd": 3672,
-    "inkboard/system-atlas": 423,
-    "isjiamu/gzh-design-skill": 3789,
-    "jakubkrehel/make-interfaces-feel-better": 3487,
-    "jangviktor-web/nihaixia": 2998,
-    "jbarbier/CLAUDE.md": 755,
-    "madhvantyagi/SOUL.md": 383,
-    "multica-ai/andrej-karpathy-skills": 214526,
-    "originalankur/GenerateAgents.md": 256,
-    "realrossmanngroup/no_ai_slop_writing_rules": 687,
-    "s1dashu/ip-as-logo-skill": 5407,
-    "tizzy916/humanities-writing-companion": 415,
-    "twostraws/SwiftAgents": 1437,
-    "workos/auth.md": 606,
-    "zeke/agents.md": 154
-  },
   "2026-09-23": {
     "Anbeeld/AGENTS.md": 165,
     "Gostyan/docx-skill-4-cn-paper": 428,
@@ -176,6 +151,27 @@
     "realrossmanngroup/no_ai_slop_writing_rules": 691,
     "s1dashu/ip-as-logo-skill": 5642,
     "twostraws/SwiftAgents": 1443,
+    "zeke/agents.md": 155
+  },
+  "2026-09-30": {
+    "Anbeeld/AGENTS.md": 166,
+    "Gostyan/docx-skill-4-cn-paper": 435,
+    "Meliwat/awesome-ios-design-md": 564,
+    "NarratorAI-Studio/narrator-ai-cli-skill": 2935,
+    "addyosmani/web-quality-skills": 2858,
+    "bergside/awesome-design-skills": 2982,
+    "dfinke/awesome-copilot-chatmodes": 319,
+    "inkboard/system-atlas": 426,
+    "isjiamu/gzh-design-skill": 3868,
+    "jakubkrehel/make-interfaces-feel-better": 3532,
+    "jangviktor-web/nihaixia": 3355,
+    "jbarbier/CLAUDE.md": 761,
+    "madhvantyagi/SOUL.md": 409,
+    "multica-ai/andrej-karpathy-skills": 215910,
+    "originalankur/GenerateAgents.md": 257,
+    "realrossmanngroup/no_ai_slop_writing_rules": 692,
+    "s1dashu/ip-as-logo-skill": 5701,
+    "twostraws/SwiftAgents": 1446,
     "zeke/agents.md": 155
   }
 }
