@@ -176,7 +176,7 @@ def parse_repository(item):
         not is_utf8_text(default_branch)
         or not default_branch
         or len(default_branch) > 255
-        or any(ord(character) < 32 for character in default_branch)
+        or any(character < " " for character in default_branch)
     ):
         raise RuntimeError(f"GitHub API returned invalid default branch for {full_name}")
     try:
@@ -347,7 +347,7 @@ def is_valid_github_path(path):
     parts = path.split("/")
     return all(
         part not in {"", ".", ".."}
-        and not any(ord(character) < 32 for character in part)
+        and not any(character < " " for character in part)
         for part in parts
     )
 
@@ -626,7 +626,7 @@ def is_safe_ai_label(value):
     return (
         is_utf8_text(value)
         and 1 <= len(value) <= 80
-        and not any(character in "`|<>[]()" or ord(character) < 32 for character in value)
+        and not any(character in "`|<>[]()" or character < " " for character in value)
     )
 
 
@@ -784,7 +784,7 @@ def load_ai_candidates(path):
             or first_seen > last_seen
             or not is_utf8_text(candidate["default_branch"])
             or not candidate["default_branch"]
-            or any(ord(character) < 32 for character in candidate["default_branch"])
+            or any(character < " " for character in candidate["default_branch"])
             or not is_utf8_text(candidate["description"])
             or len(candidate["description"]) > 1_024
             or (
