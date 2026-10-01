@@ -19,6 +19,9 @@ from zoneinfo import ZoneInfo
 
 API_ROOT = "https://api.github.com"
 API_VERSION = "2022-11-28"
+ONE_DAY = ONE_DAY
+ONE_WEEK = ONE_WEEK
+ONE_MONTH = ONE_MONTH
 GITHUB_REPOSITORY_PATTERN = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
 START_MARKER = "<!-- GITHUB-TRENDING:START -->"
 END_MARKER = "<!-- GITHUB-TRENDING:END -->"
@@ -262,9 +265,9 @@ def fetch_missing_tracked_repositories(token, repositories, tracked_names, topic
 def collect_repositories(token, today, tracked_names, topic=None):
     topic_qualifier = f" topic:{topic}" if topic else ""
     queries = (
-        f"created:>={(today - timedelta(days=30)).isoformat()} "
+        f"created:>={(today - ONE_MONTH).isoformat()} "
         f"stars:>=10 archived:false fork:false{topic_qualifier}",
-        f"pushed:>={(today - timedelta(days=7)).isoformat()} "
+        f"pushed:>={(today - ONE_WEEK).isoformat()} "
         f"stars:>=100 archived:false fork:false{topic_qualifier}",
     )
     repositories = {}
@@ -333,7 +336,7 @@ def update_history(history, repositories, today):
         full_name: repository["stars"]
         for full_name, repository in repositories.items()
     }
-    cutoff_iso = (today - timedelta(days=7)).isoformat()
+    cutoff_iso = (today - ONE_WEEK).isoformat()
     return {
         day: history[day]
         for day in sorted(history)
@@ -421,8 +424,8 @@ def repository_matches_ai_markdown(repository):
 
 def ai_repository_queries(today):
     common = "stars:>=10 archived:false fork:false"
-    recent = (today - timedelta(days=30)).isoformat()
-    pushed = (today - timedelta(days=7)).isoformat()
+    recent = (today - ONE_MONTH).isoformat()
+    pushed = (today - ONE_WEEK).isoformat()
     queries = [
         f".md in:name,description {common}",
         f".md in:name,description created:>={recent} {common}",
@@ -825,7 +828,7 @@ def load_ai_candidates(path):
 
 
 def update_ai_candidates(candidates, records, today):
-    cutoff_iso = (today - timedelta(days=7)).isoformat()
+    cutoff_iso = (today - ONE_WEEK).isoformat()
     today_iso = today.isoformat()
     updated = {
         full_name: candidate
@@ -1172,8 +1175,8 @@ def ranking_sort_key(repository):
 def calculate_ai_rankings(history, candidates, today):
     today_iso = today.isoformat()
     current = history.get(today_iso, {})
-    previous = history.get((today - timedelta(days=1)).isoformat(), {})
-    week_ago = history.get((today - timedelta(days=7)).isoformat(), {})
+    previous = history.get((today - ONE_DAY).isoformat(), {})
+    week_ago = history.get((today - ONE_WEEK).isoformat(), {})
 
     return sorted(
         [
@@ -1200,8 +1203,8 @@ def calculate_ai_rankings(history, candidates, today):
 
 
 def calculate_rankings(repositories, history, today):
-    previous = history.get((today - timedelta(days=1)).isoformat(), {})
-    week_ago = history.get((today - timedelta(days=7)).isoformat(), {})
+    previous = history.get((today - ONE_DAY).isoformat(), {})
+    week_ago = history.get((today - ONE_WEEK).isoformat(), {})
 
     return sorted(
         [
