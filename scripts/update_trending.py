@@ -19,9 +19,9 @@ from zoneinfo import ZoneInfo
 
 API_ROOT = "https://api.github.com"
 API_VERSION = "2022-11-28"
-ONE_DAY = ONE_DAY
-ONE_WEEK = ONE_WEEK
-ONE_MONTH = ONE_MONTH
+ONE_DAY = timedelta(days=1)
+ONE_WEEK = timedelta(days=7)
+ONE_MONTH = timedelta(days=30)
 GITHUB_REPOSITORY_PATTERN = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
 START_MARKER = "<!-- GITHUB-TRENDING:START -->"
 END_MARKER = "<!-- GITHUB-TRENDING:END -->"
@@ -1179,7 +1179,7 @@ def calculate_ai_rankings(history, candidates, today):
     week_ago = history.get((today - ONE_WEEK).isoformat(), {})
 
     return sorted(
-        [
+        (
             {
                 "artifact_path": candidate["classification"]["artifact_path"],
                 "default_branch": candidate["default_branch"],
@@ -1197,7 +1197,7 @@ def calculate_ai_rankings(history, candidates, today):
             for full_name, stars in current.items()
             if (candidate := candidates.get(full_name))
             and is_current_visible_ai_candidate(candidate, today_iso)
-        ],
+        ),
         key=ranking_sort_key,
     )
 
@@ -1207,7 +1207,7 @@ def calculate_rankings(repositories, history, today):
     week_ago = history.get((today - ONE_WEEK).isoformat(), {})
 
     return sorted(
-        [
+        (
             {
                 **repository,
                 "daily_change": (
@@ -1222,7 +1222,7 @@ def calculate_rankings(repositories, history, today):
                 ),
             }
             for full_name, repository in repositories.items()
-        ],
+        ),
         key=ranking_sort_key,
     )
 
