@@ -279,7 +279,7 @@ def collect_repositories(token, today, tracked_names, topic=None):
                 continue
             repositories[repository["full_name"]] = repository
 
-    daily_candidate_names = set(repositories.keys())
+    daily_candidate_names = set(repositories)
     fetch_missing_tracked_repositories(token, repositories, tracked_names, topic)
 
     return repositories, daily_candidate_names
