@@ -1071,10 +1071,11 @@ INPUT JSON:
 
 
 def classify_new_ai_candidates(token, candidates, today):
+    today_iso = today.isoformat()
     pending = [
         (full_name, candidate)
         for full_name, candidate in candidates.items()
-        if candidate["last_seen"] == today.isoformat()
+        if candidate["last_seen"] == today_iso
         and candidate["classification"] is None
     ]
     pending.sort(key=lambda item: (-item[1]["stars"], item[0].casefold()))
