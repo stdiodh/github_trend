@@ -473,9 +473,9 @@ def collect_ai_repositories(
 
 
 def markdown_path_sort_key(path):
-    parts = path.split("/")
-    name = parts[-1].casefold()
     path_casefolded = path.casefold()
+    parts = path_casefolded.split("/")
+    name = parts[-1]
     is_root = len(parts) == 1
     if is_root and name in AI_SEARCH_NAMES_CASEFOLDED:
         priority = 0
