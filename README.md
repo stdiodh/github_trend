@@ -2,56 +2,56 @@
 
 ## 🔥 최근 스타 상승 저장소
 
-> 2026-10-08 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.
+> 2026-10-09 09:00 KST 기준 · 자체 수집한 스타 변화량입니다.
 
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
-| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | Rust | 18,501 | +10,537 | - |
-| 2 | [openai/math](https://github.com/openai/math) | Lean | 10,085 | +6,694 | - |
-| 3 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | HTML | 51,446 | +4,343 | +19,220 |
-| 4 | [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | Swift | 11,637 | +2,022 | +4,937 |
-| 5 | [storytold/lightcraft](https://github.com/storytold/lightcraft) | Rust | 3,291 | +1,891 | - |
-| 6 | [storytold/filmcraft](https://github.com/storytold/filmcraft) | Rust | 3,552 | +1,743 | - |
-| 7 | [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 279,847 | +1,574 | +6,764 |
-| 8 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | C++ | 17,321 | +1,389 | +14,128 |
-| 9 | [lexmount/moli](https://github.com/lexmount/moli) | Rust | 12,669 | +1,325 | +9,971 |
-| 10 | [shader-effects-inc/shaders](https://github.com/shader-effects-inc/shaders) | TypeScript | 2,583 | +1,169 | - |
+| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | Rust | 28,135 | +9,634 | - |
+| 2 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | HTML | 55,271 | +3,825 | - |
+| 3 | [storytold/lightcraft](https://github.com/storytold/lightcraft) | Rust | 5,911 | +2,620 | - |
+| 4 | [openai/math](https://github.com/openai/math) | Lean | 12,299 | +2,214 | - |
+| 5 | [storytold/pdfcraft](https://github.com/storytold/pdfcraft) | Rust | 4,785 | +2,157 | - |
+| 6 | [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | Swift | 13,668 | +2,031 | - |
+| 7 | [storytold/filmcraft](https://github.com/storytold/filmcraft) | Rust | 5,543 | +1,991 | - |
+| 8 | [storytold/vectorcraft](https://github.com/storytold/vectorcraft) | Rust | 4,007 | +1,576 | - |
+| 9 | [mattpocock/skills](https://github.com/mattpocock/skills) | Shell | 281,312 | +1,465 | - |
+| 10 | [lexmount/moli](https://github.com/lexmount/moli) | Rust | 14,054 | +1,385 | - |
 
 ## 🌱 Spring Boot 최근 스타 상승 저장소
 
-> 2026-10-08 09:00 KST 기준 · `topic:spring-boot` 저장소의 자체 수집한 스타 변화량입니다.
+> 2026-10-09 09:00 KST 기준 · `topic:spring-boot` 저장소의 자체 수집한 스타 변화량입니다.
 
 | 순위 | Repository | Language | Stars | 24시간 | 7일 |
 |---:|---|---|---:|---:|---:|
-| 1 | [livecontext-ai/livecontext-ce](https://github.com/livecontext-ai/livecontext-ce) | Java | 764 | +27 | +142 |
-| 2 | [sapphirexai/bufferpad](https://github.com/sapphirexai/bufferpad) | Java | 161 | +12 | +63 |
-| 3 | [jdubois/boot-ui](https://github.com/jdubois/boot-ui) | Java | 306 | +6 | +9 |
-| 4 | [818000/bus](https://github.com/818000/bus) | Java | 838 | +5 | +9 |
-| 5 | [grimmory-tools/grimmory](https://github.com/grimmory-tools/grimmory) | Java | 4,489 | +4 | +30 |
-| 6 | [gotson/komga](https://github.com/gotson/komga) | Kotlin | 6,719 | +4 | +17 |
-| 7 | [spring-projects/spring-boot](https://github.com/spring-projects/spring-boot) | Java | 81,566 | +3 | +30 |
-| 8 | [myccarl/ai-shortVideo-pipeline](https://github.com/myccarl/ai-shortVideo-pipeline) | Python | 717 | +3 | +24 |
-| 9 | [quuuuj/hrm](https://github.com/quuuuj/hrm) | Java | 465 | +3 | +10 |
-| 10 | [macrozheng/mall](https://github.com/macrozheng/mall) | Java | 84,867 | +2 | +18 |
+| 1 | [YeamimHossainSajid/uber-doma-architecture](https://github.com/YeamimHossainSajid/uber-doma-architecture) | Java | 41 | +27 | - |
+| 2 | [ronitgupta138/apex-matching-engine](https://github.com/ronitgupta138/apex-matching-engine) | Java | 41 | +25 | - |
+| 3 | [ronitgupta138/bharat-spatial-engine](https://github.com/ronitgupta138/bharat-spatial-engine) | Java | 40 | +25 | - |
+| 4 | [ronitgupta138/finflow-core](https://github.com/ronitgupta138/finflow-core) | Java | 40 | +25 | - |
+| 5 | [livecontext-ai/livecontext-ce](https://github.com/livecontext-ai/livecontext-ce) | Java | 778 | +14 | - |
+| 6 | [spring-projects/spring-boot](https://github.com/spring-projects/spring-boot) | Java | 81,576 | +10 | - |
+| 7 | [Earth-OL-Player/ai_learn_project](https://github.com/Earth-OL-Player/ai_learn_project) | Java | 447 | +6 | - |
+| 8 | [sapphirexai/bufferpad](https://github.com/sapphirexai/bufferpad) | Java | 167 | +6 | - |
+| 9 | [gotson/komga](https://github.com/gotson/komga) | Kotlin | 6,724 | +5 | - |
+| 10 | [grimmory-tools/grimmory](https://github.com/grimmory-tools/grimmory) | Java | 4,494 | +5 | - |
 
 ## 🧠 최근 인기 AI 활용 Markdown
 
-> 2026-10-08 09:00 KST 기준 · 파일 자체에는 스타 지표가 없어 해당 Markdown을 배포하는 저장소의 자체 수집 스타 변화량을 기준으로 하며, 공개 본문을 AI로 분류한 참고용 목록입니다.
+> 2026-10-09 09:00 KST 기준 · 파일 자체에는 스타 지표가 없어 해당 Markdown을 배포하는 저장소의 자체 수집 스타 변화량을 기준으로 하며, 공개 본문을 AI로 분류한 참고용 목록입니다.
 
 <!-- AI-MARKDOWN:START -->
 
 | 순위 | Markdown | Repository | 종류 | Stars | 24시간 | 7일 |
 |---:|---|---|---|---:|---:|---:|
-| 1 | [CLAUDE.md](https://github.com/affaan-m/ECC/blob/main/CLAUDE.md) | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 지침 | 275,007 | +649 | - |
-| 2 | [CLAUDE.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/CLAUDE.md) | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 스킬 | 133,874 | +245 | - |
-| 3 | [CLAUDE.md](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/CLAUDE.md) | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 스킬 | 217,472 | +175 | +1,402 |
-| 4 | [SKILL.md](https://github.com/anthropics/skills/blob/main/template/SKILL.md) | [anthropics/skills](https://github.com/anthropics/skills) | 스킬 | 180,072 | +137 | - |
-| 5 | [DESIGN.md](https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/airbnb/DESIGN.md) | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | 형식 | 119,959 | +129 | - |
-| 6 | [SKILL.md](https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/agent_skills/advisor-orchestrator-worker/SKILL.md) | [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 스킬 | 140,952 | +71 | - |
-| 7 | [AGENTS.md](https://github.com/agentsmd/agents.md) | [agentsmd/agents.md](https://github.com/agentsmd/agents.md) | 형식 | 24,813 | +21 | +100 |
-| 8 | [SKILL.md](https://github.com/bergside/awesome-design-skills/blob/main/skills/agentic/SKILL.md) | [bergside/awesome-design-skills](https://github.com/bergside/awesome-design-skills) | 스킬 | 3,080 | +12 | +89 |
-| 9 | [DESIGN.md](https://github.com/google-labs-code/design.md) | [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | 형식 | 28,277 | +11 | +84 |
-| 10 | [SKILL.md](https://github.com/s1dashu/ip-as-logo-skill/blob/main/SKILL.md) | [s1dashu/ip-as-logo-skill](https://github.com/s1dashu/ip-as-logo-skill) | 스킬 | 5,833 | +9 | +99 |
+| 1 | [CLAUDE.md](https://github.com/affaan-m/ECC/blob/main/CLAUDE.md) | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 지침 | 275,470 | +463 | - |
+| 2 | [SKILL.md](https://github.com/ScrapeCreators/social-media-research-skills/blob/main/skills/ad-library-teardown/SKILL.md) | [ScrapeCreators/social-media-research-skills](https://github.com/ScrapeCreators/social-media-research-skills) | 스킬 | 3,359 | +56 | - |
+| 3 | [design.md](https://github.com/google-labs-code/design.md) | [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | 형식 | 28,298 | +21 | - |
+| 4 | [SKILL.md](https://github.com/plannotator/effective-html/blob/main/skills/design-artifact/SKILL.md) | [plannotator/effective-html](https://github.com/plannotator/effective-html) | 스킬 | 3,583 | +21 | - |
+| 5 | [AGENTS.md](https://github.com/agentsmd/agents.md) | [agentsmd/agents.md](https://github.com/agentsmd/agents.md) | 형식 | 24,833 | +20 | - |
+| 6 | [CLAUDE.md](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/CLAUDE.md) | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 스킬 | 217,491 | +19 | - |
+| 7 | [SKILL.md](https://github.com/bergside/awesome-design-skills/blob/main/skills/agentic/SKILL.md) | [bergside/awesome-design-skills](https://github.com/bergside/awesome-design-skills) | 스킬 | 3,097 | +17 | - |
+| 8 | [SKILL.md](https://github.com/s1dashu/ip-as-logo-skill/blob/main/SKILL.md) | [s1dashu/ip-as-logo-skill](https://github.com/s1dashu/ip-as-logo-skill) | 스킬 | 5,848 | +15 | - |
+| 9 | [CLAUDE.md](https://github.com/jakubkrehel/make-interfaces-feel-better/blob/main/CLAUDE.md) | [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better) | 스킬 | 3,615 | +15 | - |
+| 10 | [SKILL.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-ai-ml/SKILL.md) | [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) | 스킬 | 3,416 | +13 | - |
 
 <!-- AI-MARKDOWN:END -->
 
