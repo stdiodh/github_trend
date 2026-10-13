@@ -1066,7 +1066,7 @@ INPUT JSON:
                 "Contributor guidelines for maintaining the containing repository."
             )
         classifications[item_id] = classification
-    if set(classifications) != set(input_by_id):
+    if classifications.keys() != input_by_id.keys():
         raise RuntimeError("Copilot did not classify every candidate")
     return classifications
 
