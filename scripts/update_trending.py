@@ -682,20 +682,21 @@ def validate_ai_classification(
         raise RuntimeError(f"Invalid AI classification confidence for {context}")
     if not is_safe_ai_label(classification["label"]):
         raise RuntimeError(f"Invalid AI classification label for {context}")
-    if classification["label"].casefold() not in allowed_ai_labels(
+    label_casefolded = classification["label"].casefold()
+    if label_casefolded not in allowed_ai_labels(
         context,
         markdown_paths,
     ):
         raise RuntimeError(f"Unknown AI classification label for {context}")
     if artifact_path is None:
-        if classification["label"].casefold() != repository_ai_label(context):
+        if label_casefolded != repository_ai_label(context):
             raise RuntimeError(f"Missing AI artifact path for {context}")
     elif artifact_path not in markdown_paths:
         raise RuntimeError(f"Invalid AI artifact path for {context}")
     if (
         artifact_path is not None
         and Path(artifact_path).name.casefold()
-        != classification["label"].casefold()
+        != label_casefolded
     ):
         raise RuntimeError(f"Mismatched AI artifact label for {context}")
     if (
