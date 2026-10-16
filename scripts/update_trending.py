@@ -59,6 +59,12 @@ AI_SEARCH_NAMES = ("CLAUDE.md", "AGENTS.md", "SKILL.md", "DESIGN.md")
 AI_SEARCH_NAMES_CASEFOLDED = frozenset(item.casefold() for item in AI_SEARCH_NAMES)
 AI_TERM_PATTERN = re.compile(r"(?<![a-z0-9])ai(?![a-z0-9])")
 AI_VISIBLE_KINDS = {"format_spec", "instruction", "prompt", "skill"}
+AI_KIND_LABELS = {
+    "format_spec": "형식",
+    "instruction": "지침",
+    "prompt": "프롬프트",
+    "skill": "스킬",
+}
 IGNORED_TREE_PARTS = {
     ".git",
     ".venv",
@@ -1255,12 +1261,6 @@ def render_ai_table(rankings):
     if not rankings:
         return ["아직 분류가 완료된 AI 활용 Markdown 프로젝트가 없습니다."]
 
-    kind_labels = {
-        "format_spec": "형식",
-        "instruction": "지침",
-        "prompt": "프롬프트",
-        "skill": "스킬",
-    }
     lines = [
         "| 순위 | Markdown | Repository | 종류 | Stars | 24시간 | 7일 |",
         "|---:|---|---|---|---:|---:|---:|",
@@ -1276,7 +1276,7 @@ def render_ai_table(rankings):
             artifact_url = f"{repository_url}/blob/{branch}/{path}"
         lines.append(
             f"| {rank} | [{item['label']}]({artifact_url}) "
-            f"| [{full_name}]({repository_url}) | {kind_labels[item['kind']]} "
+            f"| [{full_name}]({repository_url}) | {AI_KIND_LABELS[item['kind']]} "
             f"| {item['stars']:,} | {format_change(item['daily_change'])} "
             f"| {format_change(item['weekly_change'])} |"
         )
