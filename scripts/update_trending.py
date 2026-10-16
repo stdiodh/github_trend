@@ -432,16 +432,13 @@ def ai_repository_queries(today):
     common = "stars:>=10 archived:false fork:false"
     recent = (today - ONE_MONTH).isoformat()
     pushed = (today - ONE_WEEK).isoformat()
-    queries = [
+    return [
         f".md in:name,description {common}",
         f".md in:name,description created:>={recent} {common}",
         f".md in:name,description pushed:>={pushed} {common}",
+        *(f"{name} in:name,description {common}" for name in AI_SEARCH_NAMES),
+        f'"agent skills" in:name,description {common}',
     ]
-    queries.extend(
-        f"{name} in:name,description {common}" for name in AI_SEARCH_NAMES
-    )
-    queries.append(f'"agent skills" in:name,description {common}')
-    return queries
 
 
 def collect_ai_repositories(
