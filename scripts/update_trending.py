@@ -60,13 +60,13 @@ AI_ARTIFACT_TERMS = (
 AI_SEARCH_NAMES = ("CLAUDE.md", "AGENTS.md", "SKILL.md", "DESIGN.md")
 AI_SEARCH_NAMES_CASEFOLDED = frozenset(item.casefold() for item in AI_SEARCH_NAMES)
 AI_TERM_PATTERN = re.compile(r"(?<![a-z0-9])ai(?![a-z0-9])")
-AI_VISIBLE_KINDS = {"format_spec", "instruction", "prompt", "skill"}
 AI_KIND_LABELS = {
     "format_spec": "형식",
     "instruction": "지침",
     "prompt": "프롬프트",
     "skill": "스킬",
 }
+AI_VISIBLE_KINDS = set(AI_KIND_LABELS)
 IGNORED_TREE_PARTS = {
     ".git",
     ".venv",
