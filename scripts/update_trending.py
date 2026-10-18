@@ -25,6 +25,7 @@ ONE_WEEK = timedelta(days=7)
 ONE_MONTH = timedelta(days=30)
 GITHUB_REPOSITORY_PATTERN = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
 GITHUB_SHA_PATTERN = re.compile(r"[0-9a-f]{40,64}")
+GITHUB_TIMESTAMP_PATTERN = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 START_MARKER = "<!-- GITHUB-TRENDING:START -->"
 END_MARKER = "<!-- GITHUB-TRENDING:END -->"
 AI_MARKDOWN_START_MARKER = "<!-- AI-MARKDOWN:START -->"
@@ -799,10 +800,7 @@ def load_ai_candidates(path):
                 candidate["pushed_at"] is not None
                 and (
                     not isinstance(candidate["pushed_at"], str)
-                    or not re.fullmatch(
-                        r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z",
-                        candidate["pushed_at"],
-                    )
+                    or not GITHUB_TIMESTAMP_PATTERN.fullmatch(candidate["pushed_at"])
                 )
             )
             or not isinstance(paths, list)
