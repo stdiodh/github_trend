@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 
 API_ROOT = "https://api.github.com"
 API_VERSION = "2022-11-28"
+RANKING_DISPLAY_LIMIT = 10
 ONE_DAY = timedelta(days=1)
 ONE_WEEK = timedelta(days=7)
 ONE_MONTH = timedelta(days=30)
@@ -1242,7 +1243,7 @@ def render_table(rankings):
         "|---:|---|---|---:|---:|---:|",
     ]
 
-    for rank, repository in enumerate(rankings[:10], start=1):
+    for rank, repository in enumerate(rankings[:RANKING_DISPLAY_LIMIT], start=1):
         full_name = repository["full_name"]
         lines.append(
             f"| {rank} | [{full_name}](https://github.com/{full_name}) "
@@ -1262,7 +1263,7 @@ def render_ai_table(rankings):
         "| 순위 | Markdown | Repository | 종류 | Stars | 24시간 | 7일 |",
         "|---:|---|---|---|---:|---:|---:|",
     ]
-    for rank, item in enumerate(rankings[:10], start=1):
+    for rank, item in enumerate(rankings[:RANKING_DISPLAY_LIMIT], start=1):
         full_name = item["full_name"]
         repository_url = f"https://github.com/{full_name}"
         if item["artifact_path"] is None:
