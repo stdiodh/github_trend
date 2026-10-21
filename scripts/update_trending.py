@@ -24,6 +24,7 @@ ONE_DAY = timedelta(days=1)
 ONE_WEEK = timedelta(days=7)
 ONE_MONTH = timedelta(days=30)
 GITHUB_REPOSITORY_PATTERN = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
+GITHUB_SHA_PATTERN = re.compile(r"[0-9a-f]{40,64}")
 START_MARKER = "<!-- GITHUB-TRENDING:START -->"
 END_MARKER = "<!-- GITHUB-TRENDING:END -->"
 AI_MARKDOWN_START_MARKER = "<!-- AI-MARKDOWN:START -->"
@@ -396,7 +397,7 @@ def get_repository_tree(token, repository):
             not isinstance(path, str)
             or mode not in {"100644", "100755", "120000"}
             or not isinstance(sha, str)
-            or not re.fullmatch(r"[0-9a-f]{40,64}", sha)
+            or not GITHUB_SHA_PATTERN.fullmatch(sha)
             or not isinstance(size, int)
             or size < 0
         ):
@@ -812,7 +813,7 @@ def load_ai_candidates(path):
             or ((readme_path is None) != (readme_sha is None))
             or (
                 readme_sha is not None
-                and not re.fullmatch(r"[0-9a-f]{40,64}", readme_sha)
+                and not GITHUB_SHA_PATTERN.fullmatch(readme_sha)
             )
             or not isinstance(candidate["stars"], int)
             or candidate["stars"] < 0
