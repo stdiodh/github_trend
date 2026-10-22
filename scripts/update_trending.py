@@ -1179,6 +1179,10 @@ def ranking_sort_key(repository):
     )
 
 
+def calculate_star_change(full_name, stars, snapshot):
+    return stars - snapshot[full_name] if full_name in snapshot else None
+
+
 def calculate_ai_rankings(history, candidates, today):
     today_iso = today.isoformat()
     current = history.get(today_iso, {})
@@ -1190,16 +1194,12 @@ def calculate_ai_rankings(history, candidates, today):
             {
                 "artifact_path": candidate["classification"]["artifact_path"],
                 "default_branch": candidate["default_branch"],
-                "daily_change": (
-                    stars - previous[full_name] if full_name in previous else None
-                ),
+                "daily_change": calculate_star_change(full_name, stars, previous),
                 "full_name": full_name,
                 "kind": candidate["classification"]["kind"],
                 "label": candidate["classification"]["label"],
                 "stars": stars,
-                "weekly_change": (
-                    stars - week_ago[full_name] if full_name in week_ago else None
-                ),
+                "weekly_change": calculate_star_change(full_name, stars, week_ago),
             }
             for full_name, stars in current.items()
             if (candidate := candidates.get(full_name))
@@ -1217,15 +1217,11 @@ def calculate_rankings(repositories, history, today):
         (
             {
                 **repository,
-                "daily_change": (
-                    repository["stars"] - previous[full_name]
-                    if full_name in previous
-                    else None
+                "daily_change": calculate_star_change(
+                    full_name, repository["stars"], previous
                 ),
-                "weekly_change": (
-                    repository["stars"] - week_ago[full_name]
-                    if full_name in week_ago
-                    else None
+                "weekly_change": calculate_star_change(
+                    full_name, repository["stars"], week_ago
                 ),
             }
             for full_name, repository in repositories.items()
