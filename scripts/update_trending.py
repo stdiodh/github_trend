@@ -1139,7 +1139,7 @@ def classify_new_ai_candidates(token, candidates, today):
                 file=sys.stderr,
             )
             continue
-        candidates[full_name]["classification"] = classification
+        candidate["classification"] = classification
         classified += 1
         if classified == AI_MAX_CLASSIFICATIONS:
             break
