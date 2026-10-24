@@ -38,7 +38,6 @@ README_PATH = REPOSITORY_ROOT / "README.md"
 
 AI_DISCOVERY_TERMS = (
     "agent",
-    "ai",
     "claude",
     "cline",
     "codex",
@@ -425,7 +424,7 @@ def repository_matches_ai_markdown(repository):
     text = f"{repository['full_name']} {repository['description']}".casefold()
     has_ai_term = (
         AI_TERM_PATTERN.search(text)
-        or any(term in text for term in AI_DISCOVERY_TERMS if term != "ai")
+        or any(term in text for term in AI_DISCOVERY_TERMS)
     )
     return bool(has_ai_term and any(term in text for term in AI_ARTIFACT_TERMS))
 
