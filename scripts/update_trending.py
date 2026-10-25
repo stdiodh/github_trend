@@ -1034,6 +1034,7 @@ INPUT JSON:
 
     input_by_id = {item["id"]: item for item in items}
     classifications = {}
+    today_iso = today.isoformat()
     for item in returned_items:
         if not isinstance(item, dict) or set(item) != {
             "artifact_path",
@@ -1052,7 +1053,7 @@ INPUT JSON:
         ):
             raise RuntimeError("Copilot returned an unknown or duplicate candidate id")
         classification = {key: value for key, value in item.items() if key != "id"}
-        classification["classified_at"] = today.isoformat()
+        classification["classified_at"] = today_iso
         classification["content_checked"] = True
         source = input_by_id[item_id]
         validate_ai_classification(
