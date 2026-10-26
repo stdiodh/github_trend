@@ -1103,8 +1103,7 @@ def classify_new_ai_candidates(token, candidates, today):
         + rotated_pending
         + pending
     ):
-        if item[0] not in selected_dict:
-            selected_dict[item[0]] = item
+        selected_dict.setdefault(item[0], item)
         if len(selected_dict) == AI_MAX_CLASSIFICATION_ATTEMPTS:
             break
     pending = list(selected_dict.values())
