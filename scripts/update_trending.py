@@ -852,12 +852,15 @@ def update_ai_candidates(candidates, records, today):
                 else None
             )
             still_valid = previous_path is None or previous_path in record["markdown_paths"]
-            unchanged = (
-                previous["default_branch"] == record["default_branch"]
-                and previous["description"] == record["description"]
-                and previous["markdown_paths"] == record["markdown_paths"]
-                and previous["pushed_at"] == record["pushed_at"]
-                and previous["readme_sha"] == record["readme_sha"]
+            unchanged = all(
+                previous[field] == record[field]
+                for field in (
+                    "default_branch",
+                    "description",
+                    "markdown_paths",
+                    "pushed_at",
+                    "readme_sha",
+                )
             )
             if still_valid and unchanged:
                 classification = previous_classification
