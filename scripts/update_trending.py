@@ -770,13 +770,13 @@ def load_ai_candidates(path):
     legacy_required = required - {"pushed_at"}
     legacy_classification = AI_CLASSIFICATION_FIELDS - {"content_checked"}
     for full_name, candidate in candidates.items():
-        if isinstance(candidate, dict) and set(candidate) == legacy_required:
+        if isinstance(candidate, dict) and candidate.keys() == legacy_required:
             candidate["pushed_at"] = None
         if (
             not isinstance(full_name, str)
             or GITHUB_REPOSITORY_PATTERN.fullmatch(full_name) is None
             or not isinstance(candidate, dict)
-            or set(candidate) != required
+            or candidate.keys() != required
         ):
             raise RuntimeError(f"Invalid AI Markdown candidate: {full_name}")
         try:
@@ -819,7 +819,7 @@ def load_ai_candidates(path):
         classification = candidate["classification"]
         if (
             isinstance(classification, dict)
-            and set(classification) == legacy_classification
+            and classification.keys() == legacy_classification
         ):
             candidate["classification"] = None
         validate_ai_classification(
