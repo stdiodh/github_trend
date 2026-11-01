@@ -106,14 +106,7 @@ AI_MAX_CLASSIFICATION_ATTEMPTS = 20
 AI_MAX_ARTIFACT_SAMPLES = 3
 AI_MAX_SAMPLE_BYTES = 65_536
 AI_MAX_SAMPLE_CHARACTERS = 4_000
-AI_CLASSIFICATION_KINDS = {
-    "format_spec",
-    "instruction",
-    "prompt",
-    "skill",
-    "uncertain",
-    "unrelated",
-}
+AI_CLASSIFICATION_KINDS = AI_VISIBLE_KINDS | {"uncertain", "unrelated"}
 AI_CLASSIFICATION_FIELDS = {
     "artifact_path",
     "classified_at",
