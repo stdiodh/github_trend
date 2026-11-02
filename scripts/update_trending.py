@@ -565,17 +565,15 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             ),
             None,
         )
-        artifact_entries = []
+        artifact_paths = []
         for entry in markdown_entries:
             parts = entry["path"].casefold().split("/")
             if (
                 parts[-1] not in AI_COMMON_MARKDOWN_NAMES
                 and AI_IGNORED_ARTIFACT_PARTS.isdisjoint(parts[:-1])
             ):
-                artifact_entries.append(entry)
-        markdown_paths = list(dict.fromkeys(
-            entry["path"] for entry in artifact_entries
-        ))[:AI_MAX_MARKDOWN_PATHS]
+                artifact_paths.append(entry["path"])
+        markdown_paths = list(dict.fromkeys(artifact_paths))[:AI_MAX_MARKDOWN_PATHS]
 
         if not allowed_ai_labels(
             full_name,
