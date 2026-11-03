@@ -1018,7 +1018,7 @@ INPUT JSON:
         )
 
     response = parse_copilot_json(result.stdout)
-    if not isinstance(response, dict) or set(response) != {"items"}:
+    if not isinstance(response, dict) or response.keys() != {"items"}:
         raise RuntimeError("Copilot returned an invalid classification response")
     returned_items = response["items"]
     if not isinstance(returned_items, list):
@@ -1028,7 +1028,7 @@ INPUT JSON:
     classifications = {}
     today_iso = today.isoformat()
     for item in returned_items:
-        if not isinstance(item, dict) or set(item) != {
+        if not isinstance(item, dict) or item.keys() != {
             "artifact_path",
             "confidence",
             "id",
