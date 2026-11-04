@@ -651,7 +651,7 @@ def validate_ai_classification(
         return
     if (
         not isinstance(classification, dict)
-        or set(classification) != AI_CLASSIFICATION_FIELDS
+        or classification.keys() != AI_CLASSIFICATION_FIELDS
     ):
         raise RuntimeError(f"Invalid AI classification for {context}")
     try:
