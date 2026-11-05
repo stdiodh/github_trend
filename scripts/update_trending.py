@@ -889,8 +889,7 @@ def get_ai_blob_sample(token, full_name, sha):
         or result.get("encoding") != "base64"
         or not isinstance(result.get("content"), str)
         or not isinstance(result.get("size"), int)
-        or result["size"] < 0
-        or result["size"] > AI_MAX_SAMPLE_BYTES
+        or not 0 <= result["size"] <= AI_MAX_SAMPLE_BYTES
     ):
         raise GitHubAPIError(
             f"GitHub returned an invalid candidate blob for {full_name}"
