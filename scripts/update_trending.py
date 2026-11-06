@@ -116,6 +116,9 @@ AI_CLASSIFICATION_FIELDS = {
     "label",
     "reason",
 }
+AI_CLASSIFICATION_RESPONSE_FIELDS = (
+    AI_CLASSIFICATION_FIELDS - {"classified_at", "content_checked"}
+) | {"id"}
 
 
 class GitHubAPIError(RuntimeError):
@@ -1027,14 +1030,7 @@ INPUT JSON:
     classifications = {}
     today_iso = today.isoformat()
     for item in returned_items:
-        if not isinstance(item, dict) or item.keys() != {
-            "artifact_path",
-            "confidence",
-            "id",
-            "kind",
-            "label",
-            "reason",
-        }:
+        if not isinstance(item, dict) or item.keys() != AI_CLASSIFICATION_RESPONSE_FIELDS:
             raise RuntimeError("Copilot returned an invalid classification item")
         item_id = item["id"]
         if (
