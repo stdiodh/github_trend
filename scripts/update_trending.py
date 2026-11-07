@@ -494,6 +494,18 @@ def markdown_path_sort_key(path):
     return (priority, len(parts), path_casefolded, path)
 
 
+def build_ai_candidate_record(repository, markdown_paths, readme_path, readme_sha):
+    return {
+        "default_branch": repository["default_branch"],
+        "description": repository["description"],
+        "markdown_paths": markdown_paths,
+        "pushed_at": repository["pushed_at"],
+        "readme_path": readme_path,
+        "readme_sha": readme_sha,
+        "stars": repository["stars"],
+    }
+
+
 def collect_ai_markdown_snapshot(token, repositories, candidates):
     snapshot = {}
     records = {}
@@ -528,15 +540,12 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
             and previous["pushed_at"] == repository["pushed_at"]
         ):
             snapshot[full_name] = repository
-            records[full_name] = {
-                "default_branch": repository["default_branch"],
-                "description": repository["description"],
-                "markdown_paths": previous["markdown_paths"][:AI_MAX_MARKDOWN_PATHS],
-                "pushed_at": repository["pushed_at"],
-                "readme_path": previous["readme_path"],
-                "readme_sha": previous["readme_sha"],
-                "stars": repository["stars"],
-            }
+            records[full_name] = build_ai_candidate_record(
+                repository,
+                previous["markdown_paths"][:AI_MAX_MARKDOWN_PATHS],
+                previous["readme_path"],
+                previous["readme_sha"],
+            )
             continue
 
         entries = get_repository_tree(token, repository)
@@ -584,15 +593,12 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
         ):
             continue
         snapshot[full_name] = repository
-        records[full_name] = {
-            "default_branch": repository["default_branch"],
-            "description": repository["description"],
-            "markdown_paths": markdown_paths,
-            "pushed_at": repository["pushed_at"],
-            "readme_path": readme["path"] if readme else None,
-            "readme_sha": readme["sha"] if readme else None,
-            "stars": repository["stars"],
-        }
+        records[full_name] = build_ai_candidate_record(
+            repository,
+            markdown_paths,
+            readme["path"] if readme else None,
+            readme["sha"] if readme else None,
+        )
 
     return snapshot, records, skipped
 
