@@ -439,6 +439,10 @@ def ai_repository_queries(today):
     ]
 
 
+def repository_star_sort_key(full_name, stars):
+    return (-stars, full_name.casefold())
+
+
 def collect_ai_repositories(
     token,
     today,
@@ -466,8 +470,7 @@ def collect_ai_repositories(
         repositories.values(),
         key=lambda repository: (
             repository["full_name"] not in tracked_names,
-            -repository["stars"],
-            repository["full_name"].casefold(),
+            *repository_star_sort_key(repository["full_name"], repository["stars"]),
         ),
     )[:AI_MAX_REPOSITORIES]
     return {repository["full_name"]: repository for repository in selected}
@@ -514,9 +517,8 @@ def collect_ai_markdown_snapshot(token, repositories, candidates):
     known_names = repositories.keys() & candidates.keys()
     new_by_stars = sorted(
         repositories.keys() - known_names,
-        key=lambda full_name: (
-            -repositories[full_name]["stars"],
-            full_name.casefold(),
+        key=lambda full_name: repository_star_sort_key(
+            full_name, repositories[full_name]["stars"]
         ),
     )
     format_names = [
@@ -1077,7 +1079,7 @@ def classify_new_ai_candidates(token, candidates, today):
         if candidate["last_seen"] == today_iso
         and candidate["classification"] is None
     ]
-    pending.sort(key=lambda item: (-item[1]["stars"], item[0].casefold()))
+    pending.sort(key=lambda item: repository_star_sort_key(item[0], item[1]["stars"]))
     format_pending = [
         item
         for item in pending
