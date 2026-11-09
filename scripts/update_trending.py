@@ -628,10 +628,6 @@ def load_ai_history(path):
     return history
 
 
-def update_ai_history(history, repositories, today):
-    return update_history(history, repositories, today)
-
-
 def is_safe_ai_label(value):
     return (
         is_utf8_text(value)
@@ -1431,7 +1427,7 @@ def run(
         candidate_records,
         today,
     )
-    ai_history = update_ai_history(
+    ai_history = update_history(
         ai_history,
         visible_ai_repositories(ai_candidates, today),
         today,
@@ -1494,7 +1490,7 @@ def run_ai_candidate_classification(
         print("No AI Markdown projects were classified")
         return
 
-    history = update_ai_history(
+    history = update_history(
         history,
         visible_ai_repositories(candidates, today),
         today,
