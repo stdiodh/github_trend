@@ -1192,8 +1192,9 @@ def calculate_ai_rankings(history, candidates, today):
                 "weekly_change": calculate_star_change(full_name, stars, week_ago),
             }
             for full_name, stars in current.items()
-            if (candidate := candidates.get(full_name))
-            and is_current_visible_ai_candidate(candidate, today_iso)
+            if is_current_visible_ai_candidate(
+                candidate := candidates.get(full_name), today_iso
+            )
         ),
         key=ranking_sort_key,
     )
