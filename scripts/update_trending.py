@@ -342,8 +342,8 @@ def update_history(history, repositories, today):
     }
     cutoff_iso = (today - ONE_WEEK).isoformat()
     return {
-        day: history[day]
-        for day in sorted(history)
+        day: repositories
+        for day, repositories in sorted(history.items())
         if cutoff_iso <= day <= today_iso
     }
 
