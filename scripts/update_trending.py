@@ -862,15 +862,14 @@ def update_ai_candidates(candidates, records, today):
                 classification = previous_classification
         updated[full_name] = {
             "classification": classification,
-            "default_branch": record["default_branch"],
-            "description": record["description"],
+            **build_ai_candidate_record(
+                record,
+                record["markdown_paths"],
+                record["readme_path"],
+                record["readme_sha"],
+            ),
             "first_seen": previous["first_seen"] if previous else today_iso,
             "last_seen": today_iso,
-            "markdown_paths": record["markdown_paths"],
-            "pushed_at": record["pushed_at"],
-            "readme_path": record["readme_path"],
-            "readme_sha": record["readme_sha"],
-            "stars": record["stars"],
         }
     for candidate in updated.values():
         candidate["markdown_paths"] = candidate["markdown_paths"][
