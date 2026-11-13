@@ -907,7 +907,7 @@ def get_ai_blob_sample(token, full_name, sha):
         )
     except (ValueError, TypeError) as error:
         raise GitHubAPIError(f"GitHub returned invalid base64 for {full_name}") from error
-    if len(decoded) != result["size"] or len(decoded) > AI_MAX_SAMPLE_BYTES:
+    if len(decoded) != result["size"]:
         raise GitHubAPIError(f"GitHub returned an invalid blob size for {full_name}")
     return decoded.decode("utf-8", errors="replace")[:AI_MAX_SAMPLE_CHARACTERS]
 
