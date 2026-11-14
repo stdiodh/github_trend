@@ -1269,10 +1269,9 @@ def render_ai_table(rankings):
 
 
 def render_ai_markdown_region(rankings):
-    lines = [AI_MARKDOWN_START_MARKER, ""]
-    lines.extend(render_ai_table(rankings))
-    lines.extend(("", AI_MARKDOWN_END_MARKER))
-    return "\n".join(lines)
+    return "\n".join(
+        (AI_MARKDOWN_START_MARKER, "", *render_ai_table(rankings), "", AI_MARKDOWN_END_MARKER)
+    )
 
 
 def render_section(
