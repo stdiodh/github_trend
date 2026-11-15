@@ -349,14 +349,14 @@ def update_history(history, repositories, today):
 
 
 def is_valid_github_path(path):
-    if not is_utf8_text(path) or not path or path.startswith("/"):
+    if (
+        not is_utf8_text(path)
+        or not path
+        or path.startswith("/")
+        or any(character < " " for character in path)
+    ):
         return False
-    parts = path.split("/")
-    return all(
-        part not in {"", ".", ".."}
-        and not any(character < " " for character in part)
-        for part in parts
-    )
+    return all(part not in {"", ".", ".."} for part in path.split("/"))
 
 
 def get_repository_tree(token, repository):
