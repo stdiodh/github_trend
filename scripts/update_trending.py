@@ -1163,8 +1163,7 @@ def ranking_sort_key(repository):
         -daily_change if daily_change is not None else 0,
         weekly_change is None,
         -weekly_change if weekly_change is not None else 0,
-        -repository["stars"],
-        repository["full_name"].casefold(),
+        *repository_star_sort_key(repository["full_name"], repository["stars"]),
     )
 
 
