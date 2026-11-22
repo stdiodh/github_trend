@@ -1252,9 +1252,8 @@ def render_ai_table(rankings):
     for rank, item in enumerate(rankings[:RANKING_DISPLAY_LIMIT], start=1):
         full_name = item["full_name"]
         repository_url = f"https://github.com/{full_name}"
-        if item["artifact_path"] is None:
-            artifact_url = repository_url
-        else:
+        artifact_url = repository_url
+        if item["artifact_path"] is not None:
             branch = quote(item["default_branch"], safe="")
             path = quote(item["artifact_path"], safe="/")
             artifact_url = f"{repository_url}/blob/{branch}/{path}"
